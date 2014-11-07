@@ -1,28 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway|Ubuntu|Roboto|Questrial|Gudea|Varela|Oswald|Sintony|Julius+Sans+One|ABeeZee|Rosario|Molengo|Actor|Oxygen|Quicksand|Maven+Pro|Asap|Nobile|Noto+Sans|Abel|Pontano+Sans|Istok+Web|Philosopher|Cantarell|Quattrocento+Sans|Merriweather);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Book+Basic);
+@import url(http://fonts.googleapis.com/css?family=Raleway|Ubuntu|Roboto|Oswald|Rosario|Oxygen|Abel|Merriweather);
 @import url(http://fonts.googleapis.com/css?family=Lora);
-@import url(http://fonts.googleapis.com/css?family=Raleway|Oxygen:400,300|Muli:300);
-
-#title-head {
-    line-height:100%; 
-    font-size:150%;
-    color:gray; 
-    font-family:'Muli', Helvetica, Sans-Serif; 
-    text-align: center;
-}
-
-#manual {
-   height:100%;
-  font-family: 'Muli', Helvetica, Sans-Serif; font-size:175%;    
-}
-
-#menu {
-  /* float:right; */
-  height:100%; text-align:right;
-  color:#BC704E; font-family: 'Muli', Helvetica, Sans-Serif; font-size:175%;  line-height:91%;
-}
-#menu .menu { color: black; text-decoration: none; }
-#menu .menu:hover { color: gray; text-decoration: none; }
-
 meta.foundation-version {
   font-family: "/5.2.3/"; }
 
@@ -50,7 +28,16 @@ meta.foundation-data-attribute-namespace {
   font-family: false; }
 
 html, body {
-  height: 100%; }
+  height: 100%; 
+
+font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;}
+
+#underline {
+    margin: 15px auto 30px;
+    width: 50%;
+    height: 3px;
+    background-color: gray;
+}
 
 *,
 *:before,
@@ -68,12 +55,10 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
   position: relative;
-  overflow: hidden;
   cursor: default; }
 
 a:hover {
@@ -83,10 +68,32 @@ img {
   max-width: 100%;
   height: auto; }
 
+#menu {
+  /* float:right; */
+  padding: 3%;
+  height:500px; text-align: justify;
+  color:#BC704E; font-family: Helvetica, Sans-Serif; font-size:175%; font-weight:bold;  line-height:91%;
+}
+#menu .menu { color: #C1BDB8; text-decoration: none; }
+#menu .menu:hover { color: #D0A18B; text-decoration: none; }
+#title-head {line-height:85%; font-size:165%;color:#BC704E; font-family:'Rosario', Helvetica, Sans-Serif; font-weight:bold; text-align: right;}
+
+.title {
+ font-weight: 300;
+font-size: 300%;
+text-align: center;
+	margin-top: 65px;
+
+}
 
 
 
-
+.fixed {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    border-bottom: 10px solid #FFF;
+}
 
 img {
   -ms-interpolation-mode: bicubic; }
@@ -101,6 +108,10 @@ img {
 
 .left {
   float: left !important; }
+
+.center {
+ float: none!important;   
+}
 
 .right {
   float: right !important; }
@@ -1385,9 +1396,20 @@ meta.foundation-mq-topbar {
       padding: 12px 0 12px 0;
       padding-left: 15px;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-      font-size: 0.8125rem;
+      font-size: 1rem;
       font-weight: normal;
-      text-transform: none; }
+      text-transform: none; 
+    }
+
+.nav {
+     
+	display: inline-block;
+	width: 27.5%;
+	text-align: center;
+	cursor: pointer;  
+}
+
+
       .top-bar-section ul li > a.button {
         font-size: 0.8125rem;
         padding-right: 15px;
@@ -2672,19 +2694,19 @@ td {
 
 /* Default Link Styles */
 a {
-  color: black;
+  color: #008cba;
   text-decoration: none;
   line-height: inherit; }
   a:hover, a:focus {
-    color: gray; }
+    color: #0078a0; }
   a img {
     border: none; }
 
 /* Default paragraph styles */
 p {
-  font-family: inherit;
+  font-family: "Times New Roman";!important;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 1.155rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility; }
@@ -2701,7 +2723,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222222;
+  color: black;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -2772,7 +2794,7 @@ dl {
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
-  font-family: inherit; }
+}
 
 ul {
   margin-left: 1.1rem; }
@@ -2850,7 +2872,7 @@ blockquote p {
   line-height: 1.6;
   color: #6f6f6f; }
 
-p { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;  color: #C1BDB8; }
+p { font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;  color: #333333; }
 
 /* Microformats */
 .vcard {
