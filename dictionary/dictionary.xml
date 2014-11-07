@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+  <metadata>
+    <!-- Open Language Archives Community Metadata -->
+  </metadata>
+  <entry id="0">
+    <form>
+      <orth/>
+    </form>
+    <sense>
+      <cit type="translation" lang="en">
+        <usg type="hyper"/>
+        <quote/>
+      </cit>
+    </sense>
+    <gramGrp>
+      <pos/>
+    </gramGrp>
+    <note/>
+    <media mimeType="" url=""/>
+    <ref/>
+  </entry>
+</dictionary>
