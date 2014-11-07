@@ -1371,7 +1371,7 @@ meta.foundation-mq-topbar {
 
 .top-bar-section {
   left: 0;
-  position: relative;
+  position: center;
   width: auto;
   transition: left 300ms ease-out; }
   .top-bar-section ul {
