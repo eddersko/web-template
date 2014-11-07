@@ -1371,7 +1371,7 @@ meta.foundation-mq-topbar {
 
 .top-bar-section {
   left: 0;
-  position: center;
+  position: relative;
   width: auto;
   transition: left 300ms ease-out; }
   .top-bar-section ul {
@@ -1404,7 +1404,7 @@ meta.foundation-mq-topbar {
 .nav {
      
 	display: inline-block;
-	width: 27.5%;
+	width: 25%;
 	text-align: center;
 	cursor: pointer;  
 }
