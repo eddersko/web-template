@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phrasicon>
+  <metadata>
+    <!-- Open Language Archives Community Metadata -->
+  </metadata>
+    <phrase id="0">
+        <ref> </ref>
+        <source></source>
+        <morpheme>
+            <m id="0.1"></m>
+        </morpheme>
+        <gloss>
+            <g id="0.1"></g>
+        </gloss>
+        <translation></translation>
+        <media mimeType="" url="" />
+    </phrase>
+</phrasicon>
