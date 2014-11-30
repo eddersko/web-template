@@ -5502,3 +5502,8 @@
 [03-Nov-2014 09:48:16 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/phrasicon/update/index.php on line 3
 [03-Nov-2014 09:49:51 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/phrasicon/update/index.php on line 2
 [03-Nov-2014 09:49:51 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/phrasicon/update/index.php on line 3
+[11-Nov-2014 13:22:49 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/phrasicon/update/index.php on line 2
+[11-Nov-2014 13:22:49 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/phrasicon/update/index.php on line 3
+[11-Nov-2014 13:23:02 America/Denver] PHP Warning:  include(): Failed opening '../insert.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/eddersko/public_html/template/phrasicon/update/uploadFiles.php on line 27
+[29-Nov-2014 17:33:44 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/phrasicon/update/index.php on line 2
+[29-Nov-2014 17:33:44 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/phrasicon/update/index.php on line 3

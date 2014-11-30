@@ -184,23 +184,26 @@ if (($count == 0 && $counting)) {
 
 ?> 
 
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-    
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Dictionary Template</title>
+    <meta name="description" content="Multi-layered Language Learning Resources" />
+    <meta name="author" content="User" />
+    <meta name="copyright" content="User" />
     <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script> 
-
-            <?php echo $redirect ?>
- 
-  </head>
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/loadxmldoc.js"></script>
+    <?php echo $redirect ?>
+</head>
     
-  <?php echo $body ?>
+    <?php echo $body ?>
+    
+        <!-- Menu Bar. -->
+    
         <div class="fixed">
-
          <nav class="top-bar" data-topbar>
             <ul class="title-area">
                
@@ -213,30 +216,41 @@ if (($count == 0 && $counting)) {
               </li>
               <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
             </ul>
-         
             <section class="top-bar-section">
-               
               <ul class="right">
                 <li class="divider"></li>
-                <li>
-                  <a href="../phrasicon">Phrasicon</a>
-
+                <li class="name">
+                    <h1>
+                    <!-- Link to Phrasicon -->
+                    <a href="../phrasicon">
+                        Phrasicon
+                        </a>
+                    </h1>
                 </li>
                 <li class="divider"></li>
               </ul>
             </section>
           </nav>
-            </div>
+        </div>
    
     <div class="row">
     <div class="large-12 columns">    
     
         <hr>
+
+        <!-- Title of the page. -->
+        
         <h4 class="title"><a class="home" href="../dictionary/">Online Talking Dictionary Template</a></h4>
         
         <hr>
+        
+        <!-- Search by letter (title).  -->
+        
         <h4 class="subsubheader">English to Source</h4>
 
+        
+        <!-- Search by letter (A-Z).  -->
+        
         <ul class="pagination"> <center>
           <li><a href="../dictionary/category.php?letter=a">a</a></li> 
           <li><a href="../dictionary/category.php?letter=b">b</a></li> 
@@ -269,16 +283,19 @@ if (($count == 0 && $counting)) {
         <div class="row collapse"> 
         <div class="large-8 small-9 columns"> 
             <form action="../dictionary/category.php" method="post">
+                
+            <!-- Search bar. -->
             <input type="text" placeholder= "<?php echo $placeholder?>" name="word"> 
-			<!--&nbsp;<input  type="checkbox" value="match" name="match" checked><label for="checkbox1">Match whole word only</label>-->
+
         </div> 
         <div class="large-4 small-3 columns"> 
+        <!-- Submit Button. -->
           <input class="button postfix" type="submit" value="Submit">
             </form>
         </div> 
         </div>
         
-        
+        <!-- Background image. -->
         <p><img src="background.jpg"/></p>    
     
     </div>
@@ -287,8 +304,9 @@ if (($count == 0 && $counting)) {
     <div class="row">
     <div class="large-12 columns">
     <div class="text-center">
+        
+        <!-- Search results. -->
         <?php echo $num_results ?>
-
         <?php echo $list ?>
         <?php echo $warning ?>
         <?php echo $form ?>
@@ -297,19 +315,7 @@ if (($count == 0 && $counting)) {
     </div>
     </div>
 
-
-    <footer class="row">
-    <div class="large-12 columns">
-        <hr>
-        <div class="row">
-        <div class="large-12 columns">
-        <h4 class="subsubheader" style="text-align:center">Copyright 2014 &copy; User</h4><br>
-        </div>
-        </div>
-    </div> 
-    </footer> 
-
-          <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation/foundation.js"></script>
     <script>
         $(document).foundation();

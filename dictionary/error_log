@@ -102,3 +102,42 @@
 [04-Nov-2014 09:46:30 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/dictionary/category.php on line 169
 [04-Nov-2014 09:46:30 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/dictionary/category.php on line 293
 [04-Nov-2014 09:46:30 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/dictionary/category.php on line 294
+[15-Nov-2014 22:01:24 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/dictionary/word.php on line 80
+[15-Nov-2014 22:01:24 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/dictionary/word.php on line 80
+[15-Nov-2014 22:01:37 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/dictionary/word.php on line 3
+[15-Nov-2014 22:01:37 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/dictionary/word.php on line 80
+[15-Nov-2014 22:01:37 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/dictionary/word.php on line 80
+[15-Nov-2014 22:01:37 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/dictionary/word.php on line 80
+[15-Nov-2014 22:01:37 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/dictionary/word.php on line 80
+[15-Nov-2014 22:01:54 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/dictionary/word.php on line 80
+[15-Nov-2014 22:01:54 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/dictionary/word.php on line 80
+[29-Nov-2014 14:02:23 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:02:35 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:02:35 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:02:36 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:02:37 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:02:51 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:02:52 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:02:56 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:02:57 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 1
+[29-Nov-2014 14:03:30 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 2
+[29-Nov-2014 14:03:31 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 2
+[29-Nov-2014 14:03:32 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 2
+[29-Nov-2014 14:03:33 America/Denver] PHP Parse error:  syntax error, unexpected 'ew' (T_STRING) in /home1/eddersko/public_html/template/dictionary/index.php on line 2
+[29-Nov-2014 14:23:22 America/Denver] PHP Parse error:  syntax error, unexpected '_POST' (T_STRING), expecting variable (T_VARIABLE) or '$' in /home1/eddersko/public_html/template/dictionary/category.php on line 1
+[29-Nov-2014 14:23:40 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/dictionary/category.php on line 7
+[29-Nov-2014 14:23:40 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/dictionary/category.php on line 169
+[29-Nov-2014 14:23:40 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/dictionary/category.php on line 293
+[29-Nov-2014 14:23:40 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/dictionary/category.php on line 294
+[29-Nov-2014 14:25:07 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/dictionary/category.php on line 7
+[29-Nov-2014 14:25:07 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/dictionary/category.php on line 169
+[29-Nov-2014 14:25:07 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/dictionary/category.php on line 293
+[29-Nov-2014 14:25:07 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/dictionary/category.php on line 294
+[29-Nov-2014 14:32:28 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/dictionary/category.php on line 7
+[29-Nov-2014 14:32:28 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/dictionary/category.php on line 169
+[29-Nov-2014 14:32:28 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/dictionary/category.php on line 313
+[29-Nov-2014 14:32:28 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/dictionary/category.php on line 314
+[29-Nov-2014 14:32:30 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/dictionary/category.php on line 18
+[29-Nov-2014 14:32:30 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/dictionary/category.php on line 177
+[29-Nov-2014 14:32:30 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/dictionary/category.php on line 313
+[29-Nov-2014 14:32:30 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/dictionary/category.php on line 314
