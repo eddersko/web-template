@@ -91,6 +91,12 @@
                 <h4 class="subsubheader">Reference</h4> 
                 <input type="text" name="ref">
             </div>
+            <!--    
+            <div class="large-12 columns">
+                <h4 class="subsubheader">ExtraAnno1</h4> 
+                <input type="text" name="extraAnno1">
+            </div>
+            -->
             </row>
             
             <div class="large-12 columns">
@@ -146,6 +152,9 @@
                     <option value="note">Description</option>
                     <option value="media">Media</option>
                     <option value="ref">Reference</option>
+                    <!-- 
+                    <option value="extraAnno1">ExtraAnno1</option>
+                    -->
                 </select>
             </div>
             <div class="large-3 columns">

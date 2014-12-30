@@ -61,6 +61,31 @@ $english = $entry->childNodes->item(9)->nodeValue;
 $media = $entry->childNodes->item(11)->getAttribute('url');
 $count++;
 
+/*
+
+$length = $entry->childNodes->item(13)->childNodes->length;
+
+$extraAnno1 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+  $val = $entry->childNodes->item(13)->childNodes->item($x)->nodeValue;
+
+array_push($extraAnno1, $val);
+}
+
+$extra = "<tr>";
+
+$num = count($extraAnno1);
+foreach($extraAnno1 as $ex) {
+    $extra_cells .= "<td class=\"pomo_gloss\">";
+    $extra_cells .= $ex;  
+    $extra_cells .= "</td>";
+}
+  
+
+*/
+    
+    
 $length = $entry->childNodes->item(5)->childNodes->length;
 
 $source_example = array();
@@ -82,7 +107,7 @@ foreach($source_example as $pom) {
   
 $length = $entry->childNodes->item(7)->childNodes->length;
 
-$eng_example = array();
+$eng_example = array(); 
 
 for ($x=1; $x<$length-1; $x+=2) {
 $val = $entry->childNodes->item(7)->childNodes->item($x)->nodeValue;
@@ -104,7 +129,7 @@ if ($eng_num > $num) {
     $num = $eng_num;   
 }
 
-$table = $table . "<table align=\"center\"><tr><td class=\"pomo\" colspan=\"". $num ."\"><center>" . $pomo . "</center></td></tr>" . $pomo_cells . "</tr>" . $eng_cells . "</tr>" . "<tr><td class=\"english\" colspan=\"" . ($num) . "\"><em><center>" . $english . "</em></center></td></tr><tr><td colspan=\"" . ($num) . "\"><audio src=\"../phrasicon/sounds/" . $media . "\" controls preload=\"auto\" autobuffer></audio></td></tr></table>";
+$table = $table . "<table align=\"center\"><tr><td class=\"pomo\" colspan=\"". $num ."\"><center>" . $pomo . "</center></td></tr>" . /* $exttraAnno1 . "</tr>" .  */ $pomo_cells . "</tr>" . $eng_cells . "</tr>" . "<tr><td class=\"english\" colspan=\"" . ($num) . "\"><em><center>" . $english . "</em></center></td></tr><tr><td colspan=\"" . ($num) . "\"><audio src=\"../phrasicon/sounds/" . $media . "\" controls preload=\"auto\" autobuffer></audio></td></tr></table>";
 }
 
 $results = "";

@@ -141,3 +141,4 @@
 [29-Nov-2014 14:32:30 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/dictionary/category.php on line 177
 [29-Nov-2014 14:32:30 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/dictionary/category.php on line 313
 [29-Nov-2014 14:32:30 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/dictionary/category.php on line 314
+[29-Dec-2014 20:21:25 America/Denver] PHP Warning:  DOMDocument::load(): XML declaration allowed only at the start of the document in /home1/eddersko/public_html/template/dictionary/dictionary.xml, line: 2 in /home1/eddersko/public_html/template/dictionary/index.php on line 1

@@ -1,4 +1,59 @@
-<?php $_SESSION[ 'word']=$ _GET[ 'word']; $word=$ _SESSION[ 'word']; $xmlDoc=n ew DOMDocument(); $xmlDoc->load("dictionary.xml"); $xpath = new DOMXPath($xmlDoc); $result = $xpath->query("/dictionary/entry/sense/cit[usg='$word']/../.."); $table = ""; foreach($result as $entry) { $id = $entry->getAttribute('id'); $hyper = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue; $pomo = $entry->childNodes->item(1)->childNodes->item(1)->nodeValue; $eng = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue; $pos = $entry->childNodes->item(5)->childNodes->item(1)->nodeValue; $note = $entry->childNodes->item(7)->nodeValue; $media = $entry->childNodes->item(9)->getAttribute('url'); $count = 0; $examples = ""; $polysemy = $xpath->query("/dictionary/entry/form[orth='$pomo']/..")->length; $len = strlen($pomo) -1; $len1 = strlen($hyper) -1; $len2 = strlen($hyper); $xmlDoc = new DOMDocument(); $xmlDoc->load("../phrasicon/phrasicon.xml"); $xpath = new DOMXPath($xmlDoc); if ($polysemy > 1) { $p = false; $e = false; $count += $xpath->query("//phrase[starts-with(source, '".$pomo." ')]")->length; $count += $xpath->query("//phrase[contains(source, ' ".$pomo." ')]")->length; $count += $xpath->query("//phrase[(substring(source, string-length(translation) - $len) = '".$pomo."')]")->length; $count += $xpath->query("//morpheme[m='".$pomo."']")->length; if ($count > 0) { $p = true; } $count = 0; $count += $xpath->query("//phrase[starts-with(translation, '$hyper')]")->length; $count += $xpath->query("//phrase[contains(translation, ' $hyper ')]")->length; $count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len1.") = '".$hyper."')]")->length; $count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = '".$hyper."?')]")->length; $count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = '".$hyper.".')]")->length; $count += $xpath->query("(//gloss[g='$hyper'])")->length; if ($count > 0) { $e = true; } if ($p and $e) { $count = 1; } } else { $count += $xpath->query('//phrase[starts-with(source, "'.$pomo.' ")]')->length; $count += $xpath->query('//phrase[contains(source, " '.$pomo.' ")]')->length; $count += $xpath->query('//phrase[(substring(source, string-length(translation) - $len) = "'.$pomo.'")]')->length; $count += $xpath->query('//morpheme[m="'.$pomo.'"]')->length; } if ($count > 0) { if ($polysemy > 1) { $examples .= "
+<?php 
+
+$_SESSION[ 'word']=$ _GET[ 'word']; 
+$word=$ _SESSION[ 'word']; 
+$xmlDoc= new DOMDocument(); 
+$xmlDoc->load("dictionary.xml"); 
+$xpath = new DOMXPath($xmlDoc); 
+$result = $xpath->query("/dictionary/entry/sense/cit[usg='$word']/../.."); 
+
+$table = ""; foreach($result as $entry) {     
+
+$id = $entry->getAttribute('id'); 
+$hyper = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue; 
+$pomo = $entry->childNodes->item(1)->childNodes->item(1)->nodeValue; 
+$eng = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue; 
+$pos = $entry->childNodes->item(5)->childNodes->item(1)->nodeValue; $note = $entry->childNodes->item(7)->nodeValue; 
+$media = $entry->childNodes->item(9)->getAttribute('url'); 
+    
+/* 
+$extraAnno1 = $entry->childNodes->item(11)->nodeValue; 
+*/    
+
+$count = 0; 
+$examples = ""; $polysemy = $xpath->query("/dictionary/entry/form[orth='$pomo']/..")->length; $len = strlen($pomo) -1; $len1 = strlen($hyper) -1; 
+$len2 = strlen($hyper); 
+$xmlDoc = new DOMDocument(); 
+$xmlDoc->load("../phrasicon/phrasicon.xml");
+$xpath = new DOMXPath($xmlDoc); 
+if ($polysemy > 1) { 
+$p = false; 
+$e = false; 
+$count += $xpath->query("//phrase[starts-with(source, '".$pomo." ')]")->length; 
+$count += $xpath->query("//phrase[contains(source, ' ".$pomo." ')]")->length; 
+$count += $xpath->query("//phrase[(substring(source, string-length(translation) - $len) = '".$pomo."')]")->length; 
+$count += $xpath->query("//morpheme[m='".$pomo."']")->length; 
+if ($count > 0) { 
+    $p = true; 
+} 
+$count = 0; 
+$count += $xpath->query("//phrase[starts-with(translation, '$hyper')]")->length; 
+$count += $xpath->query("//phrase[contains(translation, ' $hyper ')]")->length; 
+$count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len1.") = '".$hyper."')]")->length; $count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = '".$hyper."?')]")->length; $count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = '".$hyper.".')]")->length; $count += $xpath->query("(//gloss[g='$hyper'])")->length; 
+if ($count > 0) { 
+    $e = true; 
+} 
+if ($p and $e) { 
+$count = 1; 
+} 
+} else { 
+$count += $xpath->query('//phrase[starts-with(source, "'.$pomo.' ")]')->length; 
+$count += $xpath->query('//phrase[contains(source, " '.$pomo.' ")]')->length; 
+$count += $xpath->query('//phrase[(substring(source, string-length(translation) - $len) = "'.$pomo.'")]')->length; 
+$count += $xpath->query('//morpheme[m="'.$pomo.'"]')->length; 
+} if ($count > 0) {
+    if ($polysemy > 1) {
+        $examples .= "
 <tr>
     <td colspan=\ "2\">
         <center><a href=\ "../phrasicon/word.php?word=" . $pomo . "&eng=" . $eng . "&lang=poly\">Example phrases (phrasicon)</a>
@@ -17,7 +72,11 @@
             <td class=\ "english\"colspan=\ "2\">
                 <center>" . $eng . "</center>
             </td>
-        </tr>" . "
+        </tr>" . /*   "<tr>
+            <td class=\ "pomo\" colspan=\ "2\">
+                <center>" . $extraAnno1 . "</center>
+            </td>
+        </tr>"  .  */"
         <tr>
             <td class=\ "pomo\" colspan=\ "2\">
                 <center>" . $pomo . "</center>
@@ -35,7 +94,8 @@
             </td>
         </tr>
     </table>
-</a>"; } 
+</a>"; 
+} 
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">

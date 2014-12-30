@@ -7,6 +7,7 @@ $xmlDoc->load("../dictionary.xml");
 $xpath = new DOMXPath($xmlDoc);
 
 $result = $xpath->query("//entry/sense/cit[starts-with(quote, '$english')]/../..");
+
 echo "<table>
 <tr>
 <th>ID</th>
@@ -16,8 +17,13 @@ echo "<table>
 <th>POS</th>
 <th>Description</th>
 <th>Media</th>
-<th>Reference</th>
-</tr>";
+<th>Reference</th>";
+
+/* 
+<th>ExtraAnno1</th> 
+*/
+
+echo "</tr>";
 
 
 foreach($result as $entry) {
@@ -30,6 +36,9 @@ $pos = $entry->childNodes->item(5)->childNodes->item(1)->nodeValue;
 $desc = $entry->childNodes->item(7)->nodeValue;  
 $media = $entry->childNodes->item(9)->getAttribute('url');
 $ref = $entry->childNodes->item(11)->nodeValue;
+/*  
+$extraAnno1 = $entry->childNodes->item(11)->nodeValue; 
+*/
 
     
   echo "<tr>";
@@ -41,8 +50,11 @@ $ref = $entry->childNodes->item(11)->nodeValue;
  echo "<td>" . $desc . "</td>";
   echo "<td>" . $media . "</td>";
  echo "<td>" . $ref . "</td>";
-
+/*
+echo "<td>" . $extraAnno1 . "</td>";
+*/
   echo "</tr>";
+    
 }
 echo "</table>";
 

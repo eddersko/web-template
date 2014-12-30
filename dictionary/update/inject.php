@@ -31,6 +31,10 @@ $media = $entry->addChild('media');
 $media->addAttribute("mimeType", "audio/".substr($_POST['media'], -3));
 $media->addAttribute("url", $_POST['media']);
 $entry->addChild("ref", $_POST['ref']);
+/*
+$entry->AddChild("extraAnno1, $_POST['extraAnno1']);
+*/
+    
     
 $dom = new DOMDocument('1.0');
 $dom->preserveWhiteSpace = false;
@@ -103,7 +107,7 @@ $result = $xpath->query("/dictionary/entry[@id='$id']");
 $result->item(0)->parentNode->removeChild($result->item(0));
 
 $dom->save($file);
-}
+} 
 
 echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center><b>Query submitted.</b></center></h4><hr></div>";
 

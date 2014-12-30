@@ -73,7 +73,6 @@ body {
   font-style: normal;
   line-height: 1;
   position: relative;
-  overflow: hidden;
   cursor: default; }
 
 a:hover {

@@ -1525,6 +1525,7 @@ meta.foundation-mq-topbar {
 }
 .top-bar .name h1 a {
     font-weight: normal;
+    font-family: 'Helvetica';
     color: white;
     width: 75%;
     display: block;

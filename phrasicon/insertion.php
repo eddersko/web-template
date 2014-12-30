@@ -166,6 +166,49 @@
                 <input id="gloss12" type="text" name="gloss12">
             </div>
 
+            
+    <!-- 
+        <h4 class="subsubheader">ExtraAnno1</h4>
+
+            <div class="large-1 columns">
+                <input id="extra1" type="text" name="extra1">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra2" type="text" name="extra2">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra3" type="text" name="extra3">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra4" type="text" name="extra4">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra5" type="text" name="extra5">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra6" type="text" name="extra6">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra7" type="text" name="extra7">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra8" type="text" name="extra8">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra9" type="text" name="extra9">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra10" type="text" name="extra10">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra11" type="text" name="extra11">
+            </div>
+            <div class="large-1 columns">
+                <input id="extra12" type="text" name="extra12">
+            </div>
+    -->
+            
+            
             </row>
             <row>
                 <div class="large-12 columns">
@@ -233,6 +276,9 @@
                     <option value="translation">Translation</option>
                     <option value="media">Media</option>
                     <option value="ref">Reference</option>
+                    <!--
+                    <option value="extraAnno1">ExtraAnno1</option>
+                    -->
                 </select>
             </div>
             <div class="large-3 columns">
@@ -247,7 +293,7 @@
                 <input class="postfix button" type="submit" value="Modify">
             </div>
 
-            <h4 class="subsubheader">Morpheme/Gloss</h4>
+            <h4 class="subsubheader">Morpheme/Gloss<!--ExtraAnno1--></h4>
 
             <div class="large-1 columns">
                 <input id="morphoss1" type="text" name="morphoss1" onkeydown="main(event, this)">
@@ -285,6 +331,10 @@
             <div class="large-1 columns">
                 <input id="morphoss12" type="text" name="morphoss12" onkeydown="main(event, this)">
             </div>
+            
+            
+            
+            <!-- Add extra annotation layer here.-->
         </form>
         <!-- ...ends here. -->
     

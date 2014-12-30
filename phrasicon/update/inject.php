@@ -41,7 +41,18 @@ $entry->addChild('translation', $_POST['translation']);
 $media = $entry->addChild('media');
 $media->addAttribute("mimeType", substr($_POST['media'], -3));
 $media->addAttribute("url", $_POST['media']);
-    
+/*
+$extraAnno1 = $entry->addChild('extraAnno1');
+for ($x=1; $x<13; $x++) {
+    $extra = $_POST['extra' . $x];
+    if ($extra == '') {
+     break;   
+    } else {
+        $extraAnno = $gloss->addChild('extra', $extra);
+        $extraAnno->addAttribute('id', $id . "." . $x);
+    }
+}
+*/
 $dom = new DOMDocument('1.0');
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
@@ -90,7 +101,20 @@ for ($x=1; $x<13; $x++) {
     
 }
 
-} else {
+} /* elseif ($field=="extrAnno1") {
+
+for ($x=1; $x<13; $x++) {
+    
+    $extra = $_POST['morphoss' . $x];
+    if ($extra != '') {
+    $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
+    $result[0]->extraAnno1->extra[$x-1] = $extra;
+    
+    }    
+    
+}
+    
+}  */ else {
     $result = $phrasicon->xpath("/phrasicon/phrase[@id = '$id']");  
     $result[0]->$field = $edit;
 }

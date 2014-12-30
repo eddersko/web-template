@@ -16,8 +16,13 @@ echo "<table>
 <th>Morpheme</th>
 <th>Gloss</th>
 <th>Translation</th>
-<th>Media</th>
-</tr>";
+<th>Media</th>";
+
+/* 
+echo "<th>ExtraAnno1</th>";
+*/
+
+echo "</tr>";
 
 
 foreach($result as $entry) {
@@ -75,6 +80,30 @@ $media = $entry->childNodes->item(11)->nodeValue;
     echo "<td>" . $media . "</td>";
 
     
+    
+/*
+
+$length = $entry->childNodes->item(7)->childNodes->length;
+
+$extraAnno1 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+$val = $entry->childNodes->item(13)->childNodes->item($x)->nodeValue;
+array_push($extraAnno1, $val);
+}
+
+echo "<td>";
+
+echo implode(' ',$extraAnno1);
+    
+echo "</td>";  
+    
+
+echo "<td>" . $extraAnno1 . "</td>";
+
+
+*/
+      
   echo "</tr>";
 
 }

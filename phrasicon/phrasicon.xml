@@ -14,5 +14,10 @@
         </gloss>
         <translation></translation>
         <media mimeType="" url="" />
+        <!-- 
+        <extraAnno1>
+        <extra id="0.1"></extra>
+        </extraAnno1>
+        -->
     </phrase>
 </phrasicon>

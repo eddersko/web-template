@@ -96,8 +96,12 @@ foreach($words as $w) {
 }
 
 if ($_POST['lemmatize'] == 'YES') {
-$word = exec('python lemmatize.py ' . $_POST['word']);
-$counting = FALSE;
+//$word = exec('python lemmatize.py ' . $_POST['word']);
+
+    include('porterstemmer.php');
+    $word = PorterStemmer::Stem($_POST['word']);
+    $counting = FALSE;
+
 } 
 
 
