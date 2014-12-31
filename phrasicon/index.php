@@ -157,7 +157,7 @@
 
             <p>
                 <!-- Picture here. -->
-                <img src="background.jpg" />
+                <img src="background_phrasicon.jpg" />
             </p>
 
         </div>

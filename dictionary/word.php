@@ -230,7 +230,7 @@ $count += $xpath->query('//morpheme[m="'.$pomo.'"]')->length;
 
             <p>
                 <!-- Background image. -->
-                <img src="background.jpg" />
+                <img src="background_dictionary.jpg" />
             </p>
             
             <!-- Search results here... -->

@@ -138,7 +138,7 @@
 
             <p>
                 <!-- Background image. -->
-                <img src="background.jpg" />
+                <img src="background_dictionary.jpg" />
             </p>
 
         </div>

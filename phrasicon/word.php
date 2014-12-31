@@ -297,7 +297,7 @@ $results .= "<h4 class=\"subsubheader\">No results found.</h4>";
             </div>
 
             <!-- Picture here. -->
-            <p><img src="background.jpg" />
+            <p><img src="background_phrasicon.jpg" />
             </p>
 
             <!-- Search results here. -->

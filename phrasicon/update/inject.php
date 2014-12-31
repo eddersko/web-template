@@ -79,10 +79,10 @@ $result[0]->$field->attributes()->url = $edit;
 for ($x=1; $x<13; $x++) {
     
     $m = $_POST['morphoss' . $x];
-    if ($g != '') {
+    if ($m != '') {
     $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
     $result[0]->morpheme->m[$x-1] = $m;
-    
+    $result[0]->morpheme->m[$x-1]->addAttribute('id', $id . "." . $x);
     }    
     
 }
@@ -96,7 +96,7 @@ for ($x=1; $x<13; $x++) {
     if ($g != '') {
     $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
     $result[0]->gloss->g[$x-1] = $g;
-    
+    $result[0]->gloss->g[$x-1]->addAttribute('id', $id . "." . $x);
     }    
     
 }
@@ -109,7 +109,7 @@ for ($x=1; $x<13; $x++) {
     if ($extra != '') {
     $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
     $result[0]->extraAnno1->extra[$x-1] = $extra;
-    
+    $result[0]->extraAnno1->extra[$x-1]->addAttribute('id', $id . "." . $x)
     }    
     
 }

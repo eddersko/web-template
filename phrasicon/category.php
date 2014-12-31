@@ -17,7 +17,7 @@ $xpath = new DOMXPath($xmlDoc);
 
 // find stem from dictionary starting with leter ordered
 
-$result = $xpath->query("//entry[starts-with(stem, '$letter')]");    
+$result = $xpath->query("//entry/sense/cit[starts-with(quote, '$letter')]");    
 
 
 $xmlDoc = new DOMDocument();
@@ -211,7 +211,7 @@ if ($count == 0) {
                 </div>
 
                 <!-- Picture here. -->
-                <p><img src="background.jpg" />
+                <p><img src="background_phrasicon.jpg" />
                 </p>
 
             </div>

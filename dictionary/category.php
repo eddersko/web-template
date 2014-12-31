@@ -300,7 +300,7 @@ if (($count == 0 && $counting)) {
         </div>
         
         <!-- Background image. -->
-        <p><img src="background.jpg"/></p>    
+        <p><img src="background_dictionary.jpg"/></p>    
     
     </div>
     </div>
