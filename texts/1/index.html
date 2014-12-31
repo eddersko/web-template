@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Stories and Texts</title>
+    <meta name="description" content="Multi-layered Language Learning Resources" />
+    <meta name="author" content="User" />
+    <meta name="copyright" content="User" />
+    <link rel="stylesheet" href="../css/foundation.css" />
+    <link rel="stylesheet" href="../../owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="../../owl-carousel/owl.theme.css">
+    <script src="../js/modernizr.js"></script>
+</head>
+
+<body>
+
+    <div class="fixed">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+                <li class="name">
+                    <h1>
+                    <a href="../">
+                    Back to Texts
+                    </a>
+                    </h1>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="row">
+        <br>
+        <div class="large-12 columns">
+
+            <hr>
+            <!-- Title of Page. -->
+            <h4>Template #1</h4>
+            <hr>
+
+            <center>
+                <!-- Video of text. -->
+                <img src="video_placeholder.png">
+            </center>
+            <br>
+            <br>
+
+            <!-- Paragraph #1 -->
+            <p>Lorem ipsum dolor sit amet, eu mollis vel. Non feugiat eu magna nulla sapien, per justo tellus vel dui. Amet phasellus suspendisse orci cras habitasse, in ut mauris diam, egestas cras interdum, egestas aliquet felis in varius justo lectus, erat amet adipiscing. Convallis sagittis mollis, rhoncus metus vitae proin erat libero maecenas, viverra dapibus vitae, amet sapien velit habitant, nostra suspendisse. Egestas sodales nascetur molestie interdum ipsum, lacus sed, leo neque vitae massa urna pellentesque turpis. Dui cras, a posuere at nec.</p>
+
+            <!-- Paragraph #2 -->
+            <p>Consectetuer consectetuer neque, sem ultrices. Tortor et interdum tristique, maecenas malesuada justo in velit fermentum, lorem sed amet. Eget bibendum posuere mollis id in malesuada, risus amet, tristique velit vitae. Rhoncus massa, lobortis eget nulla non a tincidunt facilisis, elit pellentesque urna vestibulum enim tincidunt fusce. Placerat magna quam tincidunt neque ullamcorper non. Leo neque, pede et ipsum sed elit, ut ut, feugiat amet eu. Luctus nulla ligula, eleifend posuere integer nunc, tortor ut dui sit odio curabitur cursus, metus suspendisse tempor. Malesuada sed vivamus elit, congue praesent augue vel, molestie ipsum pede diam at nunc aliquet, dictumst suspendisse dui, tincidunt justo suspendisse justo mauris at. Eget in accumsan, semper nulla elit ligula per ante, lobortis tempus risus ullamcorper, in lobortis. Aliquam magna, fermentum metus vehicula consectetuer mattis est, mauris placerat adipiscing sem ornare nunc. Risus nullam etiam sed, enim auctor commodo ante, duis nullam eget nam vitae. Torquent mi suspendisse libero sapien molestie risus, felis est nascetur aenean, elementum non ultrices wisi pellentesque ac leo, at dui facilisi.</p>
+            <br>
+
+
+            <!-- Slide show of texts.-->
+            <div id="owl-demo" class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <img src="../img/placeholder_pdf.png" alt="text1">
+                </div>
+                <div class="item">
+                    <img src="../img/placeholder_pdf.png" alt="text2">
+                </div>
+                <div class="item">
+                    <img src="../img/placeholder_pdf.png" alt="text3">
+                </div>
+                <div class="item">
+                    <img src="../img/placeholder_pdf.png" alt="text4">
+                </div>
+            </div>
+
+            <br>
+        </div>
+
+    </div>
+
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../owl-carousel/owl.carousel.js"></script>
+
+    <!-- Demo -->
+    <style>
+        #owl-demo .item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            $("#owl-demo").owlCarousel({
+
+                navigation: true,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                items: 2,
+                scrollPerPage: true,
+                paginationNumbers: true
+
+                // "singleItem:true" is a shortcut for:
+                // items : 1, 
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+            });
+        });
+    </script>
+
+</body>
+
+</html>
