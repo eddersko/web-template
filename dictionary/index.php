@@ -7,6 +7,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Dictionary Template</title>
     <meta name="description" content="Multi-layered Language Learning Resources" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="User" />
     <meta name="copyright" content="User" />
     <link rel="stylesheet" href="css/foundation.css" />

@@ -75,7 +75,7 @@ $english = $entry->childNodes->item(9)->nodeValue;
 echo "<td>" . $english . "</td>";
 
     
-$media = $entry->childNodes->item(11)->nodeValue;
+$media = $entry->childNodes->item(11)->getAttribute('url');;
 
     echo "<td>" . $media . "</td>";
 

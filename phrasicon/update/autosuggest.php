@@ -19,4 +19,4 @@ $a[$gloss] += 1;
     
 }
 echo array_search(max($a), $a);
-?> 
+?>
