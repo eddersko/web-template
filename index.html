@@ -350,7 +350,7 @@
                 
                 <p align="justify">First, go in the <code>index.php</code> file. To change the header of the dictionary, look for the comment <code>&lt;!-- Title of the page. --></code> and replace <code>Online Talking Dictionary Template</code>. Next, find the comment <code>&lt;!-- Search by letter (title). --></code> and alter the content for the language you are working on. <code>Source</code> (language) refers to the language that the resources were created for. The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well. Finally, find the comment <code>&lt;!-- The About section starts here... --></code> which is a section that talks about the dictionary. For example, you might want to include how many entries are currently in the dictionary, or how the user should view each entry. You can input the number of existing entries by typing in <code>&lt;?php echo $count ?></code> - look for the comment that provides and example. Before editing the paragraphs, refer to the About the Materials section if you have not already as it describes the process more in depth.</p>
                 <p align="justify">When you search for a word and no results are found, you will be given an option to try an extended search. Using the extended search will execute the <code>porterstemmer.php</code> file. For example, let's say that the dictionary contains the word 'flower' but not the word 'flowers'. Therefore, searching for 'flowers' will return no results. Using the extended search will <i>stem</i> 'flowers' by removing the -s and searches for 'flower'. More information can be found <a href="http://en.wikipedia.org/wiki/Stemming">here</a>.</p>
-                <p align="justify">Now, look into the <code>dictionary.xml</code> file. The XML file follows the E-MELD Best Practices in Digital Language Documentation. Locate the opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/documents.html#Standards">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database.</p>
+                <p align="justify">Now, look into the <code>dictionary.xml</code> file. The XML file follows the E-MELD Best Practices in Digital Language Documentation. Locate the opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/REC/bpr.html#Identifier">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database.</p>
             <p align="justify"><code>&lt;title>Title of Dictionary Database&lt;/title></code></p>
             <ul><li>This is the title of your dictionary database. Replace <code>Title of Dictionary Database</code>. (Ex. Dictionary Database of Northern Pomo) between the tags.</li></ul>
             <p align="justify"><code>&lt;contributor type="olac:role" code="primary investigator">Primary Investigator&lt;/contributor></code></p>
@@ -373,8 +373,17 @@
             <ul><li>This indicates the subject matter of the dictionary database. Since the dictionary is documents the language you are working on, the three pieces of information, <code>code"abc"</code>, <code>lang="abc"</code>, and <code>Source</code> should be the same as <code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code>.</li></ul>
             <p align="justify"><code>&lt;subject type="olac:language" code="eng" lang="eng">English&lt;/subject></code></p>
             <ul><li>This also indicates the subject matter of the dictionary database. The (target) language you are using as a reference for your source language is also the subject of this dictionary. Therefore, if the language is not English, follow the same instructions for <code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code></li></ul>
-            <p align="justify">Stuff.</p>
                 <div class="row">
+                    
+                    <div class="large-8 columns">
+                        <p align="justify">The default fields in the dictionary XML file are:</p>
+                    </div>
+                    <div class="large-4 columns">
+                            <center>
+                                <img src="images/dictionary_xml.png" alt="dictionary xml" width="65%">
+                            </center>
+                    </div>
+                </div>                <div class="row">
                     
                     <div class="large-8 columns">
                         <ul>
