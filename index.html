@@ -352,21 +352,21 @@
                 <p align="justify">When you search for a word and no results are found, you will be given an option to try an extended search. Using the extended search will execute the <code>porterstemmer.php</code> file. For example, let's say that the dictionary contains the word 'flower' but not the word 'flowers'. Therefore, searching for 'flowers' will return no results. Using the extended search will <i>stem</i> 'flowers' by removing the -s and searches for 'flower'. More information can be found <a href="http://en.wikipedia.org/wiki/Stemming">here</a>.</p>
                 <p align="justify">Now, look into the <code>dictionary.xml</code> file. The XML file follows the E-MELD Best Practices in Digital Language Documentation. Locate the opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/documents.html#Standards">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database.</p>
             <p align="justify"><code>&lt;title>Title of Dictionary Database&lt;/title></code></p>
-            <ul><li>This is the title of your dictionary database. Replace <code>Title of Dictionary Database</code>. (Ex. Dictionary Database of Northern Pomo)</li></ul>
+            <ul><li>This is the title of your dictionary database. Replace <code>Title of Dictionary Database</code>. (Ex. Dictionary Database of Northern Pomo) between the tags.</li></ul>
             <p align="justify"><code>&lt;contributor type="olac:role" code="primary investigator">Primary Investigator&lt;/contributor></code></p>
-            <ul><li>This indictes who the primary investigator is, or the person leading the creation of the resources. Replace <code>Primary Investigator</code>.</li></ul>
+            <ul><li>This indictes who the primary investigator is, or the person leading the creation of the resources. Replace <code>Primary Investigator</code> between the tags..</li></ul>
             <p align="justify"><code>&lt;contributor type="olac:role" code="annotator">Annotator #1&lt;/contributor></code></p>
-            <ul><li>This indicates who the annotators are for the dictionary database. There are five fields, but you don't have to fill them all. If you want to create more, simply copy and paste the following line of code: <code>&lt;contributor type="olac:role" code="annotator">Annotator #x&lt;/contributor></code>. Repace <code>Annotator #<i>x</i></code> where <code><i>x</i></code> is any number.</li></ul>
+            <ul><li>This indicates who the annotators are for the dictionary database. There are five fields, but you don't have to fill them all. If you want to create more, simply copy and paste the following line of code: <code>&lt;contributor type="olac:role" code="annotator">Annotator #x&lt;/contributor></code>. Repace <code>Annotator #<i>x</i></code> where <code><i>x</i></code> is any number between the tags.</li></ul>
             <p align="justify"><code>&lt;contributor type="olac:role" code="creater">Creator&lt;/contributor></code></p>
-            <ul><li>This indicates the creator of the dictionary database. This is usually the technician, or the person setting up the template. Replace <code>Creator</code>.</li></ul>
+            <ul><li>This indicates the creator of the dictionary database. This is usually the technician, or the person setting up the template. Replace <code>Creator</code> between the tags.</li></ul>
             <p align="justify"><code>&lt;contributor type="olac:role" code="sponsor">Sponsor&lt;/contributor></code></p>
-            <ul><li>This indicates the funding agencies. For example, if you project is supported by the National Science Foundation (NSF), you may include it here. Replace <code>Sponsor</code>.</li></ul>
+            <ul><li>This indicates the funding agencies. For example, if you project is supported by the National Science Foundation (NSF), you may include it here. Replace <code>Sponsor</code> between the tags.</li></ul>
             <p align="justify"><code>&lt;modified type="dcterms:W3CDTF">Last Modified&lt;/modified></code></p>
-            <ul><li>This indicates when the dictionary database was last modified. Replace <code>Last Modified</code>.</li></ul>
+            <ul><li>This indicates when the dictionary database was last modified. Replace <code>Last Modified</code> between the tags.</li></ul>
             <p align="justify"><code>&lt;format type="dcterms:IMT">text/xml&lt;/format></code></p>
             <ul><li>This is the format of the dictionary database. <b>Do not change.</b></li></ul>
             <p align="justify"><code>&lt;language type="olac:language" code="abc" lang="abc">Source&lt;/language></code></p>
-            <ul><li></li></ul>
+            <ul><li>This indicates the language you are working on to document and revitalize. There are three pieces to focus on. First, look at <code>code="abc"</code>. This represents the language code </li></ul>
             <p align="justify"><code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code></p>
             <ul><li></li></ul>
             <p align="justify"><code>&lt;subject type="olac:language" code="abc" lang="abc">Source&lt;/subject></code></p>
@@ -417,7 +417,7 @@
                 <div id="underline"></div>
 
                 <p align="justify">The contact page allows users to contact the creators of the resources. The user enters in their name, their email, and their message. When they submit, the email will be sent to whichever email is supplied.</p>
-                <p align="justify">To supply an email, go into the /contact folder and open <code>send_email.php</code>. Look for the comment that says <code>// Your email goes here.</code> and then change the content between quotation marks that reads <code>enter email here</code> to your own email address.</p>
+                <p align="justify">To supply an email, go into the /contact folder and open <code>send_email.php</code>. Look for the comment that says <code>// Your email goes here.</code> and then change the content between quotation marks that reads <code>enter email here</code> to your own email address. Next, you may want to change the subject header. Look for the comment <code>// Email Subject Header</code> you have the option of altering the default subject <code>Language Tools: New Message</code>. Then, you may want to change the contents, or body, of the message. Find the comment that says <code>// Email Body Message</code> and change the default content <code>A new message has been sent from the Language Tools website...\n\n</code>.</p>
                 <p align="justify">Apart from perhaps altering the head elements in the <code>index.html</code> or <code>default.html</code> files, the template was made so that no  other changes must be made. Feel free to edit the file to fit your needs.</p>
                 <h2 class="title">Frequently Asked Questions</h2>
                 <div id="underline"></div>
