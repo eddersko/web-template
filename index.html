@@ -309,28 +309,7 @@
                 <p align="justify">Perhaps you only want to use a single paragraph. In that case, you can delete the second paragraph which is enclosed in paragraph tags (or <code>&lt;p>&lt;/p></code>). Delete the content including the tags, <code>&lt;p>[...]&lt;/p></code>.</p>
                 <p align="justify">Others may want to use only a single section. Look for comments that indicate the start of the section you want to delete (eg. <code>&lt;!-- The How to Use section starts here...--></code>), and the end of the section, <code>&lt;!-- ...and ends here. --></code>. Then, delete the lines of code between the two comments.</p>
                 <p align="justify">If you want to change the name of the sections, look for the default section names in the code, and replace them with the desired name. There should be two places where each section name appears - within the menu bar, and within their respective sections .</p>
-            <p align="justify"><code>&lt;title>Title of Dictionary Database&lt;/title></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;contributor type="olac:role" code="primary investigator">Primary Investigator&lt;/contributor></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;contributor type="olac:role" code="annotator">Annotator #1&lt;/contributor></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;contributor type="olac:role" code="creater">Creator&lt;/contributor></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;contributor type="olac:role" code="sponsor">Sponsor&lt;/contributor></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;modified type="dcterms:W3CDTF">Last Modified&lt;/modified></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;format type="dcterms:IMT">text/xml&lt;/format></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;language type="olac:language" code="abc" lang="abc">Source&lt;/language></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;subject type="olac:language" code="abc" lang="abc">Source&lt;/subject></code></p>
-            <ul><li></li></ul>
-            <p align="justify"><code>&lt;subject type="olac:language" code="eng" lang="eng">English&lt;/subject></code></p>
-            <ul><li></li></ul>
+
                 <h2 class="title">Sounds and Letters</h2>
                 <div id="underline"></div>
 
@@ -372,6 +351,28 @@
                 <p align="justify">First, go in the <code>index.php</code> file. To change the header of the dictionary, look for the comment <code>&lt;!-- Title of the page. --></code> and replace <code>Online Talking Dictionary Template</code>. Next, find the comment <code>&lt;!-- Search by letter (title). --></code> and alter the content for the language you are working on. <code>Source</code> (language) refers to the language that the resources were created for. The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well. Finally, find the comment <code>&lt;!-- The About section starts here... --></code> which is a section that talks about the dictionary. For example, you might want to include how many entries are currently in the dictionary, or how the user should view each entry. You can input the number of existing entries by typing in <code>&lt;?php echo $count ?></code> - look for the comment that provides and example. Before editing the paragraphs, refer to the About the Materials section if you have not already as it describes the process more in depth.</p>
                 <p align="justify">When you search for a word and no results are found, you will be given an option to try an extended search. Using the extended search will execute the <code>porterstemmer.php</code> file. For example, let's say that the dictionary contains the word 'flower' but not the word 'flowers'. Therefore, searching for 'flowers' will return no results. Using the extended search will <i>stem</i> 'flowers' by removing the -s and searches for 'flower'. More information can be found <a href="http://en.wikipedia.org/wiki/Stemming">here</a>.</p>
                 <p align="justify">Now, look into the <code>dictionary.xml</code> file. Locate thee opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/documents.html#Standards">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database.</p>
+            <p align="justify"><code>&lt;title>Title of Dictionary Database&lt;/title></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;contributor type="olac:role" code="primary investigator">Primary Investigator&lt;/contributor></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;contributor type="olac:role" code="annotator">Annotator #1&lt;/contributor></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;contributor type="olac:role" code="creater">Creator&lt;/contributor></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;contributor type="olac:role" code="sponsor">Sponsor&lt;/contributor></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;modified type="dcterms:W3CDTF">Last Modified&lt;/modified></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;format type="dcterms:IMT">text/xml&lt;/format></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;language type="olac:language" code="abc" lang="abc">Source&lt;/language></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;subject type="olac:language" code="abc" lang="abc">Source&lt;/subject></code></p>
+            <ul><li></li></ul>
+            <p align="justify"><code>&lt;subject type="olac:language" code="eng" lang="eng">English&lt;/subject></code></p>
+            <ul><li></li></ul>
                 <div class="row">
                     
                     <div class="large-8 columns">
