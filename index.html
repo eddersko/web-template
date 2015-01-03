@@ -454,8 +454,7 @@
                         <ul>
                             <li><code>uploadFiles.php</code>: Contains code for uploading sound files to the /dictionary/sounds folder. <b>Do not change.</b>
                             </li>
-                            <li><code>showRecords.php</code>: Contains code for the show record functionality in the interface. <b>Do not change.</b>
-                            </li>
+                            <li><code>showRecords.php</code>: Contains code for the show record functionality in the interface.</li>
                             <li><code>interface.php</code>: Contains content for the data entry interface web page.</li>
                             <li><code>insert.php</code>: Contains code to insert data into <code>dictionary.xml</code>.</li>
                             <li><code>index.php</code>: Contains contents for the update main page.</li>
@@ -467,6 +466,9 @@
                         </center>
                     </div>
                 </div>
+
+                <p align="justify">The first thing you may want to do is change the username and password of the update webpage. In the <code>index.php</code> file, look for the comment <code>// Username and password</code>. The default username is <code>abc</code> and the default password is <code>123</code>. Replace the username and password under the comment with your own username and password.</p>
+                <p align="justify">Go into the <code>interface.php</code> file. Look for the comments <code>&lt;!-- Source --></code> - there are two places were they appear. Beneath these comments, you will find the term <code>Source</code> being used. Replace it with the language you are working on. If you are working with a language that is not English as a reference language, look for <code>&lt;!-- English --></code> and replace <code>English</code>. Next, look at the <code>showRecords.php</code> file, and find the comment <code>// Source</code>. Change <code>Source</code> in <code>echo "&lt;th>Source&lt;/th>";</code> to, again, the language you are working on. If the other language you are using is not English, look for the comment <code>// English</code> and in the same way as before, replace <code>English</code> in the line of code below.</p>    
                 <h2 class="title">Phrasicon</h2>
                 <div id="underline"></div>
 
