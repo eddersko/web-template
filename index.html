@@ -419,7 +419,7 @@
                     <li>This also indicates the subject matter of the dictionary database. The (target) language you are using as a reference for your source language is also the subject of this dictionary. Therefore, if the language is not English, follow the same instructions for <code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code>
                     </li>
                 </ul>
-                <p align="justify">The dictionary XML file are organized in the following configuration.</p>
+                <p align="justify">The dictionary XML file is organized in the following configuration.</p>
 
                 <div class="row">
                     <div class="large-5 columns">
@@ -566,6 +566,37 @@
                     <li>This also indicates the subject matter of the phrasicon database. The (target) language you are using as a reference for your source language is also the subject of this phrasicon. Therefore, if the language is not English, follow the same instructions for <code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code>
                     </li>
                 </ul>
+                
+<p align="justify">The phrasicon XML file is organized in the following configuration.</p>
+
+                <div class="row">
+                    <div class="large-5 columns">
+                        <center>
+                            <img src="images/phrasicon_xml.png" alt="phrasicon xml" width="100%">
+                        </center>
+                    </div>
+                    <div class="large-7 columns">
+                        <ul>
+                        <li><code>&lt;phrase id="0">[...]&lt;/phrase></code><ul><li>Stuff.</li></ul></li>
+                        <li><code>&lt;ref>[...]&lt;/ref></code><ul><li><i>This is where you enter in the reference for the sound file.</i> For example, this might be where the sound file was found such as a cassette or a CD, and the speaker. This is for documentation and archival purposes.</li></ul></li>                            <li><code>&lt;orth>[...]&lt;/orth></code><ul><li>Stuff.</li></ul></li>
+                        <li><code>&lt;source>[...]&lt;/source></code><ul><li>Stuff.</li></ul></li>   </ul>
+                                       </div>
+                </div>
+                <br>
+                <ul>
+                            <li><code>&lt;morpheme>[...]&lt;/morpheme></code><ul><li>Stuff.</li></ul></li>
+                        <li><code>&lt;m id="<i>x</i>.<i>y</i>">[...]&lt;/m></code><ul><li>Stuff.</li></ul></li>
+                        <li><code>&lt;gloss>[...]&lt;/gloss></code><ul><li>Stuff.</li></ul></li>
+                        <li><code>&lt;g id="<i>x</i>.<i>y</i>">[...]&lt;/m></code><ul><li>Stuff.</li></ul></li>
+                        <li><code>&lt;translation>[...]&lt;/translation></code><ul><li></li></ul></li>
+                        <li><code>&lt;media mimetype="" url=""/></code><ul><li>This indicates the the audio format and name of the sound file. For example, if your file is <code>dog.wav</code>, then the code will look like this: <code>&lt;media mimetype="audio/wav" url="dog.wav"/></code>.</li></ul></li>
+
+                        <li><code>&lt;extraAnno>[...]&lt;/extraAnno></code><ul><li>These are extra layers of annotation and are commented out by default. This is discussed in depth later on.</li></ul></li>
+                        </ul>
+                        
+        <p align="justify">While there are multiple formats for interlinear glosesd texts (IGT) for XML (i.e. BHB, IGT-XML, XIGT), this format was designed to be both human- and machine-readable, and editable while keeping in line with the standards. This format, like the BHB model, is used to represent IGT as closely as possible, and has multiple purposes that includes facilitating computational manipulation of the data, and allowing these resources to be used for archiving.</p>
+                <p align="justify">Wingardium Leviosa.</p>
+
                 <p align="justify">Wingardium Leviosa.</p>
 
                 <h2 class="title">Adding Annotation Layers</h2>
