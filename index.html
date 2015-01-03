@@ -251,21 +251,21 @@
                 <div class="row">
                     <div class="large-8 columns">
                         <ul>
-                            <li>texts: Stories and Texts component.</li>
-                            <li>structure: Basic Sentence Structure component.</li>
-                            <li>sounds: Sounds and Letters component.</li>
-                            <li>phrasicon: Phrasicon componeent.</li>
-                            <li>owl-carousel: Contains slideshow components for Stories and Texts page. <b>Do not change.</b>
+                            <li>texts: Stores Stories and Texts component.</li>
+                            <li>structure: Stores Basic Sentence Structure component.</li>
+                            <li>sounds: Stores Sounds and Letters component.</li>
+                            <li>phrasicon: Stores Phrasicon componeent.</li>
+                            <li>owl-carousel: Stores slideshow components for Stories and Texts page. <b>Do not change.</b>
                             </li>
-                            <li>js: Contains JavaScript files. <b>Do not change.</b>
+                            <li>js: Stores JavaScript files. <b>Do not change.</b>
                             </li>
-                            <li>expressions: Everyday Expressions component.</li>
-                            <li>dictionary: Talking Dictionary component.</li>
-                            <li>css: Contains CSS files.</li>
-                            <li>contact: Contact Page component.</li>
-                            <li>assets: Contains slideshow components for Stories and Texts page.</li>
-                            <li>apps: Links to Mobile Apps component.</li>
-                            <li>about: About the Materrials component.</li>
+                            <li>expressions: Stores Everyday Expressions component.</li>
+                            <li>dictionary: Stores Talking Dictionary component.</li>
+                            <li>css: Stores CSS files.</li>
+                            <li>contact: Stores Contact Page component.</li>
+                            <li>assets: Stores slideshow components for Stories and Texts page.</li>
+                            <li>apps: Stores Links to Mobile Apps component.</li>
+                            <li>about: Stores About the Materrials component.</li>
                             <li>placeholder.png: Main image for the website. This is discussed later.</li>
                             <li><code>index.html</code>: This holds the content for your web page.</li>
                             <li><code>default.html</code>: Same as <code>index.html</code>.</li>
@@ -331,11 +331,11 @@
                 <div class="row">
                     <div class="large-8 columns">
                         <ul>
-                            <li>update: Contains the data entry components.</li>
-                            <li>sounds: Contains sound files.</li>
-                            <li>js: Contains JavaScript files. <b>Do not change.</b>
+                            <li>update: Stores the data entry components.</li>
+                            <li>sounds: Stores sound files.</li>
+                            <li>js: Stores JavaScript files. <b>Do not change.</b>
                             </li>
-                            <li>css: Contains CSS files.</li>
+                            <li>css: Stores CSS files.</li>
                             <li><code>word.php</code>: Contains contents for the word entry.</li>
                             <li><code>porterstemmer.php</code>: Stemmer algorithm. <b>Do not change.</b>
                             </li>
@@ -478,10 +478,10 @@
                 <div class="row">
                     <div class="large-8 columns">
                         <ul>
-                            <li>update: Contains the data entry components.</li>
-                            <li>sounds: Contains sound files.</li>
-                            <li>js: Contains JavaScript files. <b>Do not change.</b></li>
-                            <li>css: Contains CSS files.</li>
+                            <li>update: Stores the data entry components.</li>
+                            <li>sounds: Stores sound files.</li>
+                            <li>js: Stores JavaScript files. <b>Do not change.</b></li>
+                            <li>css: Stores CSS files.</li>
                             <li><code>word.php</code>: Contains contents for the word entry.</li>
                             <li><code>phrasicon.xml</code>: Stores all the dictionary entries.</li>
                             <li><code>index.php</code>: Contains contents for the main dictionary web page.</li>
@@ -495,6 +495,16 @@
                         </center>
                     </div>
                 </div>
+                 <p align="justify">First, go in the <code>index.php</code> file. To change the header of the phrasicon, look for the comment <code>&lt;!-- Title of the page. --></code> and replace <code>Online Phrasicon Template</code>. Next, find the comment <code>&lt;!-- English Word Lookup --></code>. The language you are translating into is known in this document as the reference (or target) language. If the reference language is English, you may skip this part, if not then you may want to change replace <code>English</code>. The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well.</p>
+                
+                <p align="justify">In the event that English is not being used as the reference language, search for the comment <code>&lt;!-- Search by letter (A-Z).  --></code> and below, you will see lines of code that look like this: <code>&lt;li>&lt;a href="../phrasicon/category.php?letter=e">e&lt;/a>&lt;/li></code>. If you language has an alphabet that is similar to English, you can replace the letters in the following way. First, focus on the code that reads <code>[...]letter=e"</code> and <code>[...]>e&lt;/a></code> in the example given. Then replace the <code>e</code> in both occurences with the desired letter. For example, if the reference language is French, then you may want to add &eacute;. The line of code will then look like this: <code>&lt;li>&lt;a href="../phrasicon/category.php?letter=&eacute;">&eacute;&lt;/a>&lt;/li></code>. The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well.</p>
+                
+                <p align="justify">Search for the comment <code>&lt;!-- Language options. --></code>. In the code that says <code>&lt;option value="source">Source&lt;/option></code>, alter the word <code>Source</code> (the one with the capitalized 'S'). <b>Make sure not to change the <code>source</code> in <code>value="source"</code>.</b> If English is not the reference language, change <code>English</code> in <code>&lt;option value="english">English&lt;/option></code>. <b>Again, do not change <code>english</code> in <code>value="english"</code>.</b> The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well.</p>
+                
+                    <p align="justify">Finally, find the comment <code>&lt;!-- The About section starts here... --></code> which is a section that talks about the phrasicon. For example, you might want to include how many entries are currently in the phrasicon, or how the user should view each entry. You can input the number of existing entries by typing in <code>&lt;?php echo $count ?></code> - look for the comment that provides and example. Before editing the paragraphs, refer to the About the Materials section if you have not already as it describes the process more in depth.</p>
+
+                <p align="justify">Now, look into the <code>phrasicon.xml</code> file. The XML file follows the E-MELD Best Practices in Digital Language Documentation. Locate the opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/REC/bpr.html#Identifier">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database. The first twenty lines should look like this.</p>
+
                 <p align="justify">Wingardium Leviosa.</p>
 
                 <h2 class="title">Adding Annotation Layers</h2>
