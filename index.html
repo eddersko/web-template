@@ -358,7 +358,7 @@
                 <p align="justify">When you search for a word and no results are found, you will be given an option to try an extended search. Using the extended search will execute the <code>porterstemmer.php</code> file. For example, let's say that the dictionary contains the word 'flower' but not the word 'flowers'. Therefore, searching for 'flowers' will return no results. Using the extended search will <i>stem</i> 'flowers' by removing the -s and searches for 'flower'. More information can be found <a href="http://en.wikipedia.org/wiki/Stemming">here</a>.</p>
                 <p align="justify">Now, look into the <code>dictionary.xml</code> file. The XML file follows the E-MELD Best Practices in Digital Language Documentation. Locate the opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/REC/bpr.html#Identifier">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database. The first twenty lines should look like this.</p>
                 <center>
-                        <img src="images/dictionary_metadata.png" alt="dictionary folders" width="80%">
+                        <img src="images/dictionary_metadata.png" alt="dictionary metadata" width="80%">
                 </center>
                 <br>
                 <p align="justify"><code>&lt;title>Title of Dictionary Database&lt;/title></code>
@@ -504,7 +504,68 @@
                     <p align="justify">Finally, find the comment <code>&lt;!-- The About section starts here... --></code> which is a section that talks about the phrasicon. For example, you might want to include how many entries are currently in the phrasicon, or how the user should view each entry. You can input the number of existing entries by typing in <code>&lt;?php echo $count ?></code> - look for the comment that provides and example. Before editing the paragraphs, refer to the About the Materials section if you have not already as it describes the process more in depth.</p>
 
                 <p align="justify">Now, look into the <code>phrasicon.xml</code> file. The XML file follows the E-MELD Best Practices in Digital Language Documentation. Locate the opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/REC/bpr.html#Identifier">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database. The first twenty lines should look like this.</p>
-
+<center>
+                        <img src="images/phrasicon_metadata.png" alt="phrasicon metadata" width="80%">
+                </center>
+                <br>
+                <p align="justify"><code>&lt;title>Title of Dictionary Database&lt;/title></code>
+                </p>
+                                    
+                <ul>
+                    <li>This is the title of your dictionary database. Replace <code>Title of Dictionary Database</code>. (Ex. Dictionary Database of Northern Pomo) between the tags.</li>
+                </ul>
+                <p align="justify"><code>&lt;contributor type="olac:role" code="primary investigator">Primary Investigator&lt;/contributor></code>
+                </p>
+                <ul>
+                    <li>This indictes who the primary investigator is, or the person leading the creation of the resources. Replace <code>Primary Investigator</code> between the tags.</li>
+                </ul>
+                <p align="justify"><code>&lt;contributor type="olac:role" code="annotator">Annotator #1&lt;/contributor></code>
+                </p>
+                <ul>
+                    <li>This indicates who the annotators are for the dictionary database. There are five fields, but you don't have to fill them all. If you want to create more, simply copy and paste the following line of code: <code>&lt;contributor type="olac:role" code="annotator">Annotator #x&lt;/contributor></code>. Repace <code>Annotator #<i>x</i></code> where <code><i>x</i></code> is any number between the tags.</li>
+                </ul>
+                <p align="justify"><code>&lt;contributor type="olac:role" code="creater">Creator&lt;/contributor></code>
+                </p>
+                <ul>
+                    <li>This indicates the creator of the dictionary database. This is usually the technician, or the person setting up the template. Replace <code>Creator</code> between the tags.</li>
+                </ul>
+                <p align="justify"><code>&lt;contributor type="olac:role" code="sponsor">Sponsor&lt;/contributor></code>
+                </p>
+                <ul>
+                    <li>This indicates the funding agencies. For example, if you project is supported by the National Science Foundation (NSF), you may include it here. Replace <code>Sponsor</code> between the tags.</li>
+                </ul>
+                <p align="justify"><code>&lt;modified type="dcterms:W3CDTF">Last Modified&lt;/modified></code>
+                </p>
+                <ul>
+                    <li>This indicates when the dictionary database was last modified. Replace <code>Last Modified</code> between the tags.</li>
+                </ul>
+                <p align="justify"><code>&lt;format type="dcterms:IMT">text/xml&lt;/format></code>
+                </p>
+                <ul>
+                    <li>This is the format of the dictionary database. <b>Do not change.</b>
+                    </li>
+                </ul>
+                <p align="justify"><code>&lt;language type="olac:language" code="abc" lang="abc">Source&lt;/language></code>
+                </p>
+                <ul>
+                    <li>This indicates the language you are working on to document and revitalize. There are three pieces to focus on. First, look at <code>code="abc"</code>. This represents the language code. Most of the world's languages have a specific ISO 639-3 code that can be found <a href="https://www.ethnologue.com/browse">here</a>. Locate the code for your language and replace <code>abc</code> with the new code. Do this for <code>lang="abc"</code>, also replacing <code>abc</code>. Finally, replace <code>Source</code> between the tags with the name of the language you are working on.</li>
+                </ul>
+                <p align="justify"><code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code>
+                </p>
+                <ul>
+                    <li>This indicates the language that is familiar to the target audience, or the language in which these language materials are translated into. In the same way as before, edit the <code>code="eng"</code>, <code>lang="eng"</code>, and <code>English</code> between the tags if the language of instruction is not English.</li>
+                </ul>
+                <p align="justify"><code>&lt;subject type="olac:language" code="abc" lang="abc">Source&lt;/subject></code>
+                </p>
+                <ul>
+                    <li>This indicates the subject matter of the dictionary database. Since the dictionary is documents the language you are working on, the three pieces of information, <code>code"abc"</code>, <code>lang="abc"</code>, and <code>Source</code> should be the same as <code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code>.</li>
+                </ul>
+                <p align="justify"><code>&lt;subject type="olac:language" code="eng" lang="eng">English&lt;/subject></code>
+                </p>
+                <ul>
+                    <li>This also indicates the subject matter of the dictionary database. The (target) language you are using as a reference for your source language is also the subject of this dictionary. Therefore, if the language is not English, follow the same instructions for <code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code>
+                    </li>
+                </ul>
                 <p align="justify">Wingardium Leviosa.</p>
 
                 <h2 class="title">Adding Annotation Layers</h2>
