@@ -594,9 +594,27 @@
                         <li><code>&lt;extraAnno>[...]&lt;/extraAnno></code><ul><li>These are extra layers of annotation and are commented out by default. This is discussed in depth later on.</li></ul></li>
                         </ul>
                         
-        <p align="justify">While there are multiple formats for interlinear glosesd texts (IGT) for XML (i.e. BHB, IGT-XML, XIGT), this format was designed to be both human- and machine-readable, and editable while keeping in line with the standards. This format, like the BHB model, is used to represent IGT as closely as possible, and has multiple purposes that includes facilitating computational manipulation of the data, and allowing these resources to be used for archiving.</p>
-                <p align="justify">Now, enter into the /phrasicon/update folder which is organized in the following way..</p>
+        <p align="justify">While there are multiple existing XML formats for interlinear glosesd texts (IGT) (i.e. BHB, IGT-XML, XIGT), this format was designed to be both human- and machine-readable, and editable while keeping in line with the standards. This format, like the BHB model, is used to represent IGT as closely as possible, and has multiple purposes that includes facilitating computational manipulation of the data, and allowing these resources to be used for archiving.</p>
+                <p align="justify">Now, enter into the /phrasicon/update folder which is organized in the following way.</p>
+                <div class="row">
 
+                    <div class="large-8 columns">
+                        <ul>
+                            <li><code>uploadFiles.php</code>: Contains code for uploading sound files to the /dictionary/sounds folder. <b>Do not change.</b>
+                            </li>
+                            <li><code>showRecords.php</code>: Contains code for the show record functionality in the interface.</li>
+                            <li><code>interface.php</code>: Contains content for the data entry interface web page.</li>
+                            <li><code>insert.php</code>: Contains code to insert data into <code>dictionary.xml</code>.</li>
+                            <li><code>index.php</code>: Contains contents for the update main page.</li>
+                        </ul>
+                    </div>
+                    <div class="large-4 columns">
+                        <center>
+                            <img src="images/phrasicon_update_files.png" alt="phrasicon update files" width="65%">
+                        </center>
+                    </div>
+                </div>
+                
                 <p align="justify">Wingardium Leviosa.</p>
 
                 <h2 class="title">Adding Annotation Layers</h2>
