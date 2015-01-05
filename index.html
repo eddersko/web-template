@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 
 <html>
@@ -355,16 +354,16 @@
 
                 <p align="justify">First, go in the <code>index.php</code> file. To change the header of the dictionary, look for the comment <code>&lt;!-- Title of the page. --></code> and replace <code>Online Talking Dictionary Template</code>. Next, find the comment <code>&lt;!-- Search by letter (title). --></code> and alter the content for the languages you are working with. <code>Source</code> (language) refers to the language that the resources were created for. If you are also using a language different from English as the language you are translating into, known in this document as the reference (or target) language, then you may also want to change replace <code>English</code>. The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well.</p>
                 <p align="justify">In the event that English is not being used as the reference language, search for the comment <code>&lt;!-- Search by letter (A-Z).  --></code> and below, you will see lines of code that look like this: <code>&lt;li>&lt;a href="../dictionary/category.php?letter=e">e&lt;/a>&lt;/li></code>. If you language has an alphabet that is similar to English, you can replace the letters in the following way. First, focus on the code that reads <code>[...]letter=e"</code> and <code>[...]>e&lt;/a></code> in the example given. Then replace the <code>e</code> in both occurences with the desired letter. For example, if the reference language is French, then you may want to add &eacute;. The line of code will then look like this: <code>&lt;li>&lt;a href="../dictionary/category.php?letter=&eacute;">&eacute;&lt;/a>&lt;/li></code>.</p>
-                    <p align="justify">Finally, find the comment <code>&lt;!-- The About section starts here... --></code> which is a section that talks about the dictionary. For example, you might want to include how many entries are currently in the dictionary, or how the user should view each entry. You can input the number of existing entries by typing in <code>&lt;?php echo $count ?></code> - look for the comment that provides and example. Before editing the paragraphs, refer to the About the Materials section if you have not already as it describes the process more in depth.</p>
+                <p align="justify">Finally, find the comment <code>&lt;!-- The About section starts here... --></code> which is a section that talks about the dictionary. For example, you might want to include how many entries are currently in the dictionary, or how the user should view each entry. You can input the number of existing entries by typing in <code>&lt;?php echo $count ?></code> - look for the comment that provides and example. Before editing the paragraphs, refer to the About the Materials section if you have not already as it describes the process more in depth.</p>
                 <p align="justify">When you search for a word and no results are found, you will be given an option to try an extended search. Using the extended search will execute the <code>porterstemmer.php</code> file. For example, let's say that the dictionary contains the word 'flower' but not the word 'flowers'. Therefore, searching for 'flowers' will return no results. Using the extended search will <i>stem</i> 'flowers' by removing the -s and searches for 'flower'. More information can be found <a href="http://en.wikipedia.org/wiki/Stemming">here</a>.</p>
                 <p align="justify">Now, look into the <code>dictionary.xml</code> file. The XML file follows the E-MELD Best Practices in Digital Language Documentation. Locate the opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/REC/bpr.html#Identifier">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database. The first twenty lines should look like this.</p>
                 <center>
-                        <img src="images/dictionary_metadata.png" alt="dictionary metadata" width="80%">
+                    <img src="images/dictionary_metadata.png" alt="dictionary metadata" width="80%">
                 </center>
                 <br>
                 <p align="justify"><code>&lt;title>Title of Dictionary Database&lt;/title></code>
                 </p>
-                                    
+
                 <ul>
                     <li>This is the title of your dictionary database. Replace <code>Title of Dictionary Database</code>. (Ex. Dictionary Database of Northern Pomo) between the tags.</li>
                 </ul>
@@ -430,27 +429,85 @@
                     </div>
                     <div class="large-7 columns">
                         <ul>
-                        <li><code>&lt;entry id="0">[...]&lt;/entry></code><ul><li>All entries start and end with entry tags, and each opening tag has the attribute ID. Each entry has a unique ID generated by the computer.</li></ul></li>
-                        <li><code>&lt;form>[...]&lt;/form></code><ul><li>Form represents the transcription of the word. For example, some people may create a writing system (known as orthography), others may transcribe the words using the English alphabet, and some may use the International Phonetic Alphabet (IPA).</li></ul></li>
-                            <li><code>&lt;orth>[...]&lt;/orth></code><ul><li>Orth(ography) (or writing system) indicates how the words are represented on paper, or on the computer. <i>This is where the words are entered in from the language you are working on.</i></li></ul></li>
-                        <li><code>&lt;sense>[...]&lt;/sense></code><ul><li>Sense indicates the word senses, or the  meaning of the word in the reference language, or the primary language that is used to describe the language you are working on.</li></ul></li>   </ul>
-                                       </div>
+                            <li><code>&lt;entry id="0">[...]&lt;/entry></code>
+                                <ul>
+                                    <li>All entries start and end with entry tags, and each opening tag has the attribute ID. Each entry has a unique ID generated by the computer.</li>
+                                </ul>
+                            </li>
+                            <li><code>&lt;form>[...]&lt;/form></code>
+                                <ul>
+                                    <li>Form represents the transcription of the word. For example, some people may create a writing system (known as orthography), others may transcribe the words using the English alphabet, and some may use the International Phonetic Alphabet (IPA).</li>
+                                </ul>
+                            </li>
+                            <li><code>&lt;orth>[...]&lt;/orth></code>
+                                <ul>
+                                    <li>Orth(ography) (or writing system) indicates how the words are represented on paper, or on the computer. <i>This is where the words are entered in from the language you are working on.</i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><code>&lt;sense>[...]&lt;/sense></code>
+                                <ul>
+                                    <li>Sense indicates the word senses, or the meaning of the word in the reference language, or the primary language that is used to describe the language you are working on.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <br>
                 <ul>
-                            <li><code>&lt;cit type="translation" lang="en">[...]&lt;/cit></code><ul><li>This indicates the fields that will be translations for the given word in the target language, or the language used as a reference.</li></ul></li>
-                        <li><code>&lt;usg type="hyper">[...]&lt;/usg></code><ul><li><i>This is where the hypernym for the entry is entered in.</i></li></ul></li>
-                        <li><code>&lt;quote>[...]&lt;/quote></code><ul><li><i>This is where the translation for the word is entered in.</i></li></ul></li>
-                        <li><code>&lt;gramGrp>[...]&lt;/gramGrp></code><ul><li>This indicates the fields that are part of the grammatical (or linguistic) descriptions that appear in each entry. Grammatical descriptions include parts-speech, etc.</li></ul></li>
-                        <li><code>&lt;pos>[...]&lt;/pos></code><ul><li><i>This is where you enter in the parts of speech for the word.</i></li></ul></li>
-                        <li><code>&lt;note>[...]&lt;/note></code><ul><li><i>This is where you can add more description about the entry. For example, you may want to discuss when the word is used, or its etymology.</i></li></ul></li>
-                        <li><code>&lt;media mimetype="" url=""/></code><ul><li>This indicates the the audio format and name of the sound file. For example, if your file is <code>dog.wav</code>, then the code will look like this: <code>&lt;media mimetype="audio/wav" url="dog.wav"/></code>.</li></ul></li>
-                        <li><code>&lt;ref>[...]&lt;/ref></code><ul><li><i>This is where you enter in the reference for the sound file.</i> For example, this might be where the sound file was found such as a cassette or a CD, and the speaker. This is for documentation and archival purposes.</li></ul></li>
-                        <li><code>&lt;extraAnno>[...]&lt;/extraAnno></code><ul><li>These are extra layers of annotation and are commented out by default. This is discussed in depth later on.</li></ul></li>
+                    <li><code>&lt;cit type="translation" lang="en">[...]&lt;/cit></code>
+                        <ul>
+                            <li>This indicates the fields that will be translations for the given word in the target language, or the language used as a reference.</li>
                         </ul>
-                        
-        <p align="justify">The <code>dictionary.xml</code> file was designed to be both human- and machine-readable while keeping in line with the standards. If you plan on altering the format of the dictionary database, be sure to refer to the TEI encoding standards <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html">here</a>, as well as the other standards mentioned before.</p>
-        <p align="justify">Now, enter into the /dictionary/update folder which is organized in the following way.</p>
+                    </li>
+                    <li><code>&lt;usg type="hyper">[...]&lt;/usg></code>
+                        <ul>
+                            <li><i>This is where the hypernym for the entry is entered in.</i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;quote>[...]&lt;/quote></code>
+                        <ul>
+                            <li><i>This is where the translation for the word is entered in.</i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;gramGrp>[...]&lt;/gramGrp></code>
+                        <ul>
+                            <li>This indicates the fields that are part of the grammatical (or linguistic) descriptions that appear in each entry. Grammatical descriptions include parts-speech, etc.</li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;pos>[...]&lt;/pos></code>
+                        <ul>
+                            <li><i>This is where you enter in the parts of speech for the word.</i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;note>[...]&lt;/note></code>
+                        <ul>
+                            <li><i>This is where you can add more description about the entry. For example, you may want to discuss when the word is used, or its etymology.</i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;media mimetype="" url=""/></code>
+                        <ul>
+                            <li>This indicates the the audio format and name of the sound file. For example, if your file is <code>dog.wav</code>, then the code will look like this: <code>&lt;media mimetype="audio/wav" url="dog.wav"/></code>.</li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;ref>[...]&lt;/ref></code>
+                        <ul>
+                            <li><i>This is where you enter in the reference for the sound file.</i> For example, this might be where the sound file was found such as a cassette or a CD, and the speaker. This is for documentation and archival purposes.</li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;extraAnno>[...]&lt;/extraAnno></code>
+                        <ul>
+                            <li>These are extra layers of annotation and are commented out by default. This is discussed in depth later on.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p align="justify">The <code>dictionary.xml</code> file was designed to be both human- and machine-readable while keeping in line with the standards. If you plan on altering the format of the dictionary database, be sure to refer to the TEI encoding standards <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html">here</a>, as well as the other standards mentioned before.</p>
+                <p align="justify">Now, enter into the /dictionary/update folder which is organized in the following way.</p>
                 <div class="row">
 
                     <div class="large-8 columns">
@@ -469,9 +526,9 @@
                         </center>
                     </div>
                 </div>
-<br>    
+                <br>
                 <p align="justify">The first thing you may want to do is change the username and password of the update webpage. In the <code>index.php</code> file, look for the comment <code>// Username and password</code>. The default username is <code>abc</code> and the default password is <code>123</code>. Replace the username and password under the comment with your own username and password.</p>
-                <p align="justify">Go into the <code>interface.php</code> file. Look for the comments <code>&lt;!-- Source --></code> - there are two places were they appear. Beneath these comments, you will find the term <code>Source</code> being used. Replace it with the language you are working on. If you are working with a language that is not English as a reference language, look for <code>&lt;!-- English --></code> and replace <code>English</code>. Next, look at the <code>showRecords.php</code> file, and find the comment <code>// Source</code>. Change <code>Source</code> in <code>echo "&lt;th>Source&lt;/th>";</code> to, again, the language you are working on. If the other language you are using is not English, look for the comment <code>// English</code> and in the same way as before, replace <code>English</code> in the line of code below.</p>    
+                <p align="justify">Go into the <code>interface.php</code> file. Look for the comments <code>&lt;!-- Source --></code> - there are two places were they appear. Beneath these comments, you will find the term <code>Source</code> being used. Replace it with the language you are working on. If you are working with a language that is not English as a reference language, look for <code>&lt;!-- English --></code> and replace <code>English</code>. Next, look at the <code>showRecords.php</code> file, and find the comment <code>// Source</code>. Change <code>Source</code> in <code>echo "&lt;th>Source&lt;/th>";</code> to, again, the language you are working on. If the other language you are using is not English, look for the comment <code>// English</code> and in the same way as before, replace <code>English</code> in the line of code below.</p>
                 <h2 class="title">Phrasicon</h2>
                 <div id="underline"></div>
                 <p align="justify">Enter into the /phrasicon folder which contains the following files and folders.</p>
@@ -481,7 +538,8 @@
                         <ul>
                             <li>update: Stores the data entry components.</li>
                             <li>sounds: Stores sound files.</li>
-                            <li>js: Stores JavaScript files. <b>Do not change.</b></li>
+                            <li>js: Stores JavaScript files. <b>Do not change.</b>
+                            </li>
                             <li>css: Stores CSS files.</li>
                             <li><code>word.php</code>: Contains contents for the word entry.</li>
                             <li><code>phrasicon.xml</code>: Stores all the dictionary entries.</li>
@@ -496,22 +554,22 @@
                         </center>
                     </div>
                 </div>
-                 <p align="justify">First, go in the <code>index.php</code> file. To change the header of the phrasicon, look for the comment <code>&lt;!-- Title of the page. --></code> and replace <code>Online Phrasicon Template</code>. Next, find the comment <code>&lt;!-- English Word Lookup --></code>. The language you are translating into is known in this document as the reference (or target) language. If the reference language is English, you may skip this part, if not then you may want to change replace <code>English</code>. The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well.</p>
-                
+                <p align="justify">First, go in the <code>index.php</code> file. To change the header of the phrasicon, look for the comment <code>&lt;!-- Title of the page. --></code> and replace <code>Online Phrasicon Template</code>. Next, find the comment <code>&lt;!-- English Word Lookup --></code>. The language you are translating into is known in this document as the reference (or target) language. If the reference language is English, you may skip this part, if not then you may want to change replace <code>English</code>. The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well.</p>
+
                 <p align="justify">In the event that English is not being used as the reference language, search for the comment <code>&lt;!-- Search by letter (A-Z).  --></code> and below, you will see lines of code that look like this: <code>&lt;li>&lt;a href="../phrasicon/category.php?letter=e">e&lt;/a>&lt;/li></code>. If you language has an alphabet that is similar to English, you can replace the letters in the following way. First, focus on the code that reads <code>[...]letter=e"</code> and <code>[...]>e&lt;/a></code> in the example given. Then replace the <code>e</code> in both occurences with the desired letter. For example, if the reference language is French, then you may want to add &eacute;. The line of code will then look like this: <code>&lt;li>&lt;a href="../phrasicon/category.php?letter=&eacute;">&eacute;&lt;/a>&lt;/li></code>. The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well.</p>
-                
+
                 <p align="justify">Search for the comment <code>&lt;!-- Language options. --></code>. In the code that says <code>&lt;option value="source">Source&lt;/option></code>, alter the word <code>Source</code> (the one with the capitalized 'S'). <b>Make sure not to change the <code>source</code> in <code>value="source"</code>.</b> If English is not the reference language, change <code>English</code> in <code>&lt;option value="english">English&lt;/option></code>. <b>Again, do not change <code>english</code> in <code>value="english"</code>.</b> The steps so far apply to the files <code>category.php</code> and <code>word.php</code> as well.</p>
-                
-                    <p align="justify">Finally, find the comment <code>&lt;!-- The About section starts here... --></code> which is a section that talks about the phrasicon. For example, you might want to include how many entries are currently in the phrasicon, or how the user should view each entry. You can input the number of existing entries by typing in <code>&lt;?php echo $count ?></code> - look for the comment that provides and example. Before editing the paragraphs, refer to the About the Materials section if you have not already as it describes the process more in depth.</p>
+
+                <p align="justify">Finally, find the comment <code>&lt;!-- The About section starts here... --></code> which is a section that talks about the phrasicon. For example, you might want to include how many entries are currently in the phrasicon, or how the user should view each entry. You can input the number of existing entries by typing in <code>&lt;?php echo $count ?></code> - look for the comment that provides and example. Before editing the paragraphs, refer to the About the Materials section if you have not already as it describes the process more in depth.</p>
 
                 <p align="justify">Now, look into the <code>phrasicon.xml</code> file. The XML file follows the E-MELD Best Practices in Digital Language Documentation. Locate the opening and closing tags for <code>&lt;metadata>[...]&lt;/metadata></code>. The metadata is a description about the resources which follows the OLAC (Open Language Archives Community) standards and recommendations found <a href="http://www.language-archives.org/REC/bpr.html#Identifier">here</a> - they are used for archiving purposes. For example, it indicates who created the sources, what languages are involved, and the title of the database. The first twenty lines should look like this.</p>
-<center>
-                        <img src="images/phrasicon_metadata.png" alt="phrasicon metadata" width="80%">
+                <center>
+                    <img src="images/phrasicon_metadata.png" alt="phrasicon metadata" width="80%">
                 </center>
                 <br>
                 <p align="justify"><code>&lt;title>Title of Phrasicon Database&lt;/title></code>
                 </p>
-                                    
+
                 <ul>
                     <li>This is the title of your phrasicon database. Replace <code>Title of Phrasicon Database</code>. (Ex. Phrasicon Database of Medumba) between the tags.</li>
                 </ul>
@@ -567,8 +625,8 @@
                     <li>This also indicates the subject matter of the phrasicon database. The (target) language you are using as a reference for your source language is also the subject of this phrasicon. Therefore, if the language is not English, follow the same instructions for <code>&lt;language type="olac:language" code="eng" lang="eng">English&lt;/language></code>
                     </li>
                 </ul>
-                
-<p align="justify">The phrasicon XML file is organized in the following configuration.</p>
+
+                <p align="justify">The phrasicon XML file is organized in the following configuration.</p>
 
                 <div class="row">
                     <div class="large-5 columns">
@@ -578,24 +636,70 @@
                     </div>
                     <div class="large-7 columns">
                         <ul>
-                        <li><code>&lt;phrase id="0">[...]&lt;/phrase></code><ul><li>All entries start and end with entry tags, and each opening tag has the attribute ID. Each entry has a unique ID generated by the computer.</li></ul></li>
-                        <li><code>&lt;ref>[...]&lt;/ref></code><ul><li><i>This is where you enter in the reference for the sound file.</i> For example, this might be where the sound file was found such as a cassette or a CD, and the speaker. This is for documentation and archival purposes.</li></ul></li>
-                        <li><code>&lt;source>[...]&lt;/source></code><ul><li>Source refers to the source language. This is the language you are working with. <i>This is where you enter the phrase or sentence of the source language.</i></li></ul></li>   </ul>
-                                       </div>
+                            <li><code>&lt;phrase id="0">[...]&lt;/phrase></code>
+                                <ul>
+                                    <li>All entries start and end with entry tags, and each opening tag has the attribute ID. Each entry has a unique ID generated by the computer.</li>
+                                </ul>
+                            </li>
+                            <li><code>&lt;ref>[...]&lt;/ref></code>
+                                <ul>
+                                    <li><i>This is where you enter in the reference for the sound file.</i> For example, this might be where the sound file was found such as a cassette or a CD, and the speaker. This is for documentation and archival purposes.</li>
+                                </ul>
+                            </li>
+                            <li><code>&lt;source>[...]&lt;/source></code>
+                                <ul>
+                                    <li>Source refers to the source language. This is the language you are working with. <i>This is where you enter the phrase or sentence of the source language.</i>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><code>&lt;morpheme>[...]&lt;/morpheme></code>
+                                <ul>
+                                    <li>This field indicates the morphemes you have decided to display for the phrase. The number of morphemes should be the same as the number of glosses.</li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
                 </div>
                 <br>
                 <ul>
-                            <li><code>&lt;morpheme>[...]&lt;/morpheme></code><ul><li>This field indicates the morphemes you have decided to display for the phrase. The number of morphemes should be the same as the number of glosses.</li></ul></li>
-                        <li><code>&lt;m id="<i>x</i>.<i>y</i>">[...]&lt;/m></code><ul><li>For each morpheme, they will be enclosed wwithin the <code>&lt;m>&lt;/m></code> tags. Each starting tag has an ID attribute which is generated by the computer. The ID before the decimal point refers to the ID of the entry. The ID after the decimal point refers to the number (or position) of that morpheme.</li></ul></li>
-                        <li><code>&lt;gloss>[...]&lt;/gloss></code><ul><li>This field indicates the glosses of the morphemes. Again, the number of glosses should be the same as the number of morphemes.</li></ul></li>
-                        <li><code>&lt;g id="<i>x</i>.<i>y</i>">[...]&lt;/m></code><ul><li>For each gloss, they will be enclosed within the <code>&lt;g>&lt;/g></code> tags. Each starting tag also has an ID attribute which is generated by the computer. The ID is identical to morpheme that is glossed so that that may be co-indexed. In other words, this allows the computer to know which gloss corresponds to the correct morpheme, and vice versa.</li></ul></li>
-                        <li><code>&lt;translation>[...]&lt;/translation></code><ul><li><i>This is where the translation for the phrase is entered.</i></li></ul></li>
-                        <li><code>&lt;media mimetype="" url=""/></code><ul><li>This indicates the the audio format and name of the sound file. For example, if your file is <code>dog.wav</code>, then the code will look like this: <code>&lt;media mimetype="audio/wav" url="dog.wav"/></code>.</li></ul></li>
 
-                        <li><code>&lt;extraAnno>[...]&lt;/extraAnno></code><ul><li>These are extra layers of annotation and are commented out by default. This is discussed in depth in the next section.</li></ul></li>
+                    <li><code>&lt;m id="<i>x</i>.<i>y</i>">[...]&lt;/m></code>
+                        <ul>
+                            <li>For each morpheme, they will be enclosed wwithin the <code>&lt;m>&lt;/m></code> tags. Each starting tag has an ID attribute which is generated by the computer. The ID before the decimal point refers to the ID of the entry. The ID after the decimal point refers to the number (or position) of that morpheme.</li>
                         </ul>
-                        
-        <p align="justify">While there are multiple existing XML formats for interlinear glosesd texts (IGT) (i.e. BHB, IGT-XML, XIGT), this format was designed to be both human- and machine-readable, and editable while keeping in line with the standards. This format, like the BHB model, is used to represent IGT as closely as possible, and has multiple purposes that includes facilitating computational manipulation of the data, and allowing these resources to be used for archiving.</p>
+                    </li>
+                    <li><code>&lt;gloss>[...]&lt;/gloss></code>
+                        <ul>
+                            <li>This field indicates the glosses of the morphemes. Again, the number of glosses should be the same as the number of morphemes.</li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;g id="<i>x</i>.<i>y</i>">[...]&lt;/m></code>
+                        <ul>
+                            <li>For each gloss, they will be enclosed within the <code>&lt;g>&lt;/g></code> tags. Each starting tag also has an ID attribute which is generated by the computer. The ID is identical to morpheme that is glossed so that that may be co-indexed. In other words, this allows the computer to know which gloss corresponds to the correct morpheme, and vice versa.</li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;translation>[...]&lt;/translation></code>
+                        <ul>
+                            <li><i>This is where the translation for the phrase is entered.</i>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;media mimetype="" url=""/></code>
+                        <ul>
+                            <li>This indicates the the audio format and name of the sound file. For example, if your file is <code>dog.wav</code>, then the code will look like this: <code>&lt;media mimetype="audio/wav" url="dog.wav"/></code>.</li>
+                        </ul>
+                    </li>
+
+                    <li><code>&lt;extraAnno>[...]&lt;/extraAnno></code>
+                        <ul>
+                            <li>These are extra layers of annotation and are commented out by default. This is discussed in depth in the next section.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p align="justify">While there are multiple existing XML formats for interlinear glosesd texts (IGT) (i.e. BHB, IGT-XML, XIGT), this format was designed to be both human- and machine-readable, and editable while keeping in line with the standards. This format, like the BHB model, is used to represent IGT as closely as possible, and has multiple purposes that includes facilitating computational manipulation of the data, and allowing these resources to be used for archiving.</p>
                 <p align="justify">Now, enter into the /phrasicon/update folder which is organized in the following way.</p>
                 <div class="row">
 
@@ -607,7 +711,8 @@
                             <li><code>interface.php</code>: Contains content for the data entry interface web page.</li>
                             <li><code>insert.php</code>: Contains code to insert data into <code>phrasicon.xml</code>.</li>
                             <li><code>index.php</code>: Contains contents for the update main page.</li>
-                            <li><code>autosuggest.php</code>: Contains contents for the automatic gloss suggestion program. <b>Do not change.</b></li>
+                            <li><code>autosuggest.php</code>: Contains contents for the automatic gloss suggestion program. <b>Do not change.</b>
+                            </li>
                         </ul>
                     </div>
                     <div class="large-4 columns">
@@ -616,14 +721,14 @@
                         </center>
                     </div>
                 </div>
-                <br>    
+                <br>
                 <p align="justify">The first thing you may want to do is change the username and password of the update webpage. In the <code>index.php</code> file, look for the comment <code>// Username and password</code>. The default username is <code>abc</code> and the default password is <code>123</code>. Replace the username and password under the comment with your own username and password.</p>
-                <p align="justify">Go into the <code>interface.php</code> file. Look for the comments <code>&lt;!-- Source --></code> - there are two places were they appear. Beneath these comments, you will find the term <code>Source</code> being used. Replace it with the language you are working on. Next, look at the <code>showRecords.php</code> file, and find the comment <code>// Source</code>. Change <code>Source</code> in <code>echo "&lt;th>Source&lt;/th>";</code> to, again, the language you are working on.</p> 
+                <p align="justify">Go into the <code>interface.php</code> file. Look for the comments <code>&lt;!-- Source --></code> - there are two places were they appear. Beneath these comments, you will find the term <code>Source</code> being used. Replace it with the language you are working on. Next, look at the <code>showRecords.php</code> file, and find the comment <code>// Source</code>. Change <code>Source</code> in <code>echo "&lt;th>Source&lt;/th>";</code> to, again, the language you are working on.</p>
 
                 <h2 class="title">Adding Annotation Layers</h2>
                 <div id="underline"></div>
-                
-                <p align="justify">For some languages, you  may want to add extra annotation layers. For example, if you language has tone, you may want to add a layer to represent them. </p>
+
+                <p align="justify">For some languages, you may want to add extra annotation layers. For example, if you language has tone, you may want to add a layer to represent them.</p>
                 <h2 class="title">Basic Sentence Structures</h2>
                 <div id="underline"></div>
 
