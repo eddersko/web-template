@@ -41,21 +41,4 @@
     <!-- <extraAnno4/> -->
     <!-- <extraAnno5/> -->
   </entry>
-  <entry id="1">
-    <form>
-      <orth>dog</orth>
-    </form>
-    <sense>
-      <cit type="translation" lang="en">
-        <usg type="hyper">dog</usg>
-        <quote>dog</quote>
-      </cit>
-    </sense>
-    <gramGrp>
-      <pos>dog</pos>
-    </gramGrp>
-    <note>dog</note>
-    <media mimeType="audio/" url=""/>
-    <ref/>
-  </entry>
 </dictionary>
