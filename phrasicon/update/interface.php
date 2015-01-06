@@ -167,57 +167,241 @@
                 <input id="gloss12" type="text" name="gloss12">
             </div>
 
+<!-- This is where you add annotation layers. -->
+                      
+                    <!-- ExtraAnno1 -->
             
-    <!-- 
+<!--
+
         <h4 class="subsubheader">ExtraAnno1</h4>
 
             <div class="large-2 columns">
-                <input id="extra1" type="text" name="extra1">
+                <input id="extra1_1" type="text" name="extra1_1">
             </div>
             <div class="large-2 columns">
-                <input id="extra2" type="text" name="extra2">
+                <input id="extra1_2" type="text" name="extra1_2">
             </div>
             <div class="large-2 columns">
-                <input id="extra3" type="text" name="extra3">
+                <input id="extra1_3" type="text" name="extra1_3">
             </div>
             <div class="large-2 columns">
-                <input id="extra4" type="text" name="extra4">
+                <input id="extra1_4" type="text" name="extra1_4">
             </div>
             <div class="large-2 columns">
-                <input id="extra5" type="text" name="extra5">
+                <input id="extra1_5" type="text" name="extra1_5">
             </div>
             <div class="large-2 columns">
-                <input id="extra6" type="text" name="extra6">
+                <input id="extra1_6" type="text" name="extra1_6">
             </div>
             <div class="large-2 columns">
-                <input id="extra7" type="text" name="extra7">
+                <input id="extra1_7" type="text" name="extra1_7">
             </div>
             <div class="large-2 columns">
-                <input id="extra8" type="text" name="extra8">
+                <input id="extra1_8" type="text" name="extra1_8">
             </div>
             <div class="large-2 columns">
-                <input id="extra9" type="text" name="extra9">
+                <input id="extra1_9" type="text" name="extra1_9">
             </div>
             <div class="large-2 columns">
-                <input id="extra10" type="text" name="extra10">
+                <input id="extra1_10" type="text" name="extra1_10">
             </div>
             <div class="large-2 columns">
-                <input id="extra11" type="text" name="extra11">
+                <input id="extra1_11" type="text" name="extra1_11">
             </div>
             <div class="large-2 columns">
-                <input id="extra12" type="text" name="extra12">
+                <input id="extra1_12" type="text" name="extra1_12">
             </div>
-    -->
+
+-->
+
+                    <!-- ExtraAnno2 -->
             
             
-            </row>
-            <row>
+<!--
+        <h4 class="subsubheader">ExtraAnno2</h4>
+
+            <div class="large-2 columns">
+                <input id="extra2_1" type="text" name="extra2_1">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_2" type="text" name="extra2_2">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_3" type="text" name="extra2_3">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_4" type="text" name="extra2_4">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_5" type="text" name="extra2_5">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_6" type="text" name="extra2_6">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_7" type="text" name="extra2_7">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_8" type="text" name="extra2_8">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_9" type="text" name="extra2_9">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_10" type="text" name="extra2_10">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_11" type="text" name="extra2_11">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra2_12" type="text" name="extra2_12">
+            </div>
+
+-->
+            
+                        <!-- ExtraAnno3 -->
+        
+<!--
+
+
+        <h4 class="subsubheader">ExtraAnno3</h4>
+
+            <div class="large-2 columns">
+                <input id="extra3_1" type="text" name="extra3_1">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_2" type="text" name="extra3_2">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_3" type="text" name="extra3_3">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_4" type="text" name="extra3_4">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_5" type="text" name="extra3_5">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_6" type="text" name="extra3_6">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_7" type="text" name="extra3_7">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_8" type="text" name="extra3_8">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_9" type="text" name="extra3_9">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_10" type="text" name="extra3_10">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_11" type="text" name="extra3_11">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra3_12" type="text" name="extra3_12">
+            </div>
+
+--> 
+            
+                    <!-- ExtraAnno4 -->
+            
+<!--
+
+        <h4 class="subsubheader">ExtraAnno4</h4>
+
+            <div class="large-2 columns">
+                <input id="extra4_1" type="text" name="extra4_1">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_2" type="text" name="extra4_2">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_3" type="text" name="extra4_3">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_4" type="text" name="extra4_4">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_5" type="text" name="extra4_5">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_6" type="text" name="extra4_6">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_7" type="text" name="extra4_7">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_8" type="text" name="extra4_8">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_9" type="text" name="extra4_9">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_10" type="text" name="extra4_10">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_11" type="text" name="extra4_11">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra4_12" type="text" name="extra4_12">
+            </div>
+
+-->
+            
+            
+                    <!-- ExtraAnno5 -->
+            
+<!--
+
+        <h4 class="subsubheader">ExtraAnno5</h4>
+
+            <div class="large-2 columns">
+                <input id="extra5_1" type="text" name="extra5_1">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_2" type="text" name="extra5_2">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_3" type="text" name="extra5_3">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_4" type="text" name="extra5_4">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_5" type="text" name="extra5_5">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_6" type="text" name="extra5_6">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_7" type="text" name="extra5_7">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_8" type="text" name="extra5_8">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_9" type="text" name="extra5_9">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_10" type="text" name="extra5_10">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_11" type="text" name="extra5_11">
+            </div>
+            <div class="large-2 columns">
+                <input id="extra5_12" type="text" name="extra5_12">
+            </div>
+
+-->
+                 
+            
                 <div class="large-12 columns">
                     <h4 class="subsubheader">Translation</h4>
                     <input type="text" name="translation">
                 </div>
-            </row>
-            <row>
+
                 <div class="large-4 columns">
                     <h4 class="subsubheader">Reference</h4>
                     <input type="text" name="ref">
@@ -231,7 +415,6 @@
                     <br>
                     <input class="postfix button" type="submit" value="Create">
                 </div>
-            </row>
         </form>
         <!-- ...ends here. -->
 
@@ -277,10 +460,23 @@
                     <option value="gloss">Gloss</option>
                     <option value="translation">Translation</option>
                     <option value="media">Media</option>
-                    <option value="ref">Reference</option>
-                    <!--
-                    <option value="extraAnno1">ExtraAnno1</option>
-                    -->
+                    <option value="ref">Reference</option>   
+                    <!-- This is where you add annotation layers. -->
+                    
+                    <!-- ExtraAnno1 -->
+                    <!--- <option value="extraAnno1">ExtraAnno1</option> -->
+                    
+                    <!-- ExtraAnno2 -->
+                    <!--- <option value="extraAnno2">ExtraAnno2</option> -->
+                    
+                    <!-- ExtraAnno3 -->                    
+                    <!--- <option value="extraAnno3">ExtraAnno3</option> -->
+                    
+                    <!-- ExtraAnno4 -->
+                    <!--- <option value="extraAnno4">ExtraAnno4</option> -->
+                    
+                    <!-- ExtraAnno5 -->
+                    <!--- <option value="extraAnno5">ExtraAnno5</option> -->
                 </select>
             </div>
             <div class="large-3 columns">
@@ -295,48 +491,47 @@
                 <input class="postfix button" type="submit" value="Modify">
             </div>
 
-            <h4 class="subsubheader">Morpheme/Gloss<!--ExtraAnno1--></h4>
+            <!-- This is where you add annotation layers. -->
+            <!-- Add the names of the annotation layer after Morpheme/Gloss. Ex. Morpheme/Gloss/Tone -->
+            
+            <h4 class="subsubheader">Morpheme/Gloss</h4>
 
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss1" type="text" name="morphoss1" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss2" type="text" name="morphoss2" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss3" type="text" name="morphoss3" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss4" type="text" name="morphoss4" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss5" type="text" name="morphoss5" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss6" type="text" name="morphoss6" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss7" type="text" name="morphoss7" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss8" type="text" name="morphoss8" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss9" type="text" name="morphoss9" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss10" type="text" name="morphoss10" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss11" type="text" name="morphoss11" onkeydown="main(event, this)">
             </div>
-            <div class="large-1 columns">
+            <div class="large-2 columns">
                 <input id="morphoss12" type="text" name="morphoss12" onkeydown="main(event, this)">
             </div>
-            
-            
-            
-            <!-- Add extra annotation layer here.-->
         </form>
         <!-- ...ends here. -->
     

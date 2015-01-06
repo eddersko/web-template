@@ -40,6 +40,13 @@ $xmlDoc = new DOMDocument();
 $xmlDoc->load("phrasicon.xml");
 $xpath = new DOMXPath($xmlDoc); 
 
+
+if ($word == "" ) {
+    
+    $result = $xpath->query('//phrase');
+
+} else {
+
 if ($hyper == 'hyper' & ($lang == 'eng' | $lang == 'english')) {
     
 $xmlDocD = new DOMDocument();
@@ -84,19 +91,13 @@ $result = $xpath->query($query);
     
 } else {
 
-if ($lang == 'eng') {
+if ($lang == 'eng' | $lang == 'english') {    
 
-if ($word == "") {
-
-$result = $xpath->query('//phrase');
-    
-} else {
-    
 $cWord = ucfirst($word);
     
 $result = $xpath->query('(//phrase[starts-with(translation, "'.$word.' ")]) | (//phrase[starts-with(translation, "'.$cWord.' ")]) | 
 (//phrase[contains(translation, " '.$word.' ")]) | (//phrase[(substring(translation, string-length(translation) - '.$len1.') = " '.$word.'")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'?")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'.")]) | (//phrase/gloss[g="'.$word.'"]/..)');
-}
+
     
 } elseif ($lang == "poly") {
     
@@ -151,7 +152,7 @@ $result = $xpath->query('(//phrase[starts-with(source, "'.$word.' ")]) | (//phra
 }
 
 }
-
+}
 $table = "";
 
 foreach($result as $entry) {
@@ -162,11 +163,10 @@ $media = $entry->childNodes->item(11)->getAttribute('url');
 $count++;
 
 // This is where you add annotation layers. 
-// DO NOT CHANGE NAME OF $extra_cell 
-
-/*
 
 // ExtraAnno1
+
+/*
 
 $length = $entry->childNodes->item(13)->childNodes->length;
 
@@ -177,8 +177,8 @@ for ($x=1; $x<$length-1; $x+=2) {
 
 array_push($extraAnno1, $val);
 }
-
-$extra = "<tr>";
+    
+$extra_cells1 = "<tr>";
 
 $num = count($extraAnno1);
 foreach($extraAnno1 as $ex) {
@@ -186,13 +186,12 @@ foreach($extraAnno1 as $ex) {
     $extra_cells1 .= $ex;  
     $extra_cells1 .= "</td>";
 }
-  
-
+    
 */
     
-/*
-
 // ExtraAnno2
+        
+/*
 
 $length = $entry->childNodes->item(15)->childNodes->length;
 
@@ -213,12 +212,11 @@ foreach($extraAnno2 as $ex) {
     $extra_cells2 .= "</td>";
 }
   
-
 */
 
-/*
-
 // ExtraAnno3
+    
+/*
 
 $length = $entry->childNodes->item(17)->childNodes->length;
 
@@ -239,12 +237,11 @@ foreach($extraAnno3 as $ex) {
     $extra_cells3 .= "</td>";
 }
   
-
 */
 
-/*
-
 // ExtraAnno4
+    
+/*
 
 $length = $entry->childNodes->item(19)->childNodes->length;
 
@@ -263,14 +260,13 @@ foreach($extraAnno4 as $ex) {
     $extra_cells4 .= "<td class=\"pomo_gloss\">";
     $extra_cells4 .= $ex;  
     $extra_cells4 .= "</td>";
-}
-  
+} 
 
 */
-    
-/*
-
+  
 // ExtraAnno5
+
+/*
 
 $length = $entry->childNodes->item(21)->childNodes->length;
 
@@ -291,7 +287,6 @@ foreach($extraAnno5 as $ex) {
     $extra_cells5 .= "</td>";
 }
   
-
 */
     
             
@@ -341,12 +336,21 @@ if ($eng_num > $num) {
 $table = $table . "<table align=\"center\"><tr><td class=\"pomo\" colspan=\"". $num ."\"><center>" . $source . "</center></td></tr>";
 
 // This is where you add annotation layers.
-// DO NOT CHANGE NAME OF $extra_cells
 
-// $table = $table .  $extra_cells1 . "</tr>";    
+    
+// ExtraAnno1    
+//$table = $table .  $extra_cells1 . "</tr>"; 
+    
+// ExtraAnno2    
 // $table = $table .  $extra_cells2 . "</tr>";    
-// $table = $table .  $extra_cells3 . "</tr>";    
+    
+// ExtraAnno3    
+// $table = $table .  $extra_cells3 . "</tr>";   
+
+// ExtraAnno4    
 // $table = $table .  $extra_cells4 . "</tr>";    
+
+// ExtraAnno5
 // $table = $table .  $extra_cells5 . "</tr>";    
 
 $table = $table . $source_cells . "</tr>" . $eng_cells . "</tr>" . "<tr><td class=\"english\" colspan=\"" . ($num) . "\"><em><center>" . $english . "</em></center></td></tr><tr><td colspan=\"" . ($num) . "\"><center><audio src=\"../phrasicon/sounds/" . $media . "\" controls preload=\"auto\" autobuffer></audio></center></td></tr></table>";

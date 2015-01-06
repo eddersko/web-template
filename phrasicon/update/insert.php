@@ -41,18 +41,97 @@ $entry->addChild('translation', $_POST['translation']);
 $media = $entry->addChild('media');
 $media->addAttribute("mimeType", substr($_POST['media'], -3));
 $media->addAttribute("url", $_POST['media']);
+
+// This is where you add annotation layers. 
+// ExtraAnno1
+    
 /*
+
 $extraAnno1 = $entry->addChild('extraAnno1');
 for ($x=1; $x<13; $x++) {
-    $extra = $_POST['extra' . $x];
+    $extra = $_POST['extra1_' . $x];
     if ($extra == '') {
      break;   
     } else {
-        $extraAnno = $gloss->addChild('extra', $extra);
-        $extraAnno->addAttribute('id', $id . "." . $x);
+        $layer = $extraAnno1->addChild('extra1', $extra);
+        $layer->addAttribute('id', $id . "." . $x);
     }
 }
+
+*/    
+    
+// This is where you add annotation layers. 
+// ExtraAnno2
+    
+/*
+
+$extraAnno2 = $entry->addChild('extraAnno2');
+for ($x=1; $x<13; $x++) {
+    $extra = $_POST['extra2_' . $x];
+    if ($extra == '') {
+     break;   
+    } else {
+        $layer = $extraAnno2->addChild('extra2', $extra);
+        $layer->addAttribute('id', $id . "." . $x);
+    }
+}
+
 */
+
+// This is where you add annotation layers. 
+// ExtraAnno3
+    
+/*
+
+$extraAnno3 = $entry->addChild('extraAnno3');
+for ($x=1; $x<13; $x++) {
+    $extra = $_POST['extra1_' . $x];
+    if ($extra == '') {
+     break;   
+    } else {
+        $layer = $extraAnno3->addChild('extra3', $extra);
+        $layer->addAttribute('id', $id . "." . $x);
+    }
+}
+
+*/
+ 
+// This is where you add annotation layers. 
+// ExtraAnno4
+    
+/*
+
+$extraAnno4 = $entry->addChild('extraAnno4');
+for ($x=1; $x<13; $x++) {
+    $extra = $_POST['extra4_' . $x];
+    if ($extra == '') {
+     break;   
+    } else {
+        $layer = $extraAnno4->addChild('extra4', $extra);
+        $layer->addAttribute('id', $id . "." . $x);
+    }
+}
+
+*/
+    
+// This is where you add annotation layers. 
+// ExtraAnno5    
+    
+/*
+
+$extraAnno5 = $entry->addChild('extraAnno5');
+for ($x=1; $x<13; $x++) {
+    $extra = $_POST['extra5_' . $x];
+    if ($extra == '') {
+     break;   
+    } else {
+        $layer = $extraAnno1->addChild('extra5', $extra);
+        $layer->addAttribute('id', $id . "." . $x);
+    }
+}
+
+*/
+        
 $dom = new DOMDocument('1.0');
 $dom->preserveWhiteSpace = false;
 $dom->formatOutput = true;
@@ -101,15 +180,92 @@ for ($x=1; $x<13; $x++) {
     
 }
 
-} /* elseif ($field=="extrAnno1") {
+}  
+    
+// This is where you add annotation layers. 
+// ExtraAnno1
+
+/* elseif ($field=="extraAnno1") {
 
 for ($x=1; $x<13; $x++) {
     
     $extra = $_POST['morphoss' . $x];
     if ($extra != '') {
     $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
-    $result[0]->extraAnno1->extra[$x-1] = $extra;
-    $result[0]->extraAnno1->extra[$x-1]->addAttribute('id', $id . "." . $x)
+    $result[0]->extraAnno1->extra1[$x-1] = $extra;
+    $result[0]->extraAnno1->extra1[$x-1]->addAttribute('id', $id . "." . $x);
+    }    
+    
+}
+    
+}  */
+
+// This is where you add annotation layers. 
+// ExtraAnno2
+    
+/* elseif ($field=="extraAnno2") {
+
+for ($x=1; $x<13; $x++) {
+    
+    $extra = $_POST['morphoss' . $x];
+    if ($extra != '') {
+    $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
+    $result[0]->extraAnno2->extra2[$x-1] = $extra;
+    $result[0]->extraAnno2->extra2[$x-1]->addAttribute('id', $id . "." . $x);
+    }    
+    
+}
+    
+}  */  
+    
+// This is where you add annotation layers. 
+// ExtraAnno3    
+
+/* elseif ($field=="extraAnno3") {
+
+for ($x=1; $x<13; $x++) {
+    
+    $extra = $_POST['morphoss' . $x];
+    if ($extra != '') {
+    $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
+    $result[0]->extraAnno3->extra3[$x-1] = $extra;
+    $result[0]->extraAnno3->extra3[$x-1]->addAttribute('id', $id . "." . $x);
+    }    
+    
+}
+    
+}  */ 
+
+// This is where you add annotation layers. 
+// ExtraAnno4
+    
+/* elseif ($field=="extraAnno4") {
+
+for ($x=1; $x<13; $x++) {
+    
+    $extra = $_POST['morphoss' . $x];
+    if ($extra != '') {
+    $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
+    $result[0]->extraAnno4->extra4[$x-1] = $extra;
+    $result[0]->extraAnno4->extra4[$x-1]->addAttribute('id', $id . "." . $x);
+    }    
+    
+}
+    
+}  */ 
+
+// This is where you add annotation layers. 
+// ExtraAnno5  
+
+/* elseif ($field=="extraAnno5") {
+
+for ($x=1; $x<13; $x++) {
+    
+    $extra = $_POST['morphoss' . $x];
+    if ($extra != '') {
+    $result = $phrasicon->xpath("/phrasicon/phrase[@id='$id']");
+    $result[0]->extraAnno5->extra5[$x-1] = $extra;
+    $result[0]->extraAnno5->extra5[$x-1]->addAttribute('id', $id . "." . $x);
     }    
     
 }
@@ -144,7 +300,7 @@ $result->item(0)->parentNode->removeChild($result->item(0));
 echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center><b>Query submitted.</b></center></h4><hr></div>";
 
 mysqli_close($con);
-  include("../update/index.php");
+  include("../update/interface.php");
 
 ?> 
 

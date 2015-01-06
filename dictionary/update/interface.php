@@ -60,7 +60,6 @@
         <form name="create" action="../update/insert.php" method="post">
             <h4 class="subheader">Create Record</h4>
             <input type="hidden" name="type" value="create">
-            <row>
             <div class="large-3 columns">
             <!-- Source -->
                 <h4 class="subsubheader">Source Language</h4> 
@@ -79,8 +78,6 @@
                 <h4 class="subsubheader">Hypernym</h4> 
                 <input type="text" name="usg">
             </div>
-                </row>
-            <row>
             <div class="large-6 columns">
                 <h4 class="subsubheader">Description</h4> 
                 <input id="note" type="text" name="note" onkeydown="main(event, this)">
@@ -95,37 +92,47 @@
             </div>
 
             <!-- This is where you add annotation layers. -->
+            
+            <!-- ExtraAnno1 -->
             <!--    
             <div class="large-12 columns">
                 <h4 class="subsubheader">ExtraAnno1</h4> 
                 <input type="text" name="extraAnno1">
             </div>
             -->
+            
+            <!-- ExtraAnno2 -->
             <!--    
             <div class="large-12 columns">
                 <h4 class="subsubheader">ExtraAnno2</h4> 
                 <input type="text" name="extraAnno2">
             </div>
             -->
+
+            <!-- ExtraAnno3 -->
             <!--    
             <div class="large-12 columns">
                 <h4 class="subsubheader">ExtraAnno3</h4> 
                 <input type="text" name="extraAnno3">
             </div>
             -->
+                
+            <!-- ExtraAnno4 -->
             <!--    
             <div class="large-12 columns">
                 <h4 class="subsubheader">ExtraAnno4</h4> 
                 <input type="text" name="extraAnno4">
             </div>
             -->
+    
+            <!-- ExtraAnno5 -->
             <!--    
             <div class="large-12 columns">
                 <h4 class="subsubheader">ExtraAnno5</h4> 
                 <input type="text" name="extraAnno5">
             </div>
             -->
-            </row>
+                
             
             <div class="large-12 columns">
 

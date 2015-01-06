@@ -168,7 +168,7 @@ $num_results = "";
 
     if ($count == 1) {
  $redirect .= "<meta http-equiv=\"refresh\" content=\"0; url=../dictionary/word.php?word=". $new_word . "#" . $id . "\"/>";   
- $num_results = $num_results . "<p><b>" . $count . "</b> search result found.</p>"; 
+ $num_results = $num_results . "<h4 class=\"subsubheader\"><b>" . $count . "</b> search result found.</h4>"; 
 } 
     
  $body = "<body>";

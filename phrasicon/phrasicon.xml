@@ -19,7 +19,7 @@
     <subject type="olac:language" code="eng" lang="eng">English</subject>
   </metadata>
   <phrase id="0">
-    <ref> </ref>
+    <ref/>
     <source/>
     <morpheme>
       <m id="0.1"/>
@@ -29,10 +29,41 @@
     </gloss>
     <translation/>
     <media mimeType="" url=""/>
+    <!-- This is where you add annotation layers. --> 
+      
+    <!-- ExtraAnno1 -->
+    <!--
+    <extraAnno1>
+      <extra1 id="0.1"/>
+    </extraAnno1> 
+    -->
+      
+    <!-- ExtraAnno2 -->
     <!-- 
-        <extraAnno1>
-        <extra id="0.1"></extra>
-        </extraAnno1>
+        <extraAnno2>
+        <extra2 id="0.1"></extra2>
+        </extraAnno2>
+        -->
+      
+    <!-- ExtraAnno3 -->
+    <!-- 
+        <extraAnn3>
+        <extra3 id="0.1"></extra3>
+        </extraAnno3>
+        -->
+      
+    <!-- ExtraAnno4 -->
+    <!-- 
+        <extraAnno4>
+        <extra4 id="0.1"></extra4>
+        </extraAnno4>
+        -->
+      
+    <!-- ExtraAnno5 -->
+    <!-- 
+        <extraAnno5>
+        <extra5 id="0.1"></extra5>
+        </extraAnno5>
         -->
   </phrase>
 </phrasicon>

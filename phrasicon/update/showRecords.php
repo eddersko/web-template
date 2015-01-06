@@ -24,10 +24,19 @@ echo "<th>Morpheme</th>
 
 // This is where you add annotation layers. 
  
-// echo "<th>ExtraAnno1</th>";
+// ExtraAnno1
+//echo "<th>ExtraAnno1</th>";
+
+// ExtraAnno2
 // echo "<th>ExtraAnno2</th>";
+
+// ExtraAnno3
 // echo "<th>ExtraAnno3</th>";
+
+// ExtraAnno4
 // echo "<th>ExtraAnno4</th>";
+
+// ExtraAnno5
 // echo "<th>ExtraAnno5</th>";
 
 
@@ -90,11 +99,11 @@ $media = $entry->childNodes->item(11)->getAttribute('url');;
 
 // This is where you add annotation layers. 
     
-    
-/*
 
 // ExtraAnno1
 
+/*
+    
 $length = $entry->childNodes->item(13)->childNodes->length;
 
 $extraAnno1 = array();
@@ -109,17 +118,12 @@ echo "<td>";
 echo implode(' ',$extraAnno1);
     
 echo "</td>";  
-    
-
-echo "<td>" . $extraAnno1 . "</td>";
-
 
 */
-  
-
- /*
 
 // ExtraAnno2
+
+/*
 
 $length = $entry->childNodes->item(15)->childNodes->length;
 
@@ -136,15 +140,11 @@ echo implode(' ',$extraAnno2);
     
 echo "</td>";  
     
-
-echo "<td>" . $extraAnno2 . "</td>";
-
-
 */
+    
+// ExtraAnno3
 
 /*
-
-// ExtraAnno3
 
 $length = $entry->childNodes->item(17)->childNodes->length;
 
@@ -161,15 +161,11 @@ echo implode(' ',$extraAnno3);
     
 echo "</td>";  
     
-
-echo "<td>" . $extraAnn3 . "</td>";
-
-
 */
 
-/*
-
 // ExtraAnno4
+    
+/*
 
 $length = $entry->childNodes->item(19)->childNodes->length;
 
@@ -187,14 +183,11 @@ echo implode(' ',$extraAnno4);
 echo "</td>";  
     
 
-echo "<td>" . $extraAnno4 . "</td>";
-
-
 */
 
-/*
-
 // ExtraAnno5
+
+/*
 
 $length = $entry->childNodes->item(21)->childNodes->length;
 
@@ -212,10 +205,9 @@ echo implode(' ',$extraAnno5);
 echo "</td>";  
     
 
-echo "<td>" . $extraAnn5 . "</td>";
-
-
-*/    
+*/
+    
+    
   echo "</tr>";
 
 }

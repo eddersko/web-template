@@ -115,7 +115,7 @@ $dom->save($file);
 
 echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center><b>Query submitted.</b></center></h4><hr></div>";
 
-  include("../update/index.php");
+  include("../update/interface.php");
 ?> 
 
 
