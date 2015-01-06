@@ -11,16 +11,25 @@ $result = $xpath->query("(//gloss[starts-with(g, '$english')]/..) | (//phrase[co
 echo "<table>
 <tr>
 <th>ID</th>
-<th>Reference</th>
-<th>Source</th>
-<th>Morpheme</th>
+<th>Reference</th>";
+
+// Source
+echo "<th>Source</th>";
+
+echo "<th>Morpheme</th>
 <th>Gloss</th>
 <th>Translation</th>
 <th>Media</th>";
 
-/* 
-echo "<th>ExtraAnno1</th>";
-*/
+
+// This is where you add annotation layers. 
+ 
+// echo "<th>ExtraAnno1</th>";
+// echo "<th>ExtraAnno2</th>";
+// echo "<th>ExtraAnno3</th>";
+// echo "<th>ExtraAnno4</th>";
+// echo "<th>ExtraAnno5</th>";
+
 
 echo "</tr>";
 
@@ -79,11 +88,14 @@ $media = $entry->childNodes->item(11)->getAttribute('url');;
 
     echo "<td>" . $media . "</td>";
 
+// This is where you add annotation layers. 
     
     
 /*
 
-$length = $entry->childNodes->item(7)->childNodes->length;
+// ExtraAnno1
+
+$length = $entry->childNodes->item(13)->childNodes->length;
 
 $extraAnno1 = array();
 
@@ -103,7 +115,107 @@ echo "<td>" . $extraAnno1 . "</td>";
 
 
 */
-      
+  
+
+ /*
+
+// ExtraAnno2
+
+$length = $entry->childNodes->item(15)->childNodes->length;
+
+$extraAnno2 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+$val = $entry->childNodes->item(15)->childNodes->item($x)->nodeValue;
+array_push($extraAnno2, $val);
+}
+
+echo "<td>";
+
+echo implode(' ',$extraAnno2);
+    
+echo "</td>";  
+    
+
+echo "<td>" . $extraAnno2 . "</td>";
+
+
+*/
+
+/*
+
+// ExtraAnno3
+
+$length = $entry->childNodes->item(17)->childNodes->length;
+
+$extraAnno3 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+$val = $entry->childNodes->item(17)->childNodes->item($x)->nodeValue;
+array_push($extraAnno3, $val);
+}
+
+echo "<td>";
+
+echo implode(' ',$extraAnno3);
+    
+echo "</td>";  
+    
+
+echo "<td>" . $extraAnn3 . "</td>";
+
+
+*/
+
+/*
+
+// ExtraAnno4
+
+$length = $entry->childNodes->item(19)->childNodes->length;
+
+$extraAnno4 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+$val = $entry->childNodes->item(19)->childNodes->item($x)->nodeValue;
+array_push($extraAnno4, $val);
+}
+
+echo "<td>";
+
+echo implode(' ',$extraAnno4);
+    
+echo "</td>";  
+    
+
+echo "<td>" . $extraAnno4 . "</td>";
+
+
+*/
+
+/*
+
+// ExtraAnno5
+
+$length = $entry->childNodes->item(21)->childNodes->length;
+
+$extraAnno5 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+$val = $entry->childNodes->item(21)->childNodes->item($x)->nodeValue;
+array_push($extraAnno5, $val);
+}
+
+echo "<td>";
+
+echo implode(' ',$extraAnno5);
+    
+echo "</td>";  
+    
+
+echo "<td>" . $extraAnn5 . "</td>";
+
+
+*/    
   echo "</tr>";
 
 }

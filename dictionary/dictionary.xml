@@ -1,8 +1,22 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <dictionary>
   <metadata>
     <!-- Open Language Archives Community Metadata -->
+    <title>Title of Dictionary Database</title>
+    <contributor type="olac:role" code="primary investigator">Primary Investigator</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #1</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #2</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #3</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #4</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #5</contributor>
+    <contributor type="olac:role" code="creater">Creator</contributor>
+    <contributor type="olac:role" code="sponsor">Sponsor</contributor>
+    <modified type="dcterms:W3CDTF">Last Modified</modified>
+    <format type="dcterms:IMT">text/xml</format>
+    <language type="olac:language" code="abc" lang="abc">Source</language>
+    <language type="olac:language" code="eng" lang="eng">English</language>
+    <subject type="olac:language" code="abc" lang="abc">Source</subject>
+    <subject type="olac:language" code="eng" lang="eng">English</subject>
   </metadata>
   <entry id="0">
     <form>
@@ -20,6 +34,28 @@
     <note/>
     <media mimeType="" url=""/>
     <ref/>
-<!-- <extraAnno1/> -->
-</entry>
+    <!-- This is where you add annotation layers. -->
+    <!-- <extraAnno1/> -->
+    <!-- <extraAnno2/> -->
+    <!-- <extraAnno3/> -->
+    <!-- <extraAnno4/> -->
+    <!-- <extraAnno5/> -->
+  </entry>
+  <entry id="1">
+    <form>
+      <orth>dog</orth>
+    </form>
+    <sense>
+      <cit type="translation" lang="en">
+        <usg type="hyper">dog</usg>
+        <quote>dog</quote>
+      </cit>
+    </sense>
+    <gramGrp>
+      <pos>dog</pos>
+    </gramGrp>
+    <note>dog</note>
+    <media mimeType="audio/" url=""/>
+    <ref/>
+  </entry>
 </dictionary>

@@ -1,4 +1,10 @@
-<?php $xmlDoc=new DOMDocument(); $xmlDoc->load("dictionary.xml"); $xpath = new DOMXPath($xmlDoc); $entries = $xpath->query("//entry"); $count = $entries->length; ?>
+<?php 
+$xmlDoc=new DOMDocument(); 
+$xmlDoc->load("dictionary.xml"); 
+$xpath = new DOMXPath($xmlDoc); 
+$entries = $xpath->query("//entry"); 
+$count = $entries->length; 
+?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -152,7 +158,10 @@
 
             <!-- Title of About section. -->
             <h4 class="subheader">About the Template</h4>
-
+            
+            
+            <!-- There are <?php echo $count ?> entries in the dictionary. -->
+            
             <!-- Paragraph #1 -->
             <p>Lorem ipsum dolor sit amet, eu mollis vel. Non feugiat eu magna nulla sapien, per justo tellus vel dui. Amet phasellus suspendisse orci cras habitasse, in ut mauris diam, egestas cras interdum, egestas aliquet felis in varius justo lectus, erat amet adipiscing. Convallis sagittis mollis, rhoncus metus vitae proin erat libero maecenas, viverra dapibus vitae, amet sapien velit habitant, nostra suspendisse. Egestas sodales nascetur molestie interdum ipsum, lacus sed, leo neque vitae massa urna pellentesque turpis. Dui cras, a posuere at nec.</p>
 

@@ -1,4 +1,10 @@
-<?php $xmlDoc=new DOMDocument(); $xmlDoc->load("phrasicon.xml"); $xpath = new DOMXPath($xmlDoc); $entries = $xpath->query("//phrase"); $count = $entries->length; ?>
+<?php 
+$xmlDoc=new DOMDocument(); 
+$xmlDoc->load("phrasicon.xml"); 
+$xpath = new DOMXPath($xmlDoc); 
+$entries = $xpath->query("//phrase"); 
+$count = $entries->length; 
+?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -127,7 +133,7 @@
                         <!-- Language options. -->
                         <select name="lang">
                             <option value="english">English</option>
-                            <option value="pomo">Source</option>
+                            <option value="source">Source</option>
                         </select>
 
                 </div>
@@ -140,7 +146,6 @@
                 <div class="large-3 small-3 columns">
                     <!-- Submit button. -->
                     <input class="button postfix" type="submit" value="Submit">
-                    </form>
                 </div>
                 <div class="large-1 small-2 columns">
 
@@ -154,7 +159,10 @@
                 </div>
 
             </div>
-
+<div class="row collapse">
+    			&nbsp;<input id="checkbox1" type="checkbox" name="hyper" value="hyper"><label for="checkbox1">Hyper Search</label>
+    </div>
+                    </form>
 
             <p>
                 <!-- Picture here. -->
@@ -171,6 +179,8 @@
             <!-- Title of About Section -->
             <h4 class="subheader">About the Template</h4>
 
+            <!-- There are <?php echo $count ?> entries in the phrasicon. -->
+            
             <!-- Paragraph #1 -->
             <p>Lorem ipsum dolor sit amet, eu mollis vel. Non feugiat eu magna nulla sapien, per justo tellus vel dui. Amet phasellus suspendisse orci cras habitasse, in ut mauris diam, egestas cras interdum, egestas aliquet felis in varius justo lectus, erat amet adipiscing. Convallis sagittis mollis, rhoncus metus vitae proin erat libero maecenas, viverra dapibus vitae, amet sapien velit habitant, nostra suspendisse. Egestas sodales nascetur molestie interdum ipsum, lacus sed, leo neque vitae massa urna pellentesque turpis. Dui cras, a posuere at nec.</p>
 

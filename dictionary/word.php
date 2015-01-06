@@ -1,27 +1,40 @@
 <?php 
 
-$_SESSION[ 'word']=$ _GET[ 'word']; 
-$word=$ _SESSION[ 'word']; 
+$_SESSION[ 'word']= $_GET[ 'word']; 
+$word= $_SESSION[ 'word']; 
 $xmlDoc= new DOMDocument(); 
 $xmlDoc->load("dictionary.xml"); 
 $xpath = new DOMXPath($xmlDoc); 
 $result = $xpath->query("/dictionary/entry/sense/cit[usg='$word']/../.."); 
 
-$table = ""; foreach($result as $entry) {     
+$table = ""; 
+foreach($result as $entry) {     
 
 $id = $entry->getAttribute('id'); 
 $hyper = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue; 
 $pomo = $entry->childNodes->item(1)->childNodes->item(1)->nodeValue; 
 $eng = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue; 
-$pos = $entry->childNodes->item(5)->childNodes->item(1)->nodeValue; $note = $entry->childNodes->item(7)->nodeValue; 
+$pos = $entry->childNodes->item(5)->childNodes->item(1)->nodeValue; 
+$note = $entry->childNodes->item(7)->nodeValue; 
 $media = $entry->childNodes->item(9)->getAttribute('url'); 
     
-/* 
-$extraAnno1 = $entry->childNodes->item(11)->nodeValue; 
-*/    
+ // This is where you add annotation layers. 
+
+//$extraAnno1 = $entry->childNodes->item(13)->nodeValue; 
+//$extraAnno2 = $entry->childNodes->item(15)->nodeValue; 
+//$extraAnno3 = $entry->childNodes->item(17)->nodeValue; 
+//$extraAnno4 = $entry->childNodes->item(19)->nodeValue; 
+//$extraAnno5 = $entry->childNodes->item(21)->nodeValue; 
+
 
 $count = 0; 
-$examples = ""; $polysemy = $xpath->query("/dictionary/entry/form[orth='$pomo']/..")->length; $len = strlen($pomo) -1; $len1 = strlen($hyper) -1; 
+$examples = ""; 
+$polysemy = $xpath->query("/dictionary/entry/form[orth='$pomo']/..")->length; 
+$lenA = strlen($pomo) -1;
+$lenB = strlen($pomo) - 2;
+$lenC = strlen($pomo) - 3;
+$len = strlen($pomo) -1; 
+$len1 = strlen($hyper) -1; 
 $len2 = strlen($hyper); 
 $xmlDoc = new DOMDocument(); 
 $xmlDoc->load("../phrasicon/phrasicon.xml");
@@ -39,62 +52,50 @@ if ($count > 0) {
 $count = 0; 
 $count += $xpath->query("//phrase[starts-with(translation, '$hyper')]")->length; 
 $count += $xpath->query("//phrase[contains(translation, ' $hyper ')]")->length; 
-$count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len1.") = '".$hyper."')]")->length; $count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = '".$hyper."?')]")->length; $count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = '".$hyper.".')]")->length; $count += $xpath->query("(//gloss[g='$hyper'])")->length; 
+$count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len1.") = '".$hyper."')]")->length; 
+$count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = '".$hyper."?')]")->length;
+$count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = '".$hyper.".')]")->length; 
+$count += $xpath->query("(//gloss[g='$hyper'])")->length; 
+
 if ($count > 0) { 
     $e = true; 
 } 
+
 if ($p and $e) { 
-$count = 1; 
+    $count = 1; 
 } 
+
 } else { 
+
 $count += $xpath->query('//phrase[starts-with(source, "'.$pomo.' ")]')->length; 
-$count += $xpath->query('//phrase[contains(source, " '.$pomo.' ")]')->length; 
-$count += $xpath->query('//phrase[(substring(source, string-length(translation) - $len) = "'.$pomo.'")]')->length; 
-$count += $xpath->query('//morpheme[m="'.$pomo.'"]')->length; 
-} if ($count > 0) {
+$count += $xpath->query('//phrase[contains(source,  " '.$pomo.' ")]')->length;   
+$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenA.') = "'.$pomo.'")]')->length; 
+$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenB.') = "'.$pomo.'")]')->length; 
+$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenC.') = "'.$pomo.'")]')->length; 
+
+$count += $xpath->query('//morpheme[m="'.$pomo.'"]')->length;
+
+} 
+    
+if ($count > 0) {
     if ($polysemy > 1) {
-        $examples .= "
-<tr>
-    <td colspan=\ "2\">
-        <center><a href=\ "../phrasicon/word.php?word=" . $pomo . "&eng=" . $eng . "&lang=poly\">Example phrases (phrasicon)</a>
-        </center>
-    </td>
-</tr>"; } else { $examples .= "
-<tr>
-    <td colspan=\ "2\">
-        <center><a href=\ "../phrasicon/word.php?word=" . $pomo . "&lang=pomo\">Example phrases (phrasicon)</a>
-        </center>
-    </td>
-</tr>"; } } $table = $table . "
-<a name=\ "" . $id . "\">
-    <table align=\ "center\" width=\ "300px\">
-        <tr>
-            <td class=\ "english\"colspan=\ "2\">
-                <center>" . $eng . "</center>
-            </td>
-        </tr>" . /*   "<tr>
-            <td class=\ "pomo\" colspan=\ "2\">
-                <center>" . $extraAnno1 . "</center>
-            </td>
-        </tr>"  .  */"
-        <tr>
-            <td class=\ "pomo\" colspan=\ "2\">
-                <center>" . $pomo . "</center>
-            </td>
-        </tr>" . "
-        <tr class=\ "body\">" . "
-            <td valign=\ "top\" class=\ "description\">
-                <center><em>" . $pos . "</center></em>
-            </td>
-            <td class=\ "description\">" . $note . "</td>
-        </tr>" . $examples . "
-        <tr class=\ "space\">
-            <td colspan=\ "2\">
-                <audio width=\ "300px\" src=\ "../dictionary/sounds/" . $media . "\" controls preload=\ "auto\" autobuffer></audio>
-            </td>
-        </tr>
-    </table>
-</a>"; 
+$examples .= "<tr><td colspan=\"2\"><center><a href=\"../phrasicon/word.php?word=" . $pomo . "&eng=" . $eng . "&lang=poly\">Example phrases (phrasicon)</a></center></td></tr>"; 
+} else { 
+$examples .= "<tr><td colspan=\"2\"><center><a href=\"../phrasicon/word.php?word=" . $pomo . "&lang=pomo\">Example phrases (phrasicon)</a></center></td></tr>"; 
+    }
+} 
+$table = $table . "<a name=\"" . $id . "\"><table align=\"center\" width=\"300px\"><tr><td class=\"english\" colspan=\"2\"><center>" . $eng . "</center></td></tr>";
+
+// This is where you add annotation layers. 
+
+/* $table = $table .  "<tr><td class=\"english\" colspan=\"2\"><center>" . $extraAnno1 . "</center></td></tr>"; */
+/* $table = $table .  "<tr><td class=\"english\" colspan=\"2\"><center>" . $extraAnno2 . "</center></td></tr>"; */
+/* $table = $table .  "<tr><td class=\"english\" colspan=\"2\"><center>" . $extraAnno3 . "</center></td></tr>"; */
+/* $table = $table .  "<tr><td class=\"english\" colspan=\"2\"><center>" . $extraAnno4 . "</center></td></tr>"; */
+/* $table = $table .  "<tr><td class=\"english\" colspan=\"2\"><center>" . $extraAnno5 . "</center></td></tr>"; */
+
+$table = $table . "<tr><td class=\"pomo\" colspan=\"2\"><center>" . $pomo . "</center></td></tr>" . "<tr class=\"body\">" . "<td valign=\"top\" class=\"description\"><center><em>" . $pos . "</center></em></td><td class=\"description\">" . $note . "</td></tr>" . $examples . "<tr class=\"space\"><td colspan=\"2\"><center><audio width=\"300px\" src=\"../dictionary/sounds/" . $media . "\" controls preload=\"auto\" autobuffer></audio></center></td></tr></table></a>"; 
+
 } 
 ?>
 

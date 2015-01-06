@@ -4,7 +4,7 @@ if(isset($_POST['email'])) {
  
      
  
-    // EDIT THE 2 LINES BELOW AS REQUIRED
+    // Your email goes here.
  
     $email_to = "enter email here";
       
@@ -79,8 +79,9 @@ if(isset($_POST['email'])) {
     died($error_message);
  
   }
- 
-    $email_message = "A new message has been sent from the Northern Pomo Language Tools website...\n\n";
+    
+    // Email Body Message
+    $email_message = "A new message has been sent from the Language Tools website...\n\n";
  
      
  
@@ -100,8 +101,8 @@ if(isset($_POST['email'])) {
   
     $email_message .= "Message:\n".clean_string($message)."\n\n";
  
-     
-    $email_subject = "Northern Pomo Language Tools: New Message";
+    // Email Subject Header 
+    $email_subject = "Language Tools: New Message";
 
      
  

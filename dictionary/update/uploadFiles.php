@@ -24,7 +24,7 @@ if(isset($_POST['submit']))
 
 if ($success) {
     echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center>Upload Success!</center></h4><h4><center>\"Dracarys!\"</center></h4></div>";
- include("../insert.php");   
+ include("../interface.php");   
 }
 ?>
 

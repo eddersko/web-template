@@ -2,22 +2,37 @@
 <phrasicon>
   <metadata>
     <!-- Open Language Archives Community Metadata -->
+    <title>Title of Phrasicon Database</title>
+    <contributor type="olac:role" code="primary investigator">Primary Investigator</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #1</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #2</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #3</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #4</contributor>
+    <contributor type="olac:role" code="annotator">Annotator #5</contributor>
+    <contributor type="olac:role" code="creater">Creator</contributor>
+    <contributor type="olac:role" code="sponsor">Sponsor</contributor>
+    <modified type="dcterms:W3CDTF">Last Modified</modified>
+    <format type="dcterms:IMT">text/xml</format>
+    <language type="olac:language" code="abc" lang="abc">Source</language>
+    <language type="olac:language" code="eng" lang="eng">English</language>
+    <subject type="olac:language" code="abc" lang="abc">Source</subject>
+    <subject type="olac:language" code="eng" lang="eng">English</subject>
   </metadata>
-    <phrase id="0">
-        <ref> </ref>
-        <source></source>
-        <morpheme>
-            <m id="0.1"></m>
-        </morpheme>
-        <gloss>
-            <g id="0.1"></g>
-        </gloss>
-        <translation></translation>
-        <media mimeType="" url="" />
-        <!-- 
+  <phrase id="0">
+    <ref> </ref>
+    <source/>
+    <morpheme>
+      <m id="0.1"/>
+    </morpheme>
+    <gloss>
+      <g id="0.1"/>
+    </gloss>
+    <translation/>
+    <media mimeType="" url=""/>
+    <!-- 
         <extraAnno1>
         <extra id="0.1"></extra>
         </extraAnno1>
         -->
-    </phrase>
+  </phrase>
 </phrasicon>

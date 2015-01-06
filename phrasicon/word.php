@@ -4,6 +4,8 @@ $count = 0;
 $counting = TRUE;
 $word = $_POST['word'];
 $lang = $_POST['lang'];
+$hyper = $_POST['hyper'];
+
 if ($word == null && $lang == null) {
     $word = $_GET['word'];
 $lang = $_GET['lang'];
@@ -29,28 +31,126 @@ foreach($words as $w) {
      $num--;
     }
 }
-$len1 = strlen($word) - 1;
-$len2 = strlen($word);
+
+$len1 = strlen($word);
+$len2 = strlen($word) + 1;
+
 
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("phrasicon.xml");
 $xpath = new DOMXPath($xmlDoc); 
 
+if ($hyper == 'hyper' & ($lang == 'eng' | $lang == 'english')) {
+    
+$xmlDocD = new DOMDocument();
+$xmlDocD->load("../dictionary/dictionary.xml");
+$xpathD = new DOMXPath($xmlDocD); 
+    
+$resultD = $xpathD->query("/dictionary/entry/sense/cit[quote='$word']/../..");
+    
+foreach ($resultD as $entry) {
+$hypernym = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue;
+}
+
+$resultD = $xpathD->query("/dictionary/entry/sense/cit[usg='$hypernym']/../..");
+    
+$headword_arr = array();
+
+foreach ($resultD as $entry) {
+$headword = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue;
+array_push($headword_arr, $headword);
+}
+    
+$cWord = ucfirst($word);
+
+$query =  '(//phrase[starts-with(translation, "'.$word.' ")]) | (//phrase[starts-with(translation, "'.$cWord.' ")]) | 
+(//phrase[contains(translation, " '.$word.' ")]) | (//phrase[(substring(translation, string-length(translation) - '.$len1.') = " '.$word.'")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'?")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'.")]) | (//phrase/gloss[g="'.$word.'"]/..) ';
+    
+
+for ($x=0; $x<count($headword_arr); $x++) {
+    
+    $head = $headword_arr[$x];
+    $chead = ucfirst($head);
+    $lenH1 = strlen($head);
+    $lenH2 = strlen($head) +1;
+    
+    $query = $query .  '| (//phrase[starts-with(translation, "'.$head.' ")]) | (//phrase[starts-with(translation, "'.$cHead.' ")]) | 
+(//phrase[contains(translation, " '.$head.' ")]) | (//phrase[(substring(translation, string-length(translation) - '.$lenH1.') = " '.$head.'")]) | (//phrase[(substring(translation, string-length(translation) - '.$lenH2.') = " '.$head.'?")]) | (//phrase[(substring(translation, string-length(translation) - '.$lenH2.') = " '.$head.'.")]) | (//phrase/gloss[g="'.$head.'"]/..) ';
+    
+}
+
+$result = $xpath->query($query);
+
+    
+} else {
+
 if ($lang == 'eng') {
+
+if ($word == "") {
+
+$result = $xpath->query('//phrase');
+    
+} else {
     
 $cWord = ucfirst($word);
     
 $result = $xpath->query('(//phrase[starts-with(translation, "'.$word.' ")]) | (//phrase[starts-with(translation, "'.$cWord.' ")]) | 
-(//phrase[contains(translation, " '.$word.' ")]) | (//phrase[(substring(translation, string-length(translation) - '.$len1.') = "'.$word.'")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = "'.$word.'?")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = "'.$word.'.")]) | (//phrase/gloss[g="'.$word.'"]/..)');
+(//phrase[contains(translation, " '.$word.' ")]) | (//phrase[(substring(translation, string-length(translation) - '.$len1.') = " '.$word.'")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'?")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'.")]) | (//phrase/gloss[g="'.$word.'"]/..)');
+}
+    
+} elseif ($lang == "poly") {
+    
+$len1 = strlen($eng) - 1;
+$len2 = strlen($eng);
+    
+$cWord = ucfirst($eng);
+  
+$resultG = $xpath->query('(//m[text()=\''.$word.'\'])');
 
+
+$id_arr = array();
+    
+foreach($resultG as $entry) {
+$id = $entry->getAttribute('id');
+$resultM = $xpath->query('(//g[@id="'.$id.'"])');
+
+foreach($resultM as $entryIn) {
+    $val = $entryIn->nodeValue;   
+    if ($eng == $val) {
+        $id = explode(".", $id)[0];
+        array_push($id_arr, $id);
+    }
+}
+
+}
+
+$counting = 0;  
+$query = "";
+    
+for ($x=0; $x<count($id_arr); $x++) {
+    if ($counting == 0) {
+    $id_arr[$x];
+    $query = $query . '(//phrase[@id="'.$id_arr[$x].'"])'; 
+    $counting += 1;
+    } else {
+    $query = $query . '| (//phrase[@id="'.$id_arr[$x].'"])'; 
+    $counting += 1;
+    }
+}
+
+$result = $xpath->query($query);  
     
 } else {
     
-$len = strlen($word) - 1;
+$len1 = strlen($word);
+$len2 = strlen($word) - 1;
+$len3 = strlen($word) - 2;
 
-$result = $xpath->query('(//phrase[starts-with(source, "'.$word.' ")]) | (//phrase[contains(source, " '. $word .' ")]) | (//phrase[substring(source, string-length(source) - '.$len.') = "'.$word.'"]) | (//phrase/morpheme[m="'.$word.'"]/..)');    
+$result = $xpath->query('(//phrase[starts-with(source, "'.$word.' ")]) | (//phrase[contains(source, " '. $word .' ")]) | (//phrase[substring(source, string-length(source) - '.$len1.') = " '.$word.'"]) | (//phrase[substring(source, string-length(source) - '.$len2.') = " '.$word.'"]) | (//phrase[substring(source, string-length(source) - '.$len3.') = " '.$word.'"]) | (//phrase/morpheme[m="'.$word.'"]/..)');    
+   
+}
 
-} 
+}
 
 $table = "";
 
@@ -61,7 +161,12 @@ $english = $entry->childNodes->item(9)->nodeValue;
 $media = $entry->childNodes->item(11)->getAttribute('url');
 $count++;
 
+// This is where you add annotation layers. 
+// DO NOT CHANGE NAME OF $extra_cell 
+
 /*
+
+// ExtraAnno1
 
 $length = $entry->childNodes->item(13)->childNodes->length;
 
@@ -77,15 +182,119 @@ $extra = "<tr>";
 
 $num = count($extraAnno1);
 foreach($extraAnno1 as $ex) {
-    $extra_cells .= "<td class=\"pomo_gloss\">";
-    $extra_cells .= $ex;  
-    $extra_cells .= "</td>";
+    $extra_cells1 .= "<td class=\"pomo_gloss\">";
+    $extra_cells1 .= $ex;  
+    $extra_cells1 .= "</td>";
 }
   
 
 */
     
+/*
+
+// ExtraAnno2
+
+$length = $entry->childNodes->item(15)->childNodes->length;
+
+$extraAnno2 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+  $val = $entry->childNodes->item(15)->childNodes->item($x)->nodeValue;
+
+array_push($extraAnno2, $val);
+}
+
+$extra = "<tr>";
+
+$num = count($extraAnno2);
+foreach($extraAnno2 as $ex) {
+    $extra_cells2 .= "<td class=\"pomo_gloss\">";
+    $extra_cells2 .= $ex;  
+    $extra_cells2 .= "</td>";
+}
+  
+
+*/
+
+/*
+
+// ExtraAnno3
+
+$length = $entry->childNodes->item(17)->childNodes->length;
+
+$extraAnno3 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+  $val = $entry->childNodes->item(17)->childNodes->item($x)->nodeValue;
+
+array_push($extraAnno3, $val);
+}
+
+$extra = "<tr>";
+
+$num = count($extraAnno3);
+foreach($extraAnno3 as $ex) {
+    $extra_cells3 .= "<td class=\"pomo_gloss\">";
+    $extra_cells3 .= $ex;  
+    $extra_cells3 .= "</td>";
+}
+  
+
+*/
+
+/*
+
+// ExtraAnno4
+
+$length = $entry->childNodes->item(19)->childNodes->length;
+
+$extraAnno4 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+  $val = $entry->childNodes->item(19)->childNodes->item($x)->nodeValue;
+
+array_push($extraAnno4, $val);
+}
+
+$extra = "<tr>";
+
+$num = count($extraAnno4);
+foreach($extraAnno4 as $ex) {
+    $extra_cells4 .= "<td class=\"pomo_gloss\">";
+    $extra_cells4 .= $ex;  
+    $extra_cells4 .= "</td>";
+}
+  
+
+*/
     
+/*
+
+// ExtraAnno5
+
+$length = $entry->childNodes->item(21)->childNodes->length;
+
+$extraAnno5 = array();
+
+for ($x=1; $x<$length-1; $x+=2) {
+  $val = $entry->childNodes->item(21s)->childNodes->item($x)->nodeValue;
+
+array_push($extraAnno5, $val);
+}
+
+$extra = "<tr>";
+
+$num = count($extraAnno5);
+foreach($extraAnno5 as $ex) {
+    $extra_cells5 .= "<td class=\"pomo_gloss\">";
+    $extra_cells5 .= $ex;  
+    $extra_cells5 .= "</td>";
+}
+  
+
+*/
+    
+            
 $length = $entry->childNodes->item(5)->childNodes->length;
 
 $source_example = array();
@@ -129,7 +338,19 @@ if ($eng_num > $num) {
     $num = $eng_num;   
 }
 
-$table = $table . "<table align=\"center\"><tr><td class=\"pomo\" colspan=\"". $num ."\"><center>" . $pomo . "</center></td></tr>" . /* $exttraAnno1 . "</tr>" .  */ $pomo_cells . "</tr>" . $eng_cells . "</tr>" . "<tr><td class=\"english\" colspan=\"" . ($num) . "\"><em><center>" . $english . "</em></center></td></tr><tr><td colspan=\"" . ($num) . "\"><audio src=\"../phrasicon/sounds/" . $media . "\" controls preload=\"auto\" autobuffer></audio></td></tr></table>";
+$table = $table . "<table align=\"center\"><tr><td class=\"pomo\" colspan=\"". $num ."\"><center>" . $source . "</center></td></tr>";
+
+// This is where you add annotation layers.
+// DO NOT CHANGE NAME OF $extra_cells
+
+// $table = $table .  $extra_cells1 . "</tr>";    
+// $table = $table .  $extra_cells2 . "</tr>";    
+// $table = $table .  $extra_cells3 . "</tr>";    
+// $table = $table .  $extra_cells4 . "</tr>";    
+// $table = $table .  $extra_cells5 . "</tr>";    
+
+$table = $table . $source_cells . "</tr>" . $eng_cells . "</tr>" . "<tr><td class=\"english\" colspan=\"" . ($num) . "\"><em><center>" . $english . "</em></center></td></tr><tr><td colspan=\"" . ($num) . "\"><center><audio src=\"../phrasicon/sounds/" . $media . "\" controls preload=\"auto\" autobuffer></audio></center></td></tr></table>";
+
 }
 
 $results = "";
@@ -270,7 +491,7 @@ $results .= "<h4 class=\"subsubheader\">No results found.</h4>";
                         <!-- Language Options -->
                         <select name="lang">
                             <option value="english">English</option>
-                            <option value="pomo">Source</option>
+                            <option value="source">Source</option>
                         </select>
                 </div>
 
@@ -284,7 +505,6 @@ $results .= "<h4 class=\"subsubheader\">No results found.</h4>";
                 <div class="large-3 small-2 columns">
                     <!-- Submit button. -->
                     <input class="button postfix" type="submit" value="Submit">
-                    </form>
                 </div>
                 <div class="large-1 small-2 columns">
 
@@ -296,6 +516,10 @@ $results .= "<h4 class=\"subsubheader\">No results found.</h4>";
                 </div>
 
             </div>
+<div class="row collapse">
+    			&nbsp;<input id="checkbox1" type="checkbox" name="hyper" value="hyper"><label for="checkbox1">Hyper Search</label>
+    </div>
+                                    </form>
 
             <!-- Picture here. -->
             <p><img src="background_phrasicon.jpg" />

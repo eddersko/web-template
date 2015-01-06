@@ -9,7 +9,6 @@ $_SESSION['letter'] = $_POST['word'];
 
 $list = "<div class=\"three-columns\"><ul class=\"no-bullet\">";
 $count = 0;
-  
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("dictionary.xml");
 $xpath = new DOMXPath($xmlDoc);
@@ -71,13 +70,17 @@ foreach ($a as $key => $val) {
 
 } else {
 
-$counting = TRUE;
+$counting = TRUE;  
 $new_word = "";
 $placeholder = $_POST['word'];
 $words = split (' ', $_SESSION['letter']);
 
 $num = 0;
-    
+
+if ($placeholder == "") {
+    $counting = FALSE;   
+}
+
 foreach($words as $w) {
   if ($w != "") {
       $num++;
@@ -95,12 +98,11 @@ foreach($words as $w) {
     }
 }
 
-if ($_POST['lemmatize'] == 'YES') {
+if ($_POST['stemmer'] == 'YES') {
 //$word = exec('python lemmatize.py ' . $_POST['word']);
-
+    $counting = FALSE;
     include('porterstemmer.php');
     $word = PorterStemmer::Stem($_POST['word']);
-    $counting = FALSE;
 
 } 
 
@@ -114,7 +116,7 @@ $result = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../.. | /dic
 $pos = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../../gramGrp/pos"); 
 
 foreach($pos as $tag) {
-    if ($tag->nodeValue == 'adjective') {
+    if ($tag->nodeValue == 'adjective' | $tag->nodeValue == 'adj' | $tag->nodeValue == 'adj.' | $tag->nodeValue == 'ADJ' ) {
         $is_adj = TRUE;
         break;
     }
@@ -170,11 +172,11 @@ $num_results = "";
 } 
     
  $body = "<body>";
-if (($count == 0 && $counting)) {
+if ($count == 0 && $counting) {
  $list = "";
  $form = "<form id=\"myForm\" name=\"myForm\" action=\"../dictionary/category.php\" method=\"POST\">
 <input type=hidden name=\"word\" value=\"$word\"/>
-<input type=hidden name=\"lemmatize\" value=\"YES\"/>
+<input type=hidden name=\"stemmer\" value=\"YES\"/>
 <input name=\"submit\" class=\"button postfix\" type=\"submit\"  value=\"Sure!\"/>
 </form>";
  $warning = "<h4 class=\"subsubheader\">No results found.</h4><h4 class=\"subsubheader\">Try an extended search?</h4><h4 class=\"subsubheader\"><em>Note: It'll take around 10 seconds.</em></h4>";

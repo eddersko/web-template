@@ -33,6 +33,7 @@ body {
 .home {
     color: black;
 }
+
 .even:nth-of-type(even) {
     background: #eeeeee;
 }
@@ -3345,14 +3346,15 @@ td {
 }
 /* Default Link Styles */
 
+
 a {
-    color: #368a55;
+    color: black;
     text-decoration: none;
     line-height: inherit;
 }
 a:hover,
 a:focus {
-    color: #6EA44E;
+    color: gray;
 }
 a img {
     border: none;

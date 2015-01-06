@@ -6,7 +6,7 @@ $morpheme = $_GET['morpheme'];
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("../phrasicon.xml");
 $xpath = new DOMXPath($xmlDoc);
-$result = $xpath->query("(//m[starts-with(., '$morpheme')])");
+$result = $xpath->query("(//m[starts-with(., \"$morpheme\")])");
 $a = array();
 
 foreach($result as $entry) {

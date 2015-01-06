@@ -2,10 +2,11 @@
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 
+// Username and password
 if($user == "abc"
 && $pass == "123")
 {
-        include("../insert.php");
+        include("./interface.php");
 }
 else
 {
@@ -22,7 +23,8 @@ else
     <meta name="description" content="Multi-layered Language Learning Resources" />
     <meta name="author" content="User" />
     <meta name="copyright" content="User" />
-    <link rel="stylesheet" href="../css/foundation.css" / </head>
+    <link rel="stylesheet" href="../css/foundation.css" />
+</head>
 
     <body>
         <div class="row">

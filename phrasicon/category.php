@@ -185,7 +185,7 @@ if ($count == 0) {
                         <!-- Language Options -->
                         <select name="lang">
                             <option value="english">English</option>
-                            <option value="pomo">Source</option>
+                            <option value="source">Source</option>
                         </select>
 
                 </div>
@@ -200,7 +200,6 @@ if ($count == 0) {
                 <div class="large-3 small-2 columns">
                     <!-- Submit button. -->
                     <input class="button postfix" type="submit" value="Submit">
-                    </form>
                 </div>
                 <div class="large-1 small-2 columns">
 
@@ -210,6 +209,11 @@ if ($count == 0) {
                         <li><a onmouseover="showtip(this,event,'U02B0')" onmouseout=hidetip() href="javascript:;" onclick="form1.word.value=form1.word.value + 'ʔ';">ʔ</a> </li>
                     </ul </div>
                 </div>
+        </div>
+<div class="row collapse">
+    			&nbsp;<input id="checkbox1" type="checkbox" name="hyper" value="hyper"><label for="checkbox1">Hyper Search</label>
+    </div>
+                                        </form>
 
                 <!-- Picture here. -->
                 <p><img src="background_phrasicon.jpg" />

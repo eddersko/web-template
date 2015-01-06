@@ -5,7 +5,7 @@ $pass = $_POST['pass'];
 if($user == "123"
 && $pass == "abc")
 {
-        include("../insertion.php");
+        include("./interface.php");
 }
 else
 {
