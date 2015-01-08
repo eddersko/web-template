@@ -5,7 +5,7 @@ This template along with a language learning Android app will appear as an e-pos
 
 A fully functional website can be found here for Northern Pomo: http://northernpomolanguagetools.com/
 
-The Medumba website uses this template and is still under construction: http://elodiepaquette.com/medumba/
+The Medumba website uses this template and is currently under construction: http://elodiepaquette.com/medumba/
 
 Keywords: endangered languages; language preservation; language conservation; language revitalization; digital linguistics
 
