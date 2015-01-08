@@ -4,6 +4,7 @@ Template for Multi-Layered Langauge Resources (Web App)
 This template along with a language learning Android app will appear as an e-poster at the International Conference of Language Documentation and Conservation in late-February, 2015. Feel free to check us out!
 
 A fully functional website can be found here for Northern Pomo: http://northernpomolanguagetools.com/
+
 The Medumba website uses this template and is still under construction: http://elodiepaquette.com/medumba/
 
 Keywords: endangered languages; language preservation; language conservation; language revitalization; digital linguistics
