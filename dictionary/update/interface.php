@@ -92,6 +92,7 @@
             </div>
 
             <!-- This is where you add annotation layers. -->
+            <!-- Rename-able -->
             
             <!-- ExtraAnno1 -->
             <!--    
@@ -192,6 +193,7 @@
                     <option value="ref">Reference</option>
 
                     <!-- This is where you add annotation layers. -->
+                    <!-- Rename-able -->
 
                     <!-- 
                     <option value="extraAnno1">ExtraAnno1</option>

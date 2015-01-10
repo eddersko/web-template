@@ -43,6 +43,8 @@ $media->addAttribute("mimeType", substr($_POST['media'], -3));
 $media->addAttribute("url", $_POST['media']);
 
 // This is where you add annotation layers. 
+// Rename-able    
+    
 // ExtraAnno1
     
 /*
@@ -60,7 +62,6 @@ for ($x=1; $x<13; $x++) {
 
 */    
     
-// This is where you add annotation layers. 
 // ExtraAnno2
     
 /*
@@ -78,7 +79,6 @@ for ($x=1; $x<13; $x++) {
 
 */
 
-// This is where you add annotation layers. 
 // ExtraAnno3
     
 /*
@@ -96,7 +96,6 @@ for ($x=1; $x<13; $x++) {
 
 */
  
-// This is where you add annotation layers. 
 // ExtraAnno4
     
 /*
@@ -114,7 +113,6 @@ for ($x=1; $x<13; $x++) {
 
 */
     
-// This is where you add annotation layers. 
 // ExtraAnno5    
     
 /*
@@ -184,7 +182,8 @@ for ($x=1; $x<13; $x++) {
     
 // This is where you add annotation layers. 
 // ExtraAnno1
-
+// Rename-able
+    
 /* elseif ($field=="extraAnno1") {
 
 for ($x=1; $x<13; $x++) {
@@ -200,7 +199,6 @@ for ($x=1; $x<13; $x++) {
     
 }  */
 
-// This is where you add annotation layers. 
 // ExtraAnno2
     
 /* elseif ($field=="extraAnno2") {
@@ -218,7 +216,6 @@ for ($x=1; $x<13; $x++) {
     
 }  */  
     
-// This is where you add annotation layers. 
 // ExtraAnno3    
 
 /* elseif ($field=="extraAnno3") {
@@ -236,7 +233,6 @@ for ($x=1; $x<13; $x++) {
     
 }  */ 
 
-// This is where you add annotation layers. 
 // ExtraAnno4
     
 /* elseif ($field=="extraAnno4") {
@@ -254,7 +250,6 @@ for ($x=1; $x<13; $x++) {
     
 }  */ 
 
-// This is where you add annotation layers. 
 // ExtraAnno5  
 
 /* elseif ($field=="extraAnno5") {

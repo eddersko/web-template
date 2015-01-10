@@ -13,25 +13,7 @@ $eng = $_GET['eng'];
     $counting = FALSE;
 }
 
-$words = split (' ', $word);
-$num = 0;
-    
-foreach($words as $w) {
-  if ($w != "") {
-      $num++;
-  }
-}
-
-$word = "";
-    
-foreach($words as $w) {
-    $word .= $w;
-    if($num > 1) {
-     $word .= " ";
-     $num--;
-    }
-}
-
+$word = rtrim($word, " ");
 $len1 = strlen($word);
 $len2 = strlen($word) + 1;
 
@@ -337,7 +319,6 @@ $table = $table . "<table align=\"center\"><tr><td class=\"pomo\" colspan=\"". $
 
 // This is where you add annotation layers.
 
-    
 // ExtraAnno1    
 //$table = $table .  $extra_cells1 . "</tr>"; 
     

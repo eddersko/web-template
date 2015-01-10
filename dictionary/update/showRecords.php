@@ -25,6 +25,7 @@ echo "<th>POS</th>
 <th>Reference</th>";
 
 // This is where you add annotation layers. 
+// Rename-able
 
 // echo "<th>ExtraAnno1</th>";
 // echo "<th>ExtraAnno2</th>";

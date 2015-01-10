@@ -73,29 +73,11 @@ foreach ($a as $key => $val) {
 $counting = TRUE;  
 $new_word = "";
 $placeholder = $_POST['word'];
-$words = split (' ', $_SESSION['letter']);
-
-$num = 0;
+$word = $_SESSION['letter'];
+$word = rtrim($word, " ");
 
 if ($placeholder == "") {
     $counting = FALSE;   
-}
-
-foreach($words as $w) {
-  if ($w != "") {
-      $num++;
-  }
-}
-
-
-$word = "";
-    
-foreach($words as $w) {
-    $word .= $w;
-    if($num > 1) {
-     $word .= " ";
-     $num--;
-    }
 }
 
 if ($_POST['stemmer'] == 'YES') {
@@ -179,7 +161,7 @@ if ($count == 0 && $counting) {
 <input type=hidden name=\"stemmer\" value=\"YES\"/>
 <input name=\"submit\" class=\"button postfix\" type=\"submit\"  value=\"Sure!\"/>
 </form>";
- $warning = "<h4 class=\"subsubheader\">No results found.</h4><h4 class=\"subsubheader\">Try an extended search?</h4><h4 class=\"subsubheader\"><em>Note: It'll take around 10 seconds.</em></h4>";
+ $warning = "<h4 class=\"subsubheader\">No results found.</h4><h4 class=\"subsubheader\">Try an extended search?</h4>";
 } elseif ($count > 1 && $counting) {
     $num_results = $num_results . "<h4 class=\"subsubheader\"><b>" . $count . "</b> search results found.</h4><h4 class=\"subsubheader\">Each of these links will take you to a dictionary entry that contains the word you are searching for...</h4><br>"; 
 

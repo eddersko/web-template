@@ -32,7 +32,8 @@ $media->addAttribute("url", $_POST['media']);
 $entry->addChild("ref", $_POST['ref']);
 
 // This is where you add annotation layers. 
-
+// Rename-able
+    
 //$entry->addChild("extraAnno1", $_POST['extraAnno1']);
 //$entry->addChild("extraAnno2", $_POST['extraAnno2']);
 //$entry->addChild("extraAnno3", $_POST['extraAnno3']);

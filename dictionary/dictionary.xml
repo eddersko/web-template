@@ -35,6 +35,7 @@
     <media mimeType="" url=""/>
     <ref/>
     <!-- This is where you add annotation layers. -->
+    <!-- Rename-able -->
     <!-- <extraAnno1/> -->
     <!-- <extraAnno2/> -->
     <!-- <extraAnno3/> -->

@@ -4,6 +4,7 @@ $xmlDoc->load("dictionary.xml");
 $xpath = new DOMXPath($xmlDoc); 
 $entries = $xpath->query("//entry"); 
 $count = $entries->length; 
+$count = $count -1;
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -157,7 +158,7 @@ $count = $entries->length;
         <div class="large-12 columns">
 
             <!-- Title of About section. -->
-            <h4 class="subheader">About the Template</h4>
+            <h4 class="subheader">About the Dictionary</h4>
             
             
             <!-- There are <?php echo $count ?> entries in the dictionary. -->

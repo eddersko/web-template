@@ -121,15 +121,16 @@ $headers = 'From: '.$email_from."\r\n".
  
  
 <!-- include your own success html here -->
- <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contact</title>
-<meta name="description" content="Northern Pomo Language Tools"/>
-<meta name="author" content="Edwin Ko"/>
-<meta name="copyright" content="Edwin Ko"/>
-<link rel="stylesheet" href="css/foundation.css"/>
-<script src="js/vendor/modernizr.js"></script>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Phrasicon Template</title>
+    <meta name="description" content="Multi-layered Language Learning Resources" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="User" />
+    <meta name="copyright" content="User" />
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/loadxmldoc.js"></script>
 </head>
 <body>
 <nav class="top-bar" data-topbar>
@@ -151,7 +152,7 @@ Back to Menu
 <div class="large-3 columns">
 <br> 
 <p>
-<img src="../basket.jpg"><br/>
+<img src="../placeholder.png"><br/>
 </p>
 
 </div> 
@@ -162,23 +163,7 @@ Back to Menu
 
 </div>
  
-
- 
-</div>
- 
- 
-<footer class="row">
-<div class="large-12 columns">
-<hr/>
-<div class="row">
-<div class="large-6 columns">
-<p>Copyright 2014 &copy; Edwin Ko</p>
-</div>
-</div>
-</div>
-</footer>
- 
- 
+</div> 
 
 <script src="js/vendor/jquery.js"></script>
 <script src="js/foundation/foundation.js"></script>

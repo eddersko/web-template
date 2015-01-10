@@ -46,7 +46,13 @@
                     document.getElementById(id).value = xmlhttp.responseText;
                 }
             }
-            xmlhttp.open("GET", "autosuggest.php?morpheme=" + str, true);
+            num = parseInt(id.split('gloss')[1]);
+            text = "<s> ";
+            for (i = 1; i <= num; i++) {
+                text = text + document.getElementById('morpheme'+i).value + " ";
+            }
+            text = text.trim();
+            xmlhttp.open("GET", "autosuggest.php?morpheme=" + str + "&id=" + num + "&txt=" + text, true);
             xmlhttp.send();
         }
     </script>

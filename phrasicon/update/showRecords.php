@@ -99,7 +99,6 @@ $media = $entry->childNodes->item(11)->getAttribute('url');;
 
 // This is where you add annotation layers. 
     
-
 // ExtraAnno1
 
 /*
