@@ -4,7 +4,6 @@ $xmlDoc->load("dictionary.xml");
 $xpath = new DOMXPath($xmlDoc); 
 $entries = $xpath->query("//entry"); 
 $count = $entries->length; 
-$count = $count -1;
 ?>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">

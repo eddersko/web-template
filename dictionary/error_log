@@ -1,0 +1,268 @@
+[17-Jan-2015 18:10:50 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 17
+[17-Jan-2015 18:10:50 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[17-Jan-2015 18:10:50 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[17-Jan-2015 18:10:50 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[17-Jan-2015 18:10:56 America/Denver] PHP Notice:  Undefined index: stemmer in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 83
+[17-Jan-2015 18:10:56 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[17-Jan-2015 18:10:56 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[17-Jan-2015 18:11:00 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[17-Jan-2015 18:11:00 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[17-Jan-2015 18:11:00 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[17-Jan-2015 18:11:20 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 17
+[17-Jan-2015 18:11:20 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[17-Jan-2015 18:11:20 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[17-Jan-2015 18:11:20 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[17-Jan-2015 18:20:41 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[17-Jan-2015 18:20:41 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[17-Jan-2015 18:20:41 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[17-Jan-2015 18:39:39 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 17
+[17-Jan-2015 18:39:40 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[17-Jan-2015 18:39:40 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[17-Jan-2015 18:39:40 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 02:31:26 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 02:31:26 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 02:31:26 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 02:31:26 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 08:06:37 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 08:06:37 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 08:06:37 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 08:06:37 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 08:11:52 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 08:11:52 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 08:11:52 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 08:11:52 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 08:21:45 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 08:21:45 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 08:21:45 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 08:21:45 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 08:25:08 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 08:25:08 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 08:25:08 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 08:25:08 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 08:41:33 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 08:41:33 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 176
+[18-Jan-2015 08:41:33 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 08:41:33 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:39:22 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 17
+[18-Jan-2015 09:39:22 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 09:39:22 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 09:39:22 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:39:44 America/Denver] PHP Notice:  Undefined index: stemmer in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 83
+[18-Jan-2015 09:39:44 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 09:39:44 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:40:52 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 09:40:52 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 09:40:52 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 09:40:52 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:40:56 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 09:40:56 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 09:40:56 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 09:40:56 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:40:57 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 09:40:57 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 09:40:57 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 09:40:57 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:41:46 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 09:41:46 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 09:41:46 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 09:41:46 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:41:52 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 17
+[18-Jan-2015 09:41:53 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 09:41:53 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 09:41:53 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:41:58 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 17
+[18-Jan-2015 09:41:58 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 09:41:58 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 09:41:58 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 09:42:13 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 09:42:13 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 09:42:13 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 09:42:51 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 09:42:51 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 09:42:51 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 14:17:18 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 14:17:18 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 14:17:18 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 14:17:18 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 14:31:55 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 14:31:55 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 14:31:55 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 14:31:55 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 20:23:43 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 20:23:43 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 20:23:43 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[18-Jan-2015 20:23:58 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 17
+[18-Jan-2015 20:23:58 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 20:23:58 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 20:23:58 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 21:41:40 America/Denver] PHP Notice:  Undefined index: letter in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 17
+[18-Jan-2015 21:41:40 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 21:41:40 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 21:41:40 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 22:41:32 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 22:41:32 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 22:41:32 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 22:41:32 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 23:06:46 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 23:06:46 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 23:06:46 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 23:06:46 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 23:36:40 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 23:36:40 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 23:36:40 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 23:36:40 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[18-Jan-2015 23:46:57 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[18-Jan-2015 23:46:57 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[18-Jan-2015 23:46:57 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[18-Jan-2015 23:46:57 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 14:05:23 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 14:05:23 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[19-Jan-2015 14:05:23 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 14:05:23 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 15:01:49 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[19-Jan-2015 15:01:49 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[19-Jan-2015 15:01:49 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[19-Jan-2015 15:05:38 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 15:05:38 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[19-Jan-2015 15:05:38 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 15:05:38 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 15:12:26 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[19-Jan-2015 15:12:26 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[19-Jan-2015 15:12:26 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[19-Jan-2015 16:08:56 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 16:08:56 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[19-Jan-2015 16:08:56 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 16:08:56 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 16:36:23 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 16:36:23 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[19-Jan-2015 16:36:23 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 16:36:23 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 17:08:46 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 17:08:46 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[19-Jan-2015 17:08:46 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 17:08:46 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 17:55:19 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 17:55:19 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[19-Jan-2015 17:55:19 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 17:55:19 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 19:18:26 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 19:18:26 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[19-Jan-2015 19:18:26 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 19:18:26 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 23:18:01 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 23:18:01 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[19-Jan-2015 23:18:01 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 23:18:01 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[19-Jan-2015 23:59:43 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[19-Jan-2015 23:59:44 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 176
+[19-Jan-2015 23:59:44 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[19-Jan-2015 23:59:44 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[20-Jan-2015 02:47:02 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[20-Jan-2015 02:47:02 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[20-Jan-2015 02:47:02 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[20-Jan-2015 02:47:02 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[20-Jan-2015 05:51:18 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 05:51:18 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 05:51:18 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 05:51:18 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 05:51:18 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 05:51:18 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 05:55:56 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 05:55:56 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 05:55:56 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 06:01:15 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[20-Jan-2015 06:01:15 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[20-Jan-2015 06:01:15 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[20-Jan-2015 06:01:15 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[20-Jan-2015 06:03:25 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 06:03:25 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 06:03:25 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 10:11:53 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 10:11:53 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 10:11:53 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 10:35:52 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[20-Jan-2015 10:35:52 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[20-Jan-2015 10:35:52 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[20-Jan-2015 10:35:52 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[20-Jan-2015 11:13:34 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 11:13:34 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 11:13:34 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 12:22:02 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 12:22:02 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 12:22:02 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[20-Jan-2015 17:11:53 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[20-Jan-2015 17:11:53 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[20-Jan-2015 17:11:53 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[20-Jan-2015 17:11:53 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[21-Jan-2015 13:36:43 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 13:36:43 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 13:36:43 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 14:29:56 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 14:29:56 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 14:29:56 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 14:29:56 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 14:29:56 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 14:29:56 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:00:40 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:00:40 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:00:40 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:27:39 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:27:39 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:27:39 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:27:39 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:27:39 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 15:27:39 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 16:13:25 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 16:13:25 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 16:13:25 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 18:31:37 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[21-Jan-2015 18:31:37 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[21-Jan-2015 18:31:37 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[21-Jan-2015 18:31:37 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[21-Jan-2015 20:05:24 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 20:05:24 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 20:05:24 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:37:21 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:37:21 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:37:21 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:37:21 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:37:21 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:37:21 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:42:24 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:42:24 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[21-Jan-2015 22:42:24 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 00:55:18 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[22-Jan-2015 00:55:18 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[22-Jan-2015 00:55:18 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[22-Jan-2015 00:55:18 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[22-Jan-2015 02:12:17 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 02:12:17 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 02:12:17 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 03:07:44 America/Denver] PHP Notice:  Undefined index: word in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 7
+[22-Jan-2015 03:07:44 America/Denver] PHP Notice:  Undefined variable: counting in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 184
+[22-Jan-2015 03:07:44 America/Denver] PHP Notice:  Undefined variable: warning in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 319
+[22-Jan-2015 03:07:44 America/Denver] PHP Notice:  Undefined variable: form in /home1/eddersko/public_html/template/demo/dictionary/category.php on line 320
+[22-Jan-2015 06:01:57 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 06:01:57 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 06:01:57 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 06:02:18 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 06:02:18 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 06:02:18 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 06:57:59 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 06:57:59 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 06:57:59 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 07:09:05 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 07:09:05 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 07:09:05 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 09:07:39 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 09:07:39 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 09:07:39 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 12:38:39 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 12:38:39 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 12:38:39 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 13:34:40 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 13:34:41 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 13:34:41 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 14:23:06 America/Denver] PHP Warning:  DOMXPath::query(): Invalid predicate in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 14:23:06 America/Denver] PHP Warning:  DOMXPath::query(): Invalid expression in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32
+[22-Jan-2015 14:23:06 America/Denver] PHP Notice:  Trying to get property of non-object in /home1/eddersko/public_html/template/demo/dictionary/word.php on line 32

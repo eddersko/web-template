@@ -3348,13 +3348,13 @@ td {
 
 
 a {
-    color: black;
+    color: grey;
     text-decoration: none;
     line-height: inherit;
 }
 a:hover,
 a:focus {
-    color: gray;
+    color: #AAAAAA;
 }
 a img {
     border: none;

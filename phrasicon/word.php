@@ -1,5 +1,4 @@
 <?php
-
 $count = 0;
 $counting = TRUE;
 $word = $_POST['word'];
@@ -21,6 +20,11 @@ $len2 = strlen($word) + 1;
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("phrasicon.xml");
 $xpath = new DOMXPath($xmlDoc); 
+
+
+$xmlDocD = new DOMDocument();
+$xmlDocD->load("../dictionary/dictionary.xml");
+$xpathD = new DOMXPath($xmlDocD); 
 
 
 if ($word == "" ) {
@@ -284,36 +288,55 @@ array_push($source_example, $val);
 
 $source_cells = "<tr>";
 
-$num = count($source_example);
-foreach($source_example as $pom) {
-    $source_cells .= "<td class=\"pomo_gloss\">";
-    $source_cells .= $pom;  
-    $source_cells .= "</td>";
-}
-  
 $length = $entry->childNodes->item(7)->childNodes->length;
 
-$eng_example = array(); 
-
+$eng_example = array();
+    
 for ($x=1; $x<$length-1; $x+=2) {
 $val = $entry->childNodes->item(7)->childNodes->item($x)->nodeValue;
 array_push($eng_example, $val);
 }
 
-
 $eng_num = count($eng_example);
 
 $eng_cells = "";
+    
+$num = count($source_example);
 
-foreach($eng_example as $eng) {
+for($x=0; $x<sizeof($source_example); $x++) {
+        
+    $link = "";
+    
+    $source_cells .= "<td class=\"pomo_gloss\">";
+
+    $entry = $xpathD->query("(//quote[text()='".$eng_example[$x]."']/../../..)");
+    
+    if ($entry->length > 0 ) {
+    $id = $entry->item(0)->getAttribute('id');
+    $eng = $entry->item(0)->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue;
+    $hyper = $entry->item(0)->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue;
+    
+    $source_cells .= "<a href=\"../dictionary/word.php?word=" . $hyper . "#" . $id . "\">";
+    $source_cells .= $source_example[$x];      
+    $source_cells .= "</a>";      
+
+    } else {
+    $source_cells .= $source_example[$x];      
+    }
+    $source_cells .= "</td>";
+    
+    
     $eng_cells .= "<td class=\"eng_gloss\">";
-    $eng_cells .= $eng;  
+    $eng_cells .= $eng_example[$x];  
     $eng_cells .= "</td>";
 }
+  
+
 
 if ($eng_num > $num) {
     $num = $eng_num;   
 }
+
 
 $table = $table . "<table align=\"center\"><tr><td class=\"pomo\" colspan=\"". $num ."\"><center>" . $source . "</center></td></tr>";
 

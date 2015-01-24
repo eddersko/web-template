@@ -9,7 +9,8 @@ $xmlDoc->load($file);
 $xpath = new DOMXPath($xmlDoc);
 
 if ($_POST['type'] == 'create') {
-    
+
+$num_cells = $_POST['cells'];
 $result = $xpath->query("/phrasicon/phrase[last()]");  
 $id = ($result->item(0)->getAttribute('id')) + 1;
 
@@ -18,7 +19,7 @@ $entry->addAttribute("id",$id);
 $entry->addChild("ref", $_POST['ref']);
 $entry->addChild('source', $_POST['source']);
 $morpheme = $entry->addChild('morpheme');
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$num_cells; $x++) {
     $m = $_POST['morpheme' . $x];
     if ($m == '') {
      break;   
@@ -28,7 +29,7 @@ for ($x=1; $x<13; $x++) {
     }
 }
 $gloss = $entry->addChild('gloss');
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$num_cells; $x++) {
     $g = $_POST['gloss' . $x];
     if ($g == '') {
      break;   
@@ -50,7 +51,7 @@ $media->addAttribute("url", $_POST['media']);
 /*
 
 $extraAnno1 = $entry->addChild('extraAnno1');
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$num_cells; $x++) {
     $extra = $_POST['extra1_' . $x];
     if ($extra == '') {
      break;   
@@ -67,7 +68,7 @@ for ($x=1; $x<13; $x++) {
 /*
 
 $extraAnno2 = $entry->addChild('extraAnno2');
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$num_cells; $x++) {
     $extra = $_POST['extra2_' . $x];
     if ($extra == '') {
      break;   
@@ -84,7 +85,7 @@ for ($x=1; $x<13; $x++) {
 /*
 
 $extraAnno3 = $entry->addChild('extraAnno3');
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$num_cells; $x++) {
     $extra = $_POST['extra1_' . $x];
     if ($extra == '') {
      break;   
@@ -101,7 +102,7 @@ for ($x=1; $x<13; $x++) {
 /*
 
 $extraAnno4 = $entry->addChild('extraAnno4');
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$num_cells; $x++) {
     $extra = $_POST['extra4_' . $x];
     if ($extra == '') {
      break;   
@@ -118,7 +119,7 @@ for ($x=1; $x<13; $x++) {
 /*
 
 $extraAnno5 = $entry->addChild('extraAnno5');
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$num_cells; $x++) {
     $extra = $_POST['extra5_' . $x];
     if ($extra == '') {
      break;   
@@ -141,7 +142,7 @@ $dom->save($file);
 $id = (int)$_POST['id'];
 $field = $_POST['option'];
 $edit = $_POST['edit'];
-
+$numcells = $_POST['cellsEdit'];
 $phrasicon = new SimpleXMLElement($file,null,true);
     
 if ($field == 'media') {
@@ -153,7 +154,7 @@ $result[0]->$field->attributes()->url = $edit;
 
 } elseif ($field == 'morpheme') {
 
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$numcells; $x++) {
     
     $m = $_POST['morphoss' . $x];
     if ($m != '') {
@@ -167,7 +168,7 @@ for ($x=1; $x<13; $x++) {
 } elseif ($field=="gloss") {
 
 
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$numcells; $x++) {
     
     $g = $_POST['morphoss' . $x];
     if ($g != '') {
@@ -186,7 +187,7 @@ for ($x=1; $x<13; $x++) {
     
 /* elseif ($field=="extraAnno1") {
 
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$numcells; $x++) {
     
     $extra = $_POST['morphoss' . $x];
     if ($extra != '') {
@@ -203,7 +204,7 @@ for ($x=1; $x<13; $x++) {
     
 /* elseif ($field=="extraAnno2") {
 
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$numcells; $x++) {
     
     $extra = $_POST['morphoss' . $x];
     if ($extra != '') {
@@ -220,7 +221,7 @@ for ($x=1; $x<13; $x++) {
 
 /* elseif ($field=="extraAnno3") {
 
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$numcells; $x++) {
     
     $extra = $_POST['morphoss' . $x];
     if ($extra != '') {
@@ -237,7 +238,7 @@ for ($x=1; $x<13; $x++) {
     
 /* elseif ($field=="extraAnno4") {
 
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$numcells; $x++) {
     
     $extra = $_POST['morphoss' . $x];
     if ($extra != '') {
@@ -254,7 +255,7 @@ for ($x=1; $x<13; $x++) {
 
 /* elseif ($field=="extraAnno5") {
 
-for ($x=1; $x<13; $x++) {
+for ($x=1; $x<=$numcells; $x++) {
     
     $extra = $_POST['morphoss' . $x];
     if ($extra != '') {
@@ -268,6 +269,36 @@ for ($x=1; $x<13; $x++) {
 }  */ else {
     $result = $phrasicon->xpath("/phrasicon/phrase[@id = '$id']");  
     $result[0]->$field = $edit;
+}
+    
+$dom = new DOMDocument('1.0');
+$dom->preserveWhiteSpace = false;
+$dom->formatOutput = true;
+$dom->loadXML($phrasicon->asXML());
+$dom->save($file);
+    
+} elseif ($_POST['type'] == 'mass_edit') {
+
+$morph = $_POST['morph'];
+$gloss = $_POST['gloss'];
+$edit = $_POST['edit'];
+
+$phrasicon = new SimpleXMLElement($file,null,true);
+        
+$result = $phrasicon->xpath("//m[text()='$morph']");
+
+$ids = array();
+    
+foreach ($result as $entry) {
+    array_push($ids, $entry[id]);
+}
+    
+for ($x=0; $x<sizeof($ids); $x++) {
+    $result = $phrasicon->xpath("/phrasicon/phrase/gloss/g[@id='" . $ids[$x] . "']/../..");
+    $id = explode(".", $ids[$x])[1]; 
+    if ($result[0]->gloss->g[$id-1] == $gloss) {
+        $result[0]->gloss->g[$id-1] = $edit;
+    }  
 }
     
 $dom = new DOMDocument('1.0');
@@ -292,6 +323,16 @@ $result->item(0)->parentNode->removeChild($result->item(0));
 
     $dom->save($file);
 }
+
+$phrasicon = new SimpleXMLElement($file,null,true);
+$result = $phrasicon->xpath("/phrasicon/metadata"); 
+$result[0]->modified = date("Y-m-d");
+$dom = new DOMDocument('1.0');
+$dom->preserveWhiteSpace = false;
+$dom->formatOutput = true;
+$dom->loadXML($phrasicon->asXML());
+$dom->save($file);
+
 echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center><b>Query submitted.</b></center></h4><hr></div>";
 
 mysqli_close($con);

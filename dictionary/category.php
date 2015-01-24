@@ -93,7 +93,7 @@ $is_adj = FALSE;
     
 if (strlen($word) <= 3) {
     
-$result = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../.. | /dictionary/entry/sense/cit[starts-with(quote, '$word ')]/../..");    
+$result = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../.. | /dictionary/entry/sense/cit[starts-with(quote, '$word ')]/../.. | //usg[text() = '$word']/../../..");    
 
 $pos = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../../gramGrp/pos"); 
 
@@ -105,23 +105,34 @@ foreach($pos as $tag) {
 }
 
 if ($is_adj) {
-$result = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../.. | /dictionary/entry/sense/cit[starts-with(quote, '$word')]/../..");    
+$result = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../.. | /dictionary/entry/sense/cit[starts-with(quote, '$word')]/../.. | //usg[text() = '$word']/../../..");    
 }
     
 } else {
     
-$result = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../.. | /dictionary/entry/sense/cit[starts-with(quote, '$word')]/../..");    
+$result = $xpath->query("/dictionary/entry/sense/cit[quote='$word']/../.. | /dictionary/entry/sense/cit[starts-with(quote, '$word')]/../.. | //usg[text() = '$word']/../../..");    
     
 }
+   
+$current = array();
     
 foreach($result as $entry) {
 $id = $entry->getAttribute('id');
 $stem = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue;
 $eng = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue;
+    if (!in_array($eng, $current)) {
+        array_push($current, $eng); 
+        $list = $list . "<li><a href=\"../dictionary/word.php?word=" . $stem. "#" . $id . "\">" . $eng . "</a></li>";
+        $new_word = $stem;
+        $count++;
+    }
+    if (!in_array($stem, $current)) {
+        array_push($current, $stem);
+        $list = $list . "<li><a href=\"../dictionary/word.php?word=" . $stem . "\">" . $stem . "</a></li>";
+        $new_word = $stem;
+        $count++;
+    }
 
-$list = $list . "<li><a href=\"../dictionary/word.php?word=" . $stem . "#" . $id . "\">" . $eng . "</a></li>";
-$count++;
-$new_word = $stem;
 }
 
 $result = array();
@@ -136,11 +147,19 @@ foreach($result as $entry) {
 $id = $entry->getAttribute('id');
 $stem = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue;
 $eng = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue;
-
     
-    $list = $list . "<li><a href=\"../dictionary/word.php?word=" . $stem. "#" . $id . "\">" . $eng . "</a></li>";
-    $new_word = $stem;
-    $count++;
+    if (!in_array($eng, $current)) {
+        array_push($current, $eng); 
+        $list = $list . "<li><a href=\"../dictionary/word.php?word=" . $stem. "#" . $id . "\">" . $eng . "</a></li>";
+        $new_word = $stem;
+        $count++;
+    }
+    if (!in_array($stem, $current)) {
+        array_push($current, $stem);
+        $list = $list . "<li><a href=\"../dictionary/word.php?word=" . $stem. "\">" . $stem . "</a></li>";
+        $new_word = $stem;
+        $count++;
+    }
 }
 }
 $list .= "</ul>";
@@ -300,6 +319,7 @@ if ($count == 0 && $counting) {
         <?php echo $warning ?>
         <?php echo $form ?>
     </div>
+             <br>
     </div>
     </div>
     </div>

@@ -835,11 +835,16 @@ class Maxent extends LinearModel
 
 <?php
 
-$morpheme = $_GET['morpheme'];
-$num = intval($_GET['id']);
 $txt = $_GET['txt'];
 // include('porterstemmer.php');
 // $word = PorterStemmer::Stem($_POST['word']); 
+$words = explode(" ", $txt);
+$txt = "<s1> <s2> " . $txt . " </s1> </s2>";
+
+for ($counter = 0; $counter < sizeof($words); $counter++) {
+
+$morpheme = $words[$counter];
+$num = $counter + 1;
 
 if ($morpheme == "") {  // if blank, return blank
     echo "";    
@@ -848,11 +853,25 @@ if ($morpheme == "") {  // if blank, return blank
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("../phrasicon.xml");
 $xpath = new DOMXPath($xmlDoc);
-$result = $xpath->query("(//morpheme[m='$morpheme'])");
-$resultM = $xpath->query("(//m[text() = '$morpheme'])");
+$result = $xpath->query("(//morpheme[m=\"$morpheme\"])");
+$resultM = $xpath->query("(//m[text() = \"$morpheme\"])");
 
 if ($result->length == 0) { // if no morpheme found in existing data, return blank
-    echo "";
+    
+$xmlDocDict = new DOMDocument();
+$xmlDocDict->load("../../dictionary/dictionary.xml");
+$xpathDict = new DOMXPath($xmlDocDict);
+
+$resultDict = $xpathDict->query("//orth[text() = \"$morpheme\"]/../..");    
+    if ($resultDict->length > 0) {
+     
+    $gloss = $resultDict->item(0)->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue;   
+    $gloss = str_replace(" ", "_", $gloss);
+    echo $gloss . " ";
+        
+    } else {
+    echo "? ";
+    }
 } else {
 
 $glossTypes = array();
@@ -863,6 +882,7 @@ $id = $entry->getAttribute('id');
 //echo $id;
 $g = $xpath->query("(//g[@id = '$id'])");
 $gloss = $g->item(0)->nodeValue;
+$gloss = str_replace(" ", "_", $gloss);
 array_push($glossTypes, $gloss);    
 }
 
@@ -870,7 +890,7 @@ $glossTypes = array_values(array_unique($glossTypes));
     
 if (sizeof($glossTypes) == 1) {
 
-echo $gloss;
+echo $gloss . " ";
 
 } else {
 
@@ -878,26 +898,28 @@ $morphemes = "";
 $glosses = "";
         
 foreach($result as $entry) {
-    $m = "<s> ";
-    $g = "<s> ";
+    $m = "<s1> <s2> ";
+    $g = "<s1> <s2> ";
     $length = $entry->childNodes->length;
     for ($x=1; $x<$length-1; $x+=2) {
     $morph = $entry->childNodes->item($x)->nodeValue;
     $id = $entry->childNodes->item($x)->getAttribute('id');
     $gl = $xpath->query("(//g[@id = '$id'])");
     $gloss = $gl->item(0)->nodeValue;
+    $gloss = str_replace(" ", "_", $gloss);
     $m = $m . $morph . " ";  
     $g = $g . $gloss . " ";
     }
     $m = rtrim($m, " ");
     $g = rtrim($g, " ");
-    $m .= " </s> ";
-    $g .= " </s> ";
+    $m .= " </s1> </s2> ";
+    $g .= " </s1> </s2> ";
     $morphemes = $morphemes . $m;
     $glosses = $glosses . $g;
 }
 $morphemes = rtrim($morphemes, " ");
 $glosses = rtrim($glosses, " ");
+
 $tok = new WhitespaceTokenizer();
 $tokG = new WhitespaceTokenizer();
 
@@ -931,7 +953,7 @@ array_walk(
 $tokens, function ($t,$i) use($tset,$tokens,$occ,$glossTypes,$length,$count) { // function (value, key) 
 for($x=0; $x<$length; $x++){
     if (in_array($i, $occ[$x])) { 
-        $tset->addDocument($glossTypes[$x], new WordDocument($tokens,$i,1));
+        $tset->addDocument($glossTypes[$x], new WordDocument($tokens,$i,2));
     }
 }
 }
@@ -942,10 +964,27 @@ for($x=0; $x<$length; $x++){
 // thus we prepend each feature name with the class name
 // $occ[type][$x] - 1 = position of previous words...
 
+    
+    
+/*
+
+function ($class, $d) use ($occ, $glossTypes, $length, $tokens) {
 // $data[0] is the current word
 // $data[1] is an array of previous words
 // $data[2] is an array of following words
-     
+    
+$data = $d->getDocumentData();
+$positions = $occ[array_search($class, $glossTypes)];
+for ($x=0; $x<sizeof($posittions); $x++) {
+    $prev  = $tokens[$positions[$x]-1];
+    return ($data[1][0] == $prev) ? "$class ^ prev_ends_with($prev)" : null;
+}
+    
+// check previous word by looking at co-occurence in current data...
+return ($data[1][0]=='<s>') ? "$class ^ prev_ends_with(<s>)" : null;
+}
+*/    
+    
 // feature engineering    
 
 $feats = array();
@@ -954,13 +993,34 @@ for ($x=0; $x<$length; $x++) {
     $type = $glossTypes[$x];
     $positions = $occ[$x];
     for ($y=0; $y<sizeof($positions); $y++) {    
-        $prev = $tokens[$positions[$y] - 1];
+        $prev1 = $tokens[$positions[$y] - 1];
+        $next1 = $tokens[$positions[$y] + 1];
+        $prev2 = $tokens[$positions[$y] - 2];
+        $next2 = $tokens[$positions[$y] + 2];
         array_push($feats, 
-          function ($class, $d) use ($prev) {
+          function ($class, $d) use ($prev1) {
               $data = $d->getDocumentData();
-              return ($data[1][0] == "$prev") ? "$class ^ prev_ends_with($prev)" : null;
+              return ($data[1][1] == "$prev1") ? "$class ^ one_prev_ends_with($prev1)" : null;
           }       
         );
+        array_push($feats, 
+          function ($class, $d) use ($next1) {
+              $data = $d->getDocumentData();
+              return ($data[2][0] == "$next1") ? "$class ^ one_next_ends_with($next1)" : null;
+          }       
+        );
+        array_push($feats, 
+          function ($class, $d) use ($prev2) {
+              $data = $d->getDocumentData();
+              return ($data[1][0] == "$prev2") ? "$class ^ two_prev_ends_with($prev2)" : null;
+          }       
+        );  
+        array_push($feats, 
+          function ($class, $d) use ($next2) {
+              $data = $d->getDocumentData();
+              return ($data[2][1] == "$next2") ? "$class ^ two_next_ends_with($next2)" : null;
+          }       
+        );  
     }
 }
     
@@ -981,8 +1041,6 @@ $maxent = new Maxent(array());
 // train
 
 $maxent->train($ff,$tset,$optimizer);    
-
-// debugging    
 //$weights = $maxent->dumpWeights();    
 //print_r($weights);
 
@@ -994,13 +1052,14 @@ $doc = new WordDocument($tokens, $num, 1);
 
 $classification = array();
 
-for ($x = 0; $x < $length; $x++) {   
+for ($x = 0; $x < $length; $x++) {
     array_push($classification, $maxent->P($glossTypes, $ff, $doc, $glossTypes[$x]));
 }
 
-echo $glossTypes[array_search(max($classification), $classification)];
+echo $glossTypes[array_search(max($classification), $classification)] . "^";
        
 }
 }   
+}
 ?>
 

@@ -6,8 +6,16 @@ $xmlDoc = new DOMDocument();
 $xmlDoc->load("../dictionary.xml");
 $xpath = new DOMXPath($xmlDoc);
 
+if ($english == " ") {
+ 
+$result = $xpath->query("//entry");
+    
+} else {
+
 $result = $xpath->query("//entry/sense/cit[starts-with(quote, '$english')]/../.. | //entry/sense/cit[starts-with(usg, '$english')]/../..");
 
+}
+    
 echo "<table>
 <tr>
 <th>ID</th>

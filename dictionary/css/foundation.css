@@ -3328,13 +3328,13 @@ td {
 /* Default Link Styles */
 
 a {
-    color: black;
+    color: gray;
     text-decoration: none;
     line-height: inherit;
 }
 a:hover,
 a:focus {
-    color: gray;
+    color: #AAAAAA;
 }
 a img {
     border: none;

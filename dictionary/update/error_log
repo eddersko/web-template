@@ -1,0 +1,7 @@
+[17-Jan-2015 18:09:37 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/dictionary/update/index.php on line 2
+[17-Jan-2015 18:09:37 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/dictionary/update/index.php on line 3
+[17-Jan-2015 18:09:51 America/Denver] PHP Warning:  include(): Failed opening '../../../insert.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home1/eddersko/public_html/template/demo/dictionary/update/upload_file.php on line 26
+[24-Jan-2015 15:49:13 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/dictionary/update/index.php on line 2
+[24-Jan-2015 15:49:13 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/dictionary/update/index.php on line 3
+[24-Jan-2015 15:49:19 America/Denver] PHP Notice:  Undefined variable: phrasicon in /home1/eddersko/public_html/template/demo/dictionary/update/insert.php on line 123
+[24-Jan-2015 15:49:19 America/Denver] PHP Fatal error:  Call to a member function asXML() on a non-object in /home1/eddersko/public_html/template/demo/dictionary/update/insert.php on line 123

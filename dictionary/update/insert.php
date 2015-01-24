@@ -114,6 +114,15 @@ $result->item(0)->parentNode->removeChild($result->item(0));
 $dom->save($file);
 } 
 
+$dictionary = new SimpleXMLElement($file,null,true);
+$result = $dictionary->xpath("/dictionary/metadata"); 
+$result[0]->modified = date("Y-m-d");
+$dom = new DOMDocument('1.0');
+$dom->preserveWhiteSpace = false;
+$dom->formatOutput = true;
+$dom->loadXML($dictionary->asXML());
+$dom->save($file);
+
 echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center><b>Query submitted.</b></center></h4><hr></div>";
 
   include("../update/interface.php");

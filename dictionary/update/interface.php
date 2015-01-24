@@ -30,25 +30,27 @@
         }
     </script>
     <script type='text/javascript'>
-    var id;
-    function main(e, obj) {
-        id = obj.id;
-        keyPress(e);
-    }
-    function KeyPress(e) {
-        var evtobj = window.event? event : e;
-          if (evtobj.keyCode == 65 && evtobj.altKey) {
-               document.getElementById(id).value += 'ʰ';
-          } else if (evtobj.keyCode == 191 && evtobj.altKey) {
-           document.getElementById(id).value += 'ʔ';
-           } else if (evtobj.keyCode == 78 && evtobj.altKey) {
-            document.getElementById(id).value += 't̪';      
-          } 
-    }
-    document.onkeydown = KeyPress;
+        var id;
+
+        function main(e, obj) {
+            id = obj.id;
+            keyPress(e);
+        }
+
+        function KeyPress(e) {
+            var evtobj = window.event ? event : e;
+            if (evtobj.keyCode == 65 && evtobj.altKey) {
+                document.getElementById(id).value += 'ʰ';
+            } else if (evtobj.keyCode == 191 && evtobj.altKey) {
+                document.getElementById(id).value += 'ʔ';
+            } else if (evtobj.keyCode == 78 && evtobj.altKey) {
+                document.getElementById(id).value += 't̪';
+            }
+        }
+        document.onkeydown = KeyPress;
     </script>
 </head>
-    
+
 <body>
     <div class="row">
         <hr>
@@ -61,16 +63,16 @@
             <h4 class="subheader">Create Record</h4>
             <input type="hidden" name="type" value="create">
             <div class="large-3 columns">
-            <!-- Source -->
+                <!-- Source -->
                 <h4 class="subsubheader">Source Language</h4> 
                 <input id="orth" type="text" name="orth" onkeydown="main(event, this)">
             </div>
             <div class="large-3 columns">
-            <!-- English -->
+                <!-- English -->
                 <h4 class="subsubheader">English</h4>
                 <input type="text" name="quote">
             </div>
-                    <div class="large-3 columns">
+            <div class="large-3 columns">
                 <h4 class="subsubheader">POS</h4> 
                 <input type="text" name="pos">
             </div>
@@ -86,14 +88,14 @@
                 <h4 class="subsubheader">Media</h4> 
                 <input type="text" name="media">
             </div>
-              <div class="large-3 columns">
+            <div class="large-3 columns">
                 <h4 class="subsubheader">Reference</h4> 
                 <input type="text" name="ref">
             </div>
 
             <!-- This is where you add annotation layers. -->
             <!-- Rename-able -->
-            
+
             <!-- ExtraAnno1 -->
             <!--    
             <div class="large-12 columns">
@@ -101,7 +103,7 @@
                 <input type="text" name="extraAnno1">
             </div>
             -->
-            
+
             <!-- ExtraAnno2 -->
             <!--    
             <div class="large-12 columns">
@@ -117,7 +119,7 @@
                 <input type="text" name="extraAnno3">
             </div>
             -->
-                
+
             <!-- ExtraAnno4 -->
             <!--    
             <div class="large-12 columns">
@@ -125,7 +127,7 @@
                 <input type="text" name="extraAnno4">
             </div>
             -->
-    
+
             <!-- ExtraAnno5 -->
             <!--    
             <div class="large-12 columns">
@@ -133,17 +135,17 @@
                 <input type="text" name="extraAnno5">
             </div>
             -->
-                
-            
+
+
             <div class="large-12 columns">
 
                 <input class="postfix button" type="submit" value="Create">
             </div>
 
         </form>
-        
+
         <!-- ...ends here. -->
-        
+
         <hr>
 
         <!-- The section for displaying records... -->
@@ -167,7 +169,7 @@
         </div>
 
         <!-- ...ends here. -->
-        
+
         <hr>
 
         <!-- The section for modifying records... -->
@@ -200,21 +202,21 @@
                     -->
                     <!-- 
                     <option value="extraAnno2">ExtraAnno2</option>
-                    -->                    
+                    -->
                     <!-- 
                     <option value="extraAnno3">ExtraAnno3</option>
-                    -->                    
+                    -->
                     <!-- 
                     <option value="extraAnno4">ExtraAnno4</option>
-                    -->                    
+                    -->
                     <!-- 
                     <option value="extraAnno5">ExtraAnno5</option>
                     -->
                 </select>
             </div>
             <div class="large-3 columns">
-            <h4 class="subsubheader">Edit</h4> 
-            <input id="edit" type="text" name="edit" onkeydown="main(event, this)">
+                <h4 class="subsubheader">Edit</h4> 
+                <input id="edit" type="text" name="edit" onkeydown="main(event, this)">
             </div>
             <br>
             <br>
@@ -227,11 +229,11 @@
         </form>
 
         <!-- ...ends here. -->
-        
+
         <br>
         <br>
         <hr>
-        
+
         <!-- The section for deleting records... -->
         <form action="../update/insert.php" method="post">
             <h4 class="subheader">Delete Record</h4>
@@ -246,35 +248,62 @@
                 <input class="button postfix" type="submit" value="Delete">
             </div>
         </form>
-        
+
         <!-- ...ends here. -->
-        
+
         <br>
         <br>
         <hr>
-        
-        <!-- The section for uploading files... -->
+
+        <h4 class="subheader">Import/Export XML File</h4>
+
+        <!-- The section for uploading XML database file... -->
+        <form action="upload_file.php" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="large-3 columns">
+
+                    <input type="file" name="file[]">
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-3 columns">
+                    <input class="button postfix" type="submit" name="submit" value="Import">
+                </div>
+                <div class="large-3 columns">
+                    <a class="button postfix" href="../dictionary.xml" download>Export</a>
+                </div>
+            </div>
+        </form>
+        <hr>
+        <!-- ...ends here. -->
+
+        <!-- The section for uploading sound files... -->
         <form action="uploadFiles.php" method="post" enctype="multipart/form-data">
 
-        <h4 class="subheader">Upload Files</h4>
+            <h4 class="subheader">Upload Sound Files</h4>
 
-        <input type="file" name="file[]" multiple><br>
+            <input type="file" name="file[]" multiple>
+            <br>
 
-        <input type="submit" name="submit" value="Submit">
+            <div class="row">
+                <div class="large-3 columns">
+                    <input class="button postfix" type="submit" name="submit" value="Submit">
+                </div>
+            </div>
 
         </form>
-        
+
         <!-- ...ends here. -->
         <hr>
-        </div>
-        
-        <script src="../js/vendor/jquery.js"></script>
-        <script src="../js/foundation/foundation.js"></script>
-        <script>
-            $(document).foundation();
-            var doc = document.documentElement;
-            doc.setAttribute('data-useragent', navigator.userAgent);
-        </script>
+    </div>
+
+    <script src="../js/vendor/jquery.js"></script>
+    <script src="../js/foundation/foundation.js"></script>
+    <script>
+        $(document).foundation();
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
 </body>
 
 </html>
