@@ -1,0 +1,68 @@
+.hero{
+	background: url("../background_expressions.jpg");
+	background-size: cover;
+	box-shadow: inset 0px 0px 0 2000px rgba(0,0,0,0.15);
+	height: 40%;
+}
+
+.intro-text {
+    text-shadow: 2px 2px #000000;
+	padding-top: 8%;
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+}
+
+@media only screen and (min-width: 40.063em) {
+	.intro-text{
+		padding-top: 8%;
+    }
+}
+
+@media only screen and (min-width: 64.063em) {
+	.intro-text{
+		padding-top: 8%;
+	}
+}
+
+.intro-text p{
+	font-family: 'Lora', cursive;
+	font-size: 2.5em;
+    font-weight: 100;
+}
+
+.about, .work, .contact {
+	padding: 50px 0 0 0;
+}
+
+.about img{
+	width: 250px;
+	height: 250px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;	
+}
+
+.work img:hover {
+	opacity: 0.5;
+	-webkit-transition: 0.3s ease;
+	-moz-transition: 0.3s ease;
+	-ms-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
+	transition: 0.3s ease;
+}
+
+.work li {
+	height: 140px;
+	overflow: hidden; 
+}
+
+
+p {
+ 	font-family: 'Lora', Helvetica, Arial, sans-serif;   
+}
+
+.expressions p {
+  font-family: 'Roboto', sans-serif;    
+  font-weight: 900;
+  font-size: 1.55rem;
+}
