@@ -2,21 +2,24 @@
 <html>
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Link to Mobile Apps</title>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Multi-layered Language Learning Resources" />
+    <title>Template for Multi-Layered Langauge Resources</title>
+    <meta name="keywords" content="language learning, language tools" />
+    <meta name="description" content="Template for Multi-Layered Langauge Resources" />
     <meta name="author" content="User" />
     <meta name="copyright" content="User" />
     <link rel="stylesheet" href="css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/apps.css" />
+    <link href="http://fonts.googleapis.com/css?family=Raleway:600,400,200" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css">
+    <script src="js/modernizr.js"></script>
 </head>
 
 <body>
-
-    <!-- Menu Bar -->
     <nav class="top-bar" data-topbar>
         <ul class="title-area">
+
             <li class="name">
                 <h1>
 <a href="../">
@@ -26,95 +29,70 @@ Back to Menu
             </li>
         </ul>
     </nav>
+    <div class="row about">
+        <div class="large-4 columns">
+            <center>
+                <img src="../placeholder.png">
+            </center>
+            <br>
+        </div>
+        <div class="large-8 columns">
+            <hr>
+            <center>
+                <h4>Links to Mobile App</h4>
+            </center>
+            <hr>
+            <p align="justify">Lorem ipsum dolor sit amet, eu mollis vel. Non feugiat eu magna nulla sapien, per justo tellus vel dui. Amet phasellus suspendisse orci cras habitasse, in ut mauris diam, egestas cras interdum, egestas aliquet felis in varius justo lectus, erat amet adipiscing. Convallis sagittis mollis, rhoncus metus vitae proin erat libero maecenas, viverra dapibus vitae, amet sapien velit habitant, nostra suspendisse.</p>
+        </div>
+    </div>
 
-    <div class="row">
-        <br>
+    <div class="row work">
         <div class="large-12 columns">
+            <center>
+                <hr>
+                <h4>Download</h4>
+                <hr>
+                <br>
+            </center>
+            <ul class="clearing-thumbs small-block-grid-1 medium-block-grid-2 large-block-grid-4">
 
-            <div class="row">
-
-                <div class="large-6 columns">
-
-                    <!-- This is the picture (500x500). -->
-
-                    <img src="../placeholder.png">
-                    <br>
-
-                </div>
-
-
-                <div class="large-6 columns">
-
-                    <!-- The Link to Mobile Apps section starts here... -->
-
-                    <div class="panel">
-
-                        <!-- Title of the section. -->
-
-                        <h4 class="hide-for-small subheader">Links to Mobile Apps<hr/></h4>
-
-                        <!-- Paragraph #1 -->
-
-                        <p>Lorem ipsum dolor sit amet, eu mollis vel. Non feugiat eu magna nulla sapien, per justo tellus vel dui. Amet phasellus suspendisse orci cras habitasse, in ut mauris diam, egestas cras interdum, egestas aliquet felis in varius justo lectus, erat amet adipiscing. Convallis sagittis mollis, rhoncus metus vitae proin erat libero maecenas, viverra dapibus vitae, amet sapien velit habitant, nostra suspendisse. Egestas sodales nascetur molestie interdum ipsum, lacus sed, leo neque vitae massa urna pellentesque turpis. Dui cras, a posuere at nec.</p>
-                    </div>
-
-                    <!-- ...and ends here. -->
-
-                    <div class="row">
-                    
-                        <!-- The iOS section starts here... -->
-
-                        <div class="large-6 small-6 columns">
-
-
-                            <div class="panel">
-
-                                <!-- The title of the setion.-->
-
-                                <h5 class="subheader">iOS</h5>
-
-                                <!-- Button to link. -->
-
-                                <center><a href="#" class="small button">Coming soon!</a>
-                                </center>
-                            </div>
-
-                        </div>
-                        
-                        <!-- ...and ends here. -->
-
-                        <!-- The Android section starts here... -->
-
-                        <div class="large-6 small-6 columns">
-
-                            <div class="panel">
-
-                                <!-- The title of the section. -->
-                                <h5 class="subheader">Android</h5>
-
-                                <!--Button to link. -->
-
-                                <center><a href="#" class="small button">Coming soon!</a>
-                                </center>
-                            </div>
-
-                        </div>
-                        <!-- ...and ends here. -->
-
-                    </div>
-                </div>
-            </div>
+                <li><b>iOS App</b>
+                    <br>Lorem ipsum dolor sit amet, eu mollis vel. Non feugiat eu magna nulla sapien, per justo tellus vel dui.</li>
+                <li>
+                    <center>
+                        <a class="button secondary" href="#">Download</a>
+                    </center>
+                </li>
+                <li><b>Android App</b>
+                    <br>Lorem ipsum dolor sit amet, eu mollis vel. Non feugiat eu magna nulla sapien, per justo tellus vel dui.</li>
+                <li>
+                    <center>
+                        <a class="button secondary" href="#">Download</a>
+                    </center>
+                </li>
+            </ul>
+            <br>
+            <br>
+            <br>
         </div>
     </div>
 
     <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
     <script src="js/foundation/foundation.js"></script>
+    <script src="js/foundation/foundation.clearing.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    <script src="../assets/js/templates/jquery.js"></script>
+    <script src="../assets/js/templates/foundation.js"></script>
     <script>
         $(document).foundation();
 
         var doc = document.documentElement;
         doc.setAttribute('data-useragent', navigator.userAgent);
     </script>
+
 </body>
 
 </html>

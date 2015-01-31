@@ -26,25 +26,20 @@ else
 
 <body>
 
-    <div class="row">
-        <div class="large-12 columns">
-            <hr>
-            <!-- Title of the page. -->
-            <h4 class="title">Online Phrasicon Data Entry</h4>
-            <hr>
-            <!-- Start of form... -->
-            <form method="POST" action="index.php">
-                Username
-                <input type="text" name="user" placeholder='123'></input>
-                <br/> 
-                Password
-                <input type="password" name="pass" placeholder='abc'></input>
-                <br/>
-                <input class="radius button expand" type="submit" value="Submit">
-            </form>
-            <!-- ...end of form. -->
-        </div>
+    <div class="large-4 columns">    
+    <br>
     </div>
+            <div class="large-4 columns">    
+    <hr>
+                        <h4 class="title">Phrasicon Data Entry</h4>
+                <hr>
+            <form method="POST" action="index.php">
+            <input type="text" name="user" placeholder='123' ></input>
+            <input type="password" name="pass" placeholder='abc'></input>
+            <input class="radius button expand" type="submit" value="Login">
+            </form>
+    </div>
+
 
     <br>
     <br>

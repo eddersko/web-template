@@ -1056,7 +1056,7 @@ for ($x = 0; $x < $length; $x++) {
     array_push($classification, $maxent->P($glossTypes, $ff, $doc, $glossTypes[$x]));
 }
 
-echo $glossTypes[array_search(max($classification), $classification)] . "^";
+echo $glossTypes[array_search(max($classification), $classification)] . " ";
        
 }
 }   

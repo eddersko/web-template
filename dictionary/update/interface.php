@@ -29,26 +29,6 @@
             xmlhttp.send();
         }
     </script>
-    <script type='text/javascript'>
-        var id;
-
-        function main(e, obj) {
-            id = obj.id;
-            keyPress(e);
-        }
-
-        function KeyPress(e) {
-            var evtobj = window.event ? event : e;
-            if (evtobj.keyCode == 65 && evtobj.altKey) {
-                document.getElementById(id).value += 'ʰ';
-            } else if (evtobj.keyCode == 191 && evtobj.altKey) {
-                document.getElementById(id).value += 'ʔ';
-            } else if (evtobj.keyCode == 78 && evtobj.altKey) {
-                document.getElementById(id).value += 't̪';
-            }
-        }
-        document.onkeydown = KeyPress;
-    </script>
 </head>
 
 <body>
@@ -65,25 +45,45 @@
             <div class="large-3 columns">
                 <!-- Source -->
                 <h4 class="subsubheader">Source Language</h4> 
-                <input id="orth" type="text" name="orth" onkeydown="main(event, this)">
+                <input id="orth" type="text" name="orth">
             </div>
             <div class="large-3 columns">
                 <!-- English -->
                 <h4 class="subsubheader">English</h4>
                 <input type="text" name="quote">
             </div>
+            <!--<div class="large-3 columns">
+                <h4 class="subsubheader">123</h4>
+                <input type="text" name="quote|123">
+            </div>-->
             <div class="large-3 columns">
                 <h4 class="subsubheader">POS</h4> 
                 <input type="text" name="pos">
             </div>
+            <!--<div class="large-3 columns">
+                <h4 class="subsubheader">POS</h4> 
+                <input type="text" name="pos|123">
+            </div>-->
             <div class="large-3 columns">
                 <h4 class="subsubheader">Hypernym</h4> 
                 <input type="text" name="usg">
             </div>
+            <!-- 
+            <div class="large-3 columns">
+                <h4 class="subsubheader">Hypernym (123)</h4> 
+                <input type="text" name="usg|123">
+            </div>
+            -->
             <div class="large-6 columns">
                 <h4 class="subsubheader">Description</h4> 
-                <input id="note" type="text" name="note" onkeydown="main(event, this)">
+                <input id="note" type="text" name="note">
             </div>
+            <!-- 
+            <div class="large-6 columns">
+                <h4 class="subsubheader">Description</h4> 
+                <input id="note" type="text" name="note|123"">
+            </div>
+            -->
             <div class="large-3 columns">
                 <h4 class="subsubheader">Media</h4> 
                 <input type="text" name="media">

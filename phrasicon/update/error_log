@@ -333,3 +333,17 @@
 [24-Jan-2015 15:46:04 America/Denver] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home1/eddersko/public_html/template/demo/phrasicon/update/insert.php on line 330
 [24-Jan-2015 15:46:56 America/Denver] PHP Notice:  Undefined variable: con in /home1/eddersko/public_html/template/demo/phrasicon/update/insert.php on line 338
 [24-Jan-2015 15:46:56 America/Denver] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home1/eddersko/public_html/template/demo/phrasicon/update/insert.php on line 338
+[27-Jan-2015 19:08:04 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 2
+[27-Jan-2015 19:08:04 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 3
+[27-Jan-2015 19:08:45 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 2
+[27-Jan-2015 19:08:45 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 3
+[27-Jan-2015 19:08:46 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 2
+[27-Jan-2015 19:08:46 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 3
+[27-Jan-2015 19:10:05 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 2
+[27-Jan-2015 19:10:05 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 3
+[27-Jan-2015 19:19:01 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 2
+[27-Jan-2015 19:19:01 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 3
+[27-Jan-2015 19:26:51 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 2
+[27-Jan-2015 19:26:51 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 3
+[31-Jan-2015 14:31:41 America/Denver] PHP Notice:  Undefined index: user in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 2
+[31-Jan-2015 14:31:41 America/Denver] PHP Notice:  Undefined index: pass in /home1/eddersko/public_html/template/demo/phrasicon/update/index.php on line 3

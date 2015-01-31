@@ -32,9 +32,9 @@ $len2 = strlen($stem);
 $num = 0;
 $num += $xpath->query("//phrase[starts-with(translation, '$stem')]")->length;   
 $num += $xpath->query("//phrase[contains(translation, ' $stem ')]")->length;   
-$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len1.') = "'.$stem.'")]')->length; 
-$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len2.') = "'.$stem.'?")]')->length; 
-$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len2.') = "'.$stem.'.")]')->length; 
+$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len1.') = " '.$stem.'")]')->length; 
+$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$stem.'?")]')->length; 
+$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$stem.'.")]')->length; 
 $num += $xpath->query("//gloss[g='$stem']")->length;    
 
 if ($num > 0) { 

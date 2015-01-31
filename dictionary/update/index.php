@@ -27,31 +27,20 @@ else
 </head>
 
     <body>
-        <div class="row">
-            <div class="large-12 columns">
+    <div class="large-4 columns">    
+    <br>
+    </div>
+            <div class="large-4 columns">    
+    <hr>
+                        <h4 class="title">Dictionary Data Entry</h4>
                 <hr>
-                
-                <!-- Title of page. -->
-                <h4 class="title">Talking Dictionary Data Entry</h4>
-                
-                <hr>
-                
-                <!-- Start of form... -->
-                <form method="POST" action="index.php">
-                    Username
-                    <input type="text" name="user" placeholder='abc'></input>
-                    <br/>
-                    Password
-                    <input type="password" name="pass" placeholder='123'></input>
-                    <br/>
-                    <!-- Submit button. -->
-                    <input class="radius button expand" type="submit" value="Submit">
-                </form>
-                
-                <!-- ...end of form. -->
-                
-            </div>
-        </div>
+            <form method="POST" action="index.php">
+            <input type="text" name="user" placeholder='abc' ></input>
+            <input type="password" name="pass" placeholder='123'></input>
+            <input class="radius button expand" type="submit" value="Login">
+            </form>
+    </div>
+
 
         <br>
         <br>

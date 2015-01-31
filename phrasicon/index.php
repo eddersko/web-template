@@ -12,6 +12,7 @@ $count = $entries->length;
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Phrasicon Template</title>
+    <meta name="keywords" content="phrasicon, language learning, language tools" />
     <meta name="description" content="Multi-layered Language Learning Resources" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="User" />

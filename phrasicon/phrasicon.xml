@@ -14,9 +14,11 @@
     <modified type="dcterms:W3CDTF">Last Modified</modified>
     <format type="dcterms:IMT">text/xml</format>
     <language type="olac:language" code="abc" lang="abc">Source</language>
-    <language type="olac:language" code="eng" lang="eng">English</language>
+    <language type="olac:language" code="eng" lang="en">English</language>
     <subject type="olac:language" code="abc" lang="abc">Source</subject>
-    <subject type="olac:language" code="eng" lang="eng">English</subject>
+    <subject type="olac:language" code="eng" lang="en">English</subject>
+    <!--<language type="olac:language" code="fra" lang="fr">French</language>
+    <subject type="olac:language" code="fra" lang="fr">French</subject>-->
   </metadata>
   <phrase id="0">
     <ref/>
@@ -24,11 +26,15 @@
     <morpheme>
       <m id="0.1"/>
     </morpheme>
-    <gloss>
+    <gloss lang="en">
       <g id="0.1"/>
     </gloss>
-    <translation/>
+    <translation lang="en"/>
     <media mimeType="" url=""/>
+    <!--<gloss lang="fr">
+      <g id="0.1"/>
+    </gloss>
+    <translation lang="fr" />-->
     <!-- This is where you add annotation layers. -->
     <!-- Rename-able -->
     <!-- ExtraAnno1 -->

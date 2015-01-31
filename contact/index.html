@@ -1,10 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>Contact</title>
     <meta name="description" content="Multi-layered Language Learning Resources" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="User" />
     <meta name="copyright" content="User" />
     <link rel="stylesheet" href="css/foundation.css" />
@@ -12,8 +13,6 @@
 </head>
 
 <body>
-
-    <!-- Menu Bar -->
     <nav class="top-bar" data-topbar>
         <ul class="title-area">
             <li class="name">
@@ -25,64 +24,32 @@ Back to Menu
             </li>
         </ul>
     </nav>
-
     <div class="row">
-
-        <div class="large-3 columns">
-            <br>
-
-            <p>
-                <!-- This is the picture (500x500). -->
-                <img src="../placeholder.png">
-                <br/>
-            </p>
-
+        <div class="large-12 medium-12 columns">
+            <br><center>
+            <img width="250px" height="250px" style="border-radius: 150px;-webkit-border-radius: 150px;-moz-border-radius: 150px" src="../placeholder.png" />
+            </center>
         </div>
-        <div class="large-9 columns">
-
-            <!-- Title of the section. -->
-            <h3>Contact</h3>
-
-            <!-- Start of form... -->
-
+        <div class="large-12 medium-12 columns">
             <div class="section-container tabs" data-section>
-                <section class="section">
-                    <div class="content" data-slug="panel1">
-                        <form method="post" action="send_email.php">
-                            <div class="row collapse">
-                                <div class="large-2 columns">
-                                    <label class="inline">Your Name</label>
-                                </div>
-                                <div class="large-10 columns">
-                                    <input name="name" type="text" id="yourName" placeholder="First Last">
-                                </div>
-                            </div>
-                            <div class="row collapse">
-                                <div class="large-2 columns">
-                                    <label class="inline">Your Email</label>
-                                </div>
-                                <div class="large-10 columns">
-                                    <input name="email" type="text" id="yourEmail" placeholder="123@abc.com">
-                                </div>
-                            </div>
-                            <label>Your Message</label>
-                            <textarea name="message" rows="4"></textarea>
-                            <input class="radius button" type="submit" value="Submit">
-                        </form>
-                    </div>
-                </section>
+                <h4>Contact Us</h4>
+                <form method="post" action="send_email.php">
+                    <label>Your Name</label>
+                    <center>
+                        <input name="name" type="text" id="yourName">
+                    </center>
+                    <label>Your Email</label>
+                    <center>
+                        <input name="email" type="text" id="yourEmail">
+                    </center>
+                    <label>Your Message</label>
+                    <center>
+                        <textarea name="message" rows="4"></textarea>
+                        <input class="radius button expand info" type="submit" value="Submit">
+                </form>
             </div>
-
-            <!-- ...end of form.-->
-
         </div>
-
-
-
+        </center>
     </div>
-
-
-
 </body>
-
 </html>

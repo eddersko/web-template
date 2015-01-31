@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -9,15 +9,20 @@
     <meta name="author" content="User" />
     <meta name="copyright" content="User" />
     <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/expressions.css" />
     <script src="js/vendor/modernizr.js"></script>
+
 </head>
 
 <body>
+    <link href="http://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 
-    <!-- Menu Bar. -->
     <div class="fixed">
         <nav class="top-bar" data-topbar>
             <ul class="title-area">
+
                 <li class="name">
                     <h1>
                   <a href="../">
@@ -29,85 +34,67 @@
         </nav>
     </div>
 
-    <div class="row">
-
-        <div class="large-4 small-12 columns">
-            <br>
-            <!-- Picture (500x500). -->
-            <img src="../placeholder.png">
-            <div class="panel radius">
-                <center>
-                    <!-- Title of page. -->
-                    <h3>Everyday Expressions</h3>
-                </center>
+    <div class="hero">
+        <div class="row">
+            <div class="large-12 columns intro-text">
+                <p>Everyday Expressions</p>
             </div>
-        </div>
-
-        <div class="large-8 small-12 columns">
-
-            <!-- Paragraph  #1 -->
-            <p>Lorem ipsum dolor sit amet, eu mollis vel. Non feugiat eu magna nulla sapien, per justo tellus vel dui. Amet phasellus suspendisse orci cras habitasse, in ut mauris diam, egestas cras interdum, egestas aliquet felis in varius justo lectus, erat amet adipiscing. Convallis sagittis mollis, rhoncus metus vitae proin erat libero maecenas, viverra dapibus vitae, amet sapien velit habitant, nostra suspendisse. Egestas sodales nascetur molestie interdum ipsum, lacus sed, leo neque vitae massa urna pellentesque turpis. Dui cras, a posuere at nec.</p>
-
-            <div class="row">
-
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatisthis">"What is this?" "That is..."</a>
-                </div>
-                <div class="large-6 column">
-
-                    <a href="#" class="button expand expression" data-reveal-id="whatchadoing">"Whatcha doing?"</a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatisthis">Hello...Goodbye</a>
-                </div>
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatchadoing">"I don't understand. Do you?"</a>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatisthis">"Listen good!"</a>
-                </div>
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatchadoing">"I don't know. Do you know?"</a>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatisthis">"How are you?" "Fine, and you?"</a>
-                </div>
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatchadoing">"Who is that?" "That's..."</a>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatisthis">"Where are you from?"</a>
-                </div>
-                <div class="large-6 column">
-                    <a href="#" class="button expand expression" data-reveal-id="whatchadoing">Numbers 1 - 10</a>
-                </div>
-            </div>
-
         </div>
     </div>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation/foundation.js"></script>
+    <div class="row">
+        <div class="large-12 small-12 columns">
+            <p align="center" style="font-size:1.2em">On this page you will find links to short videos explaining some common expressions.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-6 small-12 columns">
+            <div class="expressions">
+                <hr>
+                <center>
+                    <p>Expression #1</p>
+                    <a class="button secondary" href="#" data-reveal-id="expression1">Watch</a>
+                </center>
+                <hr>
+            </div>
+        </div>
+        <div class="large-6 small-12 columns">
+            <div class="expressions">
+                <hr>
+                <center>
+                    <p>Coming soon!</p>
+                    <a class="button secondary" href="#" data-reveal-id="coming_soon">Watch</a>
+                </center>
+                <hr>
+            </div>
+        </div>
+    </div>
+    </center>
+    <div id="expression1" class="reveal-modal small expressions" data-reveal>
+        <p style="font-size:200%">Expression #1</p>
+        <div class="flex-video">
+            <video poster='video_placeholder.png' controls='controls'>
+                <source src="placeholder.mp4" type="video/mp4" />
+                <source src="placeholder.webm" type="video/webm" />
+                <source src="placeholder.ogv" type="video/ogg" />Your browser doesn't seem to support the video tag.
+            </video>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <script src="js/all.js"></script>
     <script>
-        $(document).foundation();
-
-        var doc = document.documentElement;
-        doc.setAttribute('data-useragent', navigator.userAgent);
+        $(document).foundation({
+            tab: {
+                callback: function(tab) {
+                    console.log(tab);
+                }
+            }
+        });
+    </script>
+    <script>
+        $('#myTabs').on('toggled', function(event, tab) {
+            console.log(tab);
+        });
     </script>
 </body>
 

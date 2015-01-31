@@ -29,6 +29,7 @@ for ($x=1; $x<=$num_cells; $x++) {
     }
 }
 $gloss = $entry->addChild('gloss');
+$gloss->addAttribute("lang", "en");
 for ($x=1; $x<=$num_cells; $x++) {
     $g = $_POST['gloss' . $x];
     if ($g == '') {
@@ -38,7 +39,10 @@ for ($x=1; $x<=$num_cells; $x++) {
         $glossing->addAttribute('id', $id . "." . $x);
     }
 }
-$entry->addChild('translation', $_POST['translation']);
+$translation1 = $entry->addChild('translation', $_POST['translation_abc']);
+$translation1->addAttribute("lang", "en");
+//$translation2 = $entry->addChild('translation', $_POST['translation_123']);
+//$translation2->addAttribute("lang", "123");    
 $media = $entry->addChild('media');
 $media->addAttribute("mimeType", substr($_POST['media'], -3));
 $media->addAttribute("url", $_POST['media']);
@@ -267,8 +271,18 @@ for ($x=1; $x<=$numcells; $x++) {
 }
     
 }  */ else {
+    
+    $field_explode = explode('|', $field);
+    if ($field_explode[0] == "translation") {
+    $field = $field_explode[0];
+    $lang = $field_explode[1];
+    $result = $phrasicon->xpath("/phrasicon/phrase[@id = '$id']/translation[@lang = '$lang']/..");  
+    $result[0]->$field = $edit;        
+    } else {
     $result = $phrasicon->xpath("/phrasicon/phrase[@id = '$id']");  
     $result[0]->$field = $edit;
+    }
+
 }
     
 $dom = new DOMDocument('1.0');

@@ -44,7 +44,7 @@
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
-                    response = xmlhttp.responseText.trim().split("^");
+                    response = xmlhttp.responseText.trim().split(" ");
 
                     for (i = 0; i < response.length; i++) {
                         if (response[i] == "?") {
@@ -125,26 +125,6 @@
             document.getElementById("cellsEdit").value = counterEdit;
         }
     </script>
-    <script type='text/javascript'>
-        var id;
-
-        function main(e, obj) {
-            id = obj.id;
-            keyPress(e);
-        }
-
-        function KeyPress(e) {
-            var evtobj = window.event ? event : e;
-            if (evtobj.keyCode == 65 && evtobj.altKey) {
-                document.getElementById(id).value += 'ʰ';
-            } else if (evtobj.keyCode == 191 && evtobj.altKey) {
-                document.getElementById(id).value += 'ʔ';
-            } else if (evtobj.keyCode == 78 && evtobj.altKey) {
-                document.getElementById(id).value += 't̪';
-            }
-        }
-        document.onkeydown = KeyPress;
-    </script>
 </head>
 
 <body>
@@ -162,47 +142,47 @@
             <div class="large-12 columns">
                 <!-- Source -->
                 <h4 class="subsubheader">Source</h4>
-                <input id="source" type="text" name="source" onkeydown="main(event, this)">
+                <input id="source" type="text" name="source" >
             </div>
             <input type="hidden" id="cells" name="cells" value="12">
             <h4 class="subsubheader">Morpheme</h4>
             <div id="morphinput">
 
             <div class="large-2 columns">
-                <input id="morpheme1" type="text" name="morpheme1" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss1')" autocomplete="off">
+                <input id="morpheme1" type="text" name="morpheme1"  onkeyup="suggest(this.value, 'gloss1')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme2" type="text" name="morpheme2" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss2')" autocomplete="off">
+                <input id="morpheme2" type="text" name="morpheme2"  onkeyup="suggest(this.value, 'gloss2')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme3" type="text" name="morpheme3" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss3')" autocomplete="off">
+                <input id="morpheme3" type="text" name="morpheme3"  onkeyup="suggest(this.value, 'gloss3')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme4" type="text" name="morpheme4" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss4')" autocomplete="off">
+                <input id="morpheme4" type="text" name="morpheme4"  onkeyup="suggest(this.value, 'gloss4')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme5" type="text" name="morpheme5" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss5')" autocomplete="off">
+                <input id="morpheme5" type="text" name="morpheme5"  onkeyup="suggest(this.value, 'gloss5')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme6" type="text" name="morpheme6" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss6')" autocomplete="off">
+                <input id="morpheme6" type="text" name="morpheme6"  onkeyup="suggest(this.value, 'gloss6')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme7" type="text" name="morpheme7" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss7')" autocomplete="off">
+                <input id="morpheme7" type="text" name="morpheme7"  onkeyup="suggest(this.value, 'gloss7')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme8" type="text" name="morpheme8" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss8')" autocomplete="off">
+                <input id="morpheme8" type="text" name="morpheme8"  onkeyup="suggest(this.value, 'gloss8')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme9" type="text" name="morpheme9" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss9')" autocomplete="off">
+                <input id="morpheme9" type="text" name="morpheme9"  onkeyup="suggest(this.value, 'gloss9')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme10" type="text" name="morpheme10" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss10')" autocomplete="off">
+                <input id="morpheme10" type="text" name="morpheme10"  onkeyup="suggest(this.value, 'gloss10')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme11" type="text" name="morpheme11" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss11')" autocomplete="off">
+                <input id="morpheme11" type="text" name="morpheme11"  onkeyup="suggest(this.value, 'gloss11')" autocomplete="off">
             </div>
             <div class="large-2 columns">
-                <input id="morpheme12" type="text" name="morpheme12" onkeydown="main(event, this)" onkeyup="suggest(this.value, 'gloss12')" autocomplete="off">
+                <input id="morpheme12" type="text" name="morpheme12"  onkeyup="suggest(this.value, 'gloss12')" autocomplete="off">
             </div>
             </div>
             <h4 class="subsubheader">Gloss</h4>
@@ -486,9 +466,14 @@
             
             <div class="large-12 columns">
                 <h4 class="subsubheader">Translation</h4>
-                <input type="text" name="translation">
+                <input type="text" name="translation_abc">
             </div>
-
+            <!-- 
+            <div class="large-12 columns">
+                <h4 class="subsubheader">Translation (123)</h4>
+                <input type="text" name="translation_123">
+            </div>
+-->
             <div class="large-4 columns">
                 <h4 class="subsubheader">Reference</h4>
                 <input type="text" name="ref">
@@ -545,7 +530,8 @@
                     <option value="source">Source</option>
                     <option value="morpheme">Morpheme</option>
                     <option value="gloss">Gloss</option>
-                    <option value="translation">Translation</option>
+                    <option value="translation|en">Translation</option>
+                    <!--<option value="translation|123">Translation (123)</option>-->
                     <option value="media">Media</option>
                     <option value="ref">Reference</option>
                     <!-- This is where you add annotation layers. -->
@@ -569,7 +555,7 @@
             <div class="large-3 columns">
 
                 <h4 class="subsubheader">Edit</h4>
-                <input id="edit" type="text" name="edit" onkeydown="main(event, this)">
+                <input id="edit" type="text" name="edit" >
             </div>
             <br>
             <br>
@@ -585,40 +571,40 @@
             <div id="morphossInput">
             <input type="hidden" id="cellsEdit" name="cellsEdit" value="12">
             <div class="large-2 columns">
-                <input id="morphoss1" type="text" name="morphoss1" onkeydown="main(event, this)">
+                <input id="morphoss1" type="text" name="morphoss1" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss2" type="text" name="morphoss2" onkeydown="main(event, this)">
+                <input id="morphoss2" type="text" name="morphoss2" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss3" type="text" name="morphoss3" onkeydown="main(event, this)">
+                <input id="morphoss3" type="text" name="morphoss3" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss4" type="text" name="morphoss4" onkeydown="main(event, this)">
+                <input id="morphoss4" type="text" name="morphoss4" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss5" type="text" name="morphoss5" onkeydown="main(event, this)">
+                <input id="morphoss5" type="text" name="morphoss5" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss6" type="text" name="morphoss6" onkeydown="main(event, this)">
+                <input id="morphoss6" type="text" name="morphoss6" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss7" type="text" name="morphoss7" onkeydown="main(event, this)">
+                <input id="morphoss7" type="text" name="morphoss7" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss8" type="text" name="morphoss8" onkeydown="main(event, this)">
+                <input id="morphoss8" type="text" name="morphoss8" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss9" type="text" name="morphoss9" onkeydown="main(event, this)">
+                <input id="morphoss9" type="text" name="morphoss9" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss10" type="text" name="morphoss10" onkeydown="main(event, this)">
+                <input id="morphoss10" type="text" name="morphoss10" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss11" type="text" name="morphoss11" onkeydown="main(event, this)">
+                <input id="morphoss11" type="text" name="morphoss11" >
             </div>
             <div class="large-2 columns">
-                <input id="morphoss12" type="text" name="morphoss12" onkeydown="main(event, this)">
+                <input id="morphoss12" type="text" name="morphoss12" >
             </div>
             </div>
             <center><a onclick="addEditLayer('morphossInput')" class="button round">+ Add Row</a>
