@@ -77,6 +77,7 @@
 
                 <h2 class="title">Table of Contents</h2>
                 <ul>
+                    <li><a href="./#intro">Introduction</a></li>
                     <li><a href="./#change">Changing the Code to Create your Website</a></li>
                     <li><a href="./#images">Images, Head Element, Colors</a></li>
                     <li><a href="./#meu">Main Menu</a></li>
@@ -92,7 +93,7 @@
                     <li><a href="./#faq">FAQ</a></li>
                 </ul>
                 
-                
+                <a id="intro" name="intro"></a>
                 <h2 class="title">Introduction</h2>
                 <div id="underline"></div>
 
@@ -255,6 +256,7 @@
                 </ol>
                 <p align="justify">You might decide to include the talking dictionary alone, or include the phrasicon with common everyday expressions. You can select any to all of the components to fit your needs.</p>
                 
+                <a id="change" name="change"></a>
                 <h2 class="title">Changing the Code to Create your Website</h2>
                 <div id="underline"></div>
                 
@@ -302,6 +304,7 @@
                 </div>
                 <br>
                 <p>You'll notice that <code>index.html</code> and <code>default.html</code> are the same, except for their names. These files display the content of your web page in the folder it is in. For example, if your <code>index.html</code> or <code>default.html</code> files are in your folder labeled as 'language', they represent the content when a user visits <code>www.example.com/language</code>. You're probably wondering why there are two separate files since they hold the same piece of code. Depending on what web host you use, some may read from <code>index.html</code>, and others may read from <code>default.html</code>. Therefore, if you know your host uses one, and not the other, you can simply delete the other version. You can see which one your host uses by simply changing one of the files, and then save. If the web page reflects the changes that were made, then that is the file your host uses. Note that these files only appear in the major components (i.e. Dictionary, Phrasicon, etc.), and not in the folders like owl-carousel or js.</p>
+                <a id="images" name="images"></a>
                 <h2 class="title">Images, Head Element, Colors</h2>
                 <div id="underline"></div>
 
@@ -315,7 +318,7 @@
                 <p align="justify">The author indicates the creator of the web pages. That's you! They look like this: <code>&lt;meta name="author" content="User" /&gt;</code>. Focus on <code>content="User"</code> and change the content between the quotation marks with the name of the author for the website.</p>
                 <p align="justify">The copyright distinguishes who the content on the website belongs to. This could be you or the community. They look like this: <code>&lt;meta name="copyright" content="User" /&gt;</code>, and, again, simply swap out <code>User</code> with the name of the person or organization with rights to these materials.</p>
                 <p align="justify">Color...</p>
-
+                <a id="menu" name="menu"></a>
                 <h2 class="title">Main Menu</h2>
                 <div id="underline"></div>
 
@@ -323,6 +326,7 @@
                 <p align="justify">First, you may want to delete the link to the documentation (i.e. [Documentation]) that appears beneath the picture. Look for the comment that says <code>&lt;!-- This is the link to the documentation. You may want to delete this. --&gt;</code>. Delete the whole line, from <code>&lt;a [...]></code> to <code>&lt;/a></code> including the tags. Alternatively, you can comment the whole line by adding <code>&lt;!--</code> before the start of the line, and <code>--></code> at the end.</p>
                 <p align="justify">Next, you may want to change the menu header. Find <code>&lt;!-- This is the Menu Header right above the menu links. --&gt;</code>. Changing the content within tags will alter the menu header.</p>
                 <p align="justify">Finally, you may only want to use some of the components in the template. Therefore, you will want to keep the relevant links. For the components that you will not be using, simply delete the whole line, from <code>&lt;a [...]></code> to <code>&lt;/a></code> including the tags. <code>&lt;br /></code> are linebreaks - they create empty lines to separate the links. You may want to insert or remove them to adjust the look on your web page.</p>
+                <a id="about" name="about"></a>
                 <h2 class="title">About the Materials</h2>
                 <div id="underline"></div>
                 <p align="justify">To change the about page, go into the /about folder. Again, there are the two files, <code>index.html</code> and <code>default.html</code>. Open the one that pertains to you, and delete the other.</p>
@@ -334,18 +338,18 @@
                 <p align="justify">Perhaps you only want to use a single paragraph. In that case, you can delete the second paragraph which is enclosed in paragraph tags (or <code>&lt;p>&lt;/p></code>). Delete the content including the tags, <code>&lt;p>[...]&lt;/p></code>.</p>
                 <p align="justify">Others may want to use only a single section. Look for comments that indicate the start of the section you want to delete (eg. <code>&lt;!-- The How to Use section starts here...--></code>), and the end of the section, <code>&lt;!-- ...and ends here. --></code>. Then, delete the lines of code between the two comments. Remember that you can comment out these lines of code rather than deleting in the event that you may want to use these sections at another time.</p>
                 <p align="justify">If you want to change the name of the sections, look for the default section names in the code, and replace them with the desired name. There should be two places where each section name appears - within the menu bar, and within their respective sections .</p>
-
+                <a id="sounds" name="sounds"></a>
                 <h2 class="title">Sounds and Letters</h2>
                 <div id="underline"></div>
 
                 <p align="justify">The sounds and letters...</p>
 
-
+                <a id="expressions" name="expressions"></a>
                 <h2 class="title">Everyday Expressions</h2>
                 <div id="underline"></div>
 
                 <p align="justify">Bleep bloop...</p>
-
+                <a id="dict" name="dict"></a>
                 <h2 class="title">Talking Dictionary</h2>
                 <div id="underline"></div>
 
@@ -551,7 +555,8 @@
                 </div>
                 <br>
                 <p align="justify">The first thing you may want to do is change the username and password of the update webpage. In the <code>index.php</code> file, look for the comment <code>// Username and password</code>. The default username is <code>abc</code> and the default password is <code>123</code>. Replace the username and password under the comment with your own username and password.</p>
-                <p align="justify">Go into the <code>interface.php</code> file. Look for the comments <code>&lt;!-- Source --></code> - there are two places were they appear. Beneath these comments, you will find the term <code>Source language</code> being used. Replace it with the language you are working on. If you are working with a language that is not English as a reference language, look for <code>&lt;!-- English --></code> and replace <code>English</code>. Next, look at the <code>showRecords.php</code> file, and find the comment <code>// Source</code>. Change <code>Source</code> in <code>echo "&lt;th>Source&lt;/th>";</code> to, again, the language you are working on. If the other language you are using is not English, look for the comment <code>// English</code> and in the same way as before, replace <code>English</code> in the line of code below.</p>
+                <p align="justify">Go into the <code>interface.php</code> file. Look for the comments <code>&lt;!-- Source --></code> - there are two places were they appear. Beneath these comments, you will find the term <code>Source language</code> being used. Replace it with the language you are working on. If you are working with a language that is not English as a reference language, look for <code>&lt;!-- English --></code> and replace <code>English</code>. Next, look at the <code>showRecords.php</code> file, and find the comment <code>// Source</code>. Change <code>Source</code> in <code>echo "&lt;th>Source&lt;/th>";</code> to, again, the language you are working on. If the other language you are using is not English, look for the comment <code>// English</code> and in the same way as before, replace <code>English</code> in the line of code below.</p>              
+                <a id="phrasicon" name="phrasicon"></a>
                 <h2 class="title">Phrasicon</h2>
                 <div id="underline"></div>
                 <p align="justify">Enter into the /phrasicon folder which contains the following files and folders.</p>
@@ -767,12 +772,14 @@
                 <p align="justify">Now, in the phrasicon/update folder, go into the <code>interface.php</code> file. There are two add-annotation-layer comments in this file. For the first add-annotation-layer comment found in the file, each layer is commented, and separated into blocks indicated by the following: <code>&lt;!-- ExtraAnno --></code> just like in the <code>phrasicon.xml</code> fil. <b>Do not uncomment them.</b> Below each <code>&lt;!-- ExtraAnno --></code> comment, uncomment the desired number of layers. If you are renaming, replace the content the following line <code>&lt;h4 class="subsubheader">ExtraAnno&lt;/h4></code>.<b>The first letter should be capitalized.</b> Using the same example for tone, it would be <code>>&lt;h4 class="subsubheader">Tone&lt;/h4></code>.  Look for the second add-annotation-layer comment in the file, and, again, uncomment the layers you want. Replace the content <code>extraAnno</code> and <code>ExtraAnno</code>. Keep in mind that if the content reads <code>ExtraAnno</code>, the first letter of the new name should be capitalized. If the content reads <code>extraAnno</code>, the first letter of the new name should not be capitalized. Therefore, if the layer was renamed for tone, the code will look like this: <code>&lt;option value="tone">Tone&lt;/option></code>.</p>
                 <p align="justify">Next, open the <code>insert.php</code> file. There are two add-annotation-layer comments. In the first one, there are five blocks of commented code that correspond to the five extra annotation layers. Uncomment the number of layers you want by removing the <code>/*</code> and <code>*/</code>. If renaming, in the line of code that says <code>$extraAnno1 = $entry->addChild('extraAnno1');</code>, replace <code>extraAnno1</code> only in <code>addChild('extraAnno1');</code>. So for tone, it will look like this: <code>$extraAnno1 = $entry->addChild('tone');</code>. For the second add-annotation-layer comment, again, uncomment the desired number of layers. If renaming, in the code that reads <code>elseif ($field=="extraAnno1") {</code>, replace <code>extraAnno1</code>.</p>
                 <p align="justify">In the <code>showRecords.php</code> file, there are two add-annotation-layer comments. For the first one, uncomment the number of layers you want, and if renaming, replace the content. (eg. <code>echo "&lt;th>Tone&lt;/th>";</code>. Now, look for the second add-annotation-layer comment. Again, there are five blocks of comments with code in them. Each of these blocks are beneath another comment that says <code>// ExtraAnno</code>. <b>Do not uncomment these.</b> Instead, uncomment the block of code underneath.</p>
-                <p align="justify">Finally, in the /phrasicon folder, go into the <code>word.php</code> file. There are two add-annotion-layer comments. Just like before, uncomment the layers in both sections. For the first one, each layer consists of multiple lines of code enclosed within the comment tags. The second one is simply five lines of code for the five layers. <b>You should not rename any of the content in this file.</b></p>
+                <p align="justify">Finally, in the /phrasicon folder, go into the <code>word.php</code> file. There are two add-annotion-layer comments. Just like before, uncomment the layers in both sections. For the first one, each layer consists of multiple lines of code enclosed within the comment tags. The second one is simply five lines of code for the five layers. <b>You should not rename any of the content in this file.</b></p> 
+                <a id="struct" name="struct"></a>
                 <h2 class="title">Basic Sentence Structures</h2>
                 <div id="underline"></div>
 
                 <p align="justify">So. Basic.</p>
-
+                
+                <a id="mobile" name="mobile"></a>
                 <h2 class="title">Links to Mobile Apps</h2>
                 <div id="underline"></div>
 
@@ -781,12 +788,16 @@
                 <p align="justify">If you want to insert a link to the iOS app (i.e. iPhone, iPad), look for the comment indicating the iOS section, <code>&lt;!-- The iOS section starts here... --></code>. Within the section, there is another comment that says <code>&lt;!-- Button to link. --></code>. Below, there is a line of code that reads <code>&lt;center>&lt;a href="#" class="small button">Coming soon!&lt;/a></code>. To add a link, replace <code>#</code> located between the quotation marks directly after <code>href=</code> with the full link to the download page. Then, alter the notification <code>Coming soon!</code> to signal users to click there. This process is the same for the Android version.</p>
 
                 <p align="justify">Perhaps you only have a mobile app for one platform. For example, if you only have an iOS app, and have no plans to develop an Android app, you will only want to have a single section. Look for comments indicating the start of the section you want to delete, and the end of the section. Then, delete the lines of code between the two comments. Finally, for the section that remains, look for the line of code that reads <code>&lt;div class="large-6 small-6 columns"></code>, and change both <code>6</code>s to <code>12</code>s.</p>
+                
+                <a id="contact" name="contact"></a>
                 <h2 class="title">Contact Page</h2>
                 <div id="underline"></div>
 
                 <p align="justify">The contact page allows users to contact the creators of the resources. The user enters in their name, their email, and their message. When they submit, the email will be sent to whichever email is supplied.</p>
                 <p align="justify">To supply an email, go into the /contact folder and open <code>send_email.php</code>. Look for the comment that says <code>// Your email goes here.</code> and then change the content between quotation marks that reads <code>enter email here</code> to your own email address. Next, you may want to change the subject header. Look for the comment <code>// Email Subject Header</code> you have the option of altering the default subject <code>Language Tools: New Message</code>. Then, you may want to change the contents, or body, of the message. Find the comment that says <code>// Email Body Message</code> and change the default content <code>A new message has been sent from the Language Tools website...\n\n</code>.</p>
                 <p align="justify">Apart from perhaps altering the head elements in the <code>index.html</code> or <code>default.html</code> files, the template was made so that no other changes must be made. Feel free to edit the file to fit your needs.</p>
+                
+                <a id="faq" name="faq"></a>
                 <h2 class="title">Frequently Asked Questions</h2>
                 <div id="underline"></div>
 
