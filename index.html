@@ -362,12 +362,10 @@
             <p align="justify">To change the about page, go into the /about folder. Again, there are the two files, <code>index.html</code> and <code>default.html</code>. Open the one that pertains to you, and delete the other.</p>
             <p align="justify">The about page consists of three sections. The first section describes the language. For example, where is this language spoken? Are there living speakers, if so how many? How were the resources collected? The next section informs others how they should use the website. For example, if they are interested in common expressions, they might only want to look at the everyday expressions page. The last section mentions the names of those who worked on the website, and in the preparation of the resources.</p>
             <p align="justify">In the code, you will find comments throughout. If you want to keep the default format, and just want to change the content, look for comments that indicate which blocks of code represent the paragraphs. For example, the section 'About the Language' has two paragraphs, and the first paragraph is marked with this comment: <code>&lt;!-- Paragraph #1 --&gt;</code>.</p>
-
             <p align="justify">The content is located within paragraph tags that look like this: <code>&lt;p&gt;This is content inside a paragraph tag.&lt;/p&gt;</code>. Simply replace <code>This is content inside a paragraph tag</code>, save, and this should modify the text displayed on the page.</p>
-
             <p align="justify">Perhaps you only want to use a single paragraph. In that case, you can delete the second paragraph which is enclosed in paragraph tags (or <code>&lt;p>&lt;/p></code>). Delete the content including the tags, <code>&lt;p>[...]&lt;/p></code>.</p>
             <p align="justify">Others may want to use only a single section. Look for comments that indicate the start of the section you want to delete (eg. <code>&lt;!-- The How to Use section starts here...--></code>), and the end of the section, <code>&lt;!-- ...and ends here. --></code>. Then, delete the lines of code between the two comments. Remember that you can comment out these lines of code rather than deleting in the event that you may want to use these sections at another time.</p>
-            <p align="justify">If you want to change the name of the sections, look for the default section names in the code, and replace them with the desired name. There should be two places where each section name appears - within the menu bar, and within their respective sections .</p>
+            <p align="justify">If you want to change the name of the sections, look for the default section names in the code, and replace them with the desired name. There should be two places where each section name appears - within the menu bar, and within their respective sections.</p>
         </div>
     </div>
     <div id="sounds" name="sounds">
@@ -376,7 +374,12 @@
             <h2 class="title">Sounds and Letters</h2>
             <div id="underline"></div>
 
-            <p align="justify">The sounds and letters...</p>
+            <p align="justify">To change the sounds and letters page, go into the /sounds folder from /public_html. Again, there are the two files, <code>index.html</code> and <code>default.html</code>. Open the one that pertains to you, and delete the other.</p>
+            <p align="justify">The about page consists of four sections. The first section is the introduction to the sounds section. For example, you may want to briefly discuss what users should expect in the sounds section. The next section contains the sound matrix, and a more in-depth explanation of the sounds in your language, and how it is written down or how one might type into their electronic devices. The third section introduces the vowels and consonants section. The last section is where you might want to place videos training the learner about the vowels and constants of the language.</p>
+            <p align="justify">In the code, you will find comments throughout. If you want to keep the default format, and just want to change the content, look for comments that indicate which blocks of code represent the paragraphs. For example, the section 'Sounds Section' contains one paragraph, is marked with this comment: <code>&lt;!-- Paragraph #1 --&gt;</code>. This is followed by the 'Sound Matrix Section' which also has one paragraph, indicated by the comment: <code>&lt;!-- Paragraph #2 --&gt;</code>.</p>
+            <p align="justify">The content is located within paragraph tags that look like this: <code>&lt;p&gt;This is content inside a paragraph tag.&lt;/p&gt;</code>. Simply replace <code>This is content inside a paragraph tag</code>, save, and this should modify the text displayed on the page.</p>        
+            <p align="justify">Next, you may want to insert your own images. Look for comments that read <code>&lt;!-- Image goes here. --&gt;</code>. There are two locations in the file - in the Sounds Section, and the Vowels and Consonants section. Replace <code>../placeholder.png</code> as you did in the previous section 'Images, Head Element, Colors' - look back at the instructions again if this is unfamiliar. The recommended image size if 400x400 pixels.</p>        
+             <p align="justify">Now, you may want to edit the sound matrix. The sound matrix is set up as a table like the ones you can find in Word or Excel. The default matrix has the dimensions 6x5, or 6 rows and 5 columns. Each row is indicated by the comments: <code>&lt;!-- Table Row #<i>x</i> --&gt;</code>, where <i>x</i> is any number from 1 to 6. In each row, you will see code that looks like this <code>&lt;td class="click_sound" onclick="ipa('a')"&gt;a&lt;/td&gt;</code>. Each one of these represents a column within that row. For example, table row #1 contains five of these, and therefore has five columns. You may notice already that each one contains a unique English letter. Let's imagine the language you are working on does not contain the letter <code>b</code> or perhaps you want to represent it instead with <code>B</code> - a capital 'b'. Looking at the existing code: <code>&lt;td class="click_sound" onclick="ipa('b')"&gt;b&lt;/td&gt;</code>, change the letter 'b' that is beetween the angle brackets. It should look like this: <code>&lt;td class="click_sound" onclick="ipa('b')"&gt;B&lt;/td&gt;</code>. You may probably want to also change the other 'b' contained within <code>ipa('b')</code>, but wait!</p>       
         </div>
     </div>
     <div id="expressions" name="expressions">
@@ -385,8 +388,8 @@
             <h2 class="title">Everyday Expressions</h2>
             <div id="underline"></div>
 
-            <p align="justify">Bleep bloop...</p>
-        </div>
+            <p align="justify">To change the everyday expressions page, go into the /expressions folder. Again, there are the two files, <code>index.html</code> and <code>default.html</code>. Open the one that pertains to you, and delete the other.</p>
+            <p align="justify">The about page consists of four sections. The first section is the introduction to the sounds section. For example, you may want to briefly discuss what users should expect in the sounds section. The next section contains the sound matrix, and a more in-depth explanation of the sounds in your language, and how it is written down or how one might type into their electronic devices. The third section introduces the vowels and consonants section. The last section is where you might want to place videos training the learner about the vowels and constants of the language.</p>        </div>
     </div>
     <div id="dict" name="dict">
         <div class="row">
