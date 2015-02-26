@@ -79,12 +79,7 @@ footer p,
 footer a {
     font-size: 14px;
 }
-.hero {
-    padding-bottom: 50px;
-    background-image: url("../img/background_texts.jpg");
-    background-size: cover;
-    box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2);
-}
+
 .hero-content {
     padding-top: 40px;
     padding-bottom: 40px;

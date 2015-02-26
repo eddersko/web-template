@@ -1,8 +1,16 @@
-<?php 
+<?php
+
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
 $xmlDoc=new DOMDocument(); 
 $xmlDoc->load("phrasicon.xml"); 
 $xpath = new DOMXPath($xmlDoc); 
-$entries = $xpath->query("//phrase"); 
+$entries = $xpath->query("//phrase");
+
+// count all entries in phrasicon
 $count = $entries->length; 
 ?>
 

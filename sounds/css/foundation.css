@@ -62,15 +62,15 @@ img {
 img {
     -ms-interpolation-mode: bicubic;
 }
-.pomo_sound {
+.click_sound {
     font-family: "Gentium Book Basic";
 }
-.pomo_sound:hover {
+.click_sound:hover {
     background: gray;
     color: white;
     box-shadow: 0px;
 }
-.pomo_sound:active {
+.click_sound:active {
     background: #555555;
 }
 .sound {

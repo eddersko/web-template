@@ -1,55 +1,35 @@
 <?php
 
-putenv('PYTHONPATH=/home2/northfz2/python/lib/python2.7/site-packages:');
-
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
 
 $list = "<div class=\"three-columns\"><ul class=\"no-bullet\">";
-
 $count = 0;
 $letter = $_GET['letter'];
-$lang = $_GET['lang'];
-
-
-if ($lang == 'eng') {
-$xmlDoc = new DOMDocument();
-$xmlDoc->load("../dictionary/dictionary.xml");
-$xpath = new DOMXPath($xmlDoc);
-
-// find stem from dictionary starting with leter ordered
-
-$result = $xpath->query("//entry/sense/cit[starts-with(quote, '$letter')]");    
-
 
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("phrasicon.xml");
 $xpath = new DOMXPath($xmlDoc);
+
+// get entries from the phrasicon with morphemes beginning with letter
+$result = $xpath->query("//g[starts-with(., '$letter')]");   
+
 $a = array();
 
 foreach($result as $entry) {
-$stem = $entry->childNodes->item(3)->nodeValue;
-$len1 = strlen($stem) -1;
-$len2 = strlen($stem);
-$num = 0;
-$num += $xpath->query("//phrase[starts-with(translation, '$stem')]")->length;   
-$num += $xpath->query("//phrase[contains(translation, ' $stem ')]")->length;   
-$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len1.') = " '.$stem.'")]')->length; 
-$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$stem.'?")]')->length; 
-$num += $xpath->query('//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$stem.'.")]')->length; 
-$num += $xpath->query("//gloss[g='$stem']")->length;    
-
-if ($num > 0) { 
-    array_push($a, $stem);
-    $count++;
-    }
+    $gloss = $entry->nodeValue;
+    array_push($a, $gloss);
 }
-
+    
 $a = array_unique($a);
+$count = sizeof($a);
 uksort($a, "strnatcasecmp");
-foreach ($a as $stem) {
-    $list = $list . "<li><a href=\"../phrasicon/word.php?word=" . $stem . "&lang=eng\">" . $stem . "</a></li>";
+foreach ($a as $g) {
+    $list = $list . "<li><a href=\"../phrasicon/word.php?word=" . $g . "&lang=eng\">" . $g . "</a></li>";
 }
-      
-} 
+     
 
 if ($count == 0) {
      $list = "<h4 class=\"subsubheader\">No results found.</h4>";
@@ -94,17 +74,19 @@ if ($count == 0) {
             <section class="top-bar-section">
 
                 <ul class="right">
-                    <li class="divider">
-                    <!-- Link to Dictionary. -->
-                    <h1>
-                <a href="../dictionary">Online Talking Dictionary</a>
-                </h1>
+                    <li class="divider"></li>
+                    <li class="name">
+                        <!-- Link to Dictionary. -->
+                        <h1>
+                        <a href="../dictionary">Online Talking Dictionary</a>
+                        </h1>
                     </li>
                     <li class="divider"></li>
                 </ul>
             </section>
         </nav>
     </div>
+
 
     <div class="row">
         <div class="large-12 columns">

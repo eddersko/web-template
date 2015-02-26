@@ -29,6 +29,72 @@
             xmlhttp.send();
         }
     </script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#create').on('submit', function(e) {
+
+                $.ajax({
+                    url: './insert.php',
+                    data: $('#create').serialize(),
+                    type: 'POST',
+                    success: function(data) {
+                        alert("Query submitted."); //=== Show Success Message==
+                        clear('create');
+                    },
+                    error: function(data) {
+                        alert("Error."); //===Show Error Message====
+                    }
+                });
+                e.preventDefault(); //=== To Avoid Page Refresh and Fire the Event "Click"===
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#modify').on('submit', function(e) {
+
+                $.ajax({
+                    url: './insert.php',
+                    data: $('#modify').serialize(),
+                    type: 'POST',
+                    success: function(data) {
+                        alert("Query submitted."); //=== Show Success Message==
+                        clear('modify');
+                    },
+                    error: function(data) {
+                        alert("Error."); //===Show Error Message====
+                    }
+                });
+                e.preventDefault(); //=== To Avoid Page Refresh and Fire the Event "Click"===
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#delete').on('submit', function(e) {
+
+                $.ajax({
+                    url: './insert.php',
+                    data: $('#delete').serialize(),
+                    type: 'POST',
+                    success: function(data) {
+                        alert("Query submitted."); //=== Show Success Message==
+                        clear('delete');
+                    },
+                    error: function(data) {
+                        alert("Error."); //===Show Error Message====
+                    }
+                });
+                e.preventDefault(); //=== To Avoid Page Refresh and Fire the Event "Click"===
+            });
+        });
+    </script>
+    <script>
+        function clear(id) {
+            document.getElementById(id).reset();
+        }
+    </script>
 </head>
 
 <body>
@@ -39,7 +105,7 @@
         <hr>
 
         <!-- The section for creating records... -->
-        <form name="create" action="../update/insert.php" method="post">
+        <form id="create" name="create">
             <h4 class="subheader">Create Record</h4>
             <input type="hidden" name="type" value="create">
             <div class="large-3 columns">
@@ -52,38 +118,18 @@
                 <h4 class="subsubheader">English</h4>
                 <input type="text" name="quote">
             </div>
-            <!--<div class="large-3 columns">
-                <h4 class="subsubheader">123</h4>
-                <input type="text" name="quote|123">
-            </div>-->
             <div class="large-3 columns">
                 <h4 class="subsubheader">POS</h4> 
                 <input type="text" name="pos">
             </div>
-            <!--<div class="large-3 columns">
-                <h4 class="subsubheader">POS</h4> 
-                <input type="text" name="pos|123">
-            </div>-->
             <div class="large-3 columns">
                 <h4 class="subsubheader">Hypernym</h4> 
                 <input type="text" name="usg">
             </div>
-            <!-- 
-            <div class="large-3 columns">
-                <h4 class="subsubheader">Hypernym (123)</h4> 
-                <input type="text" name="usg|123">
-            </div>
-            -->
             <div class="large-6 columns">
                 <h4 class="subsubheader">Description</h4> 
                 <input id="note" type="text" name="note">
             </div>
-            <!-- 
-            <div class="large-6 columns">
-                <h4 class="subsubheader">Description</h4> 
-                <input id="note" type="text" name="note|123"">
-            </div>
-            -->
             <div class="large-3 columns">
                 <h4 class="subsubheader">Media</h4> 
                 <input type="text" name="media">
@@ -173,7 +219,7 @@
         <hr>
 
         <!-- The section for modifying records... -->
-        <form name="modify" action="../update/insert.php" method="post">
+        <form id="modify" name="modify">
             <h4 class="subheader">Modify Record</h4>
             <input type="hidden" name="type" value="modify">
             <div class="large-3 columns">
@@ -235,7 +281,7 @@
         <hr>
 
         <!-- The section for deleting records... -->
-        <form action="../update/insert.php" method="post">
+        <form id="delete" name="delete">
             <h4 class="subheader">Delete Record</h4>
             <input type="hidden" name="type" value="delete">
             <div class="large-3 columns">

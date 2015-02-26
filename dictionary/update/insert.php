@@ -1,5 +1,10 @@
 <?php
 
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
 $file = '../dictionary.xml';
 
 $xml = simplexml_load_file($file);
@@ -123,21 +128,4 @@ $dom->formatOutput = true;
 $dom->loadXML($dictionary->asXML());
 $dom->save($file);
 
-echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center><b>Query submitted.</b></center></h4><hr></div>";
-
-  include("../update/interface.php");
 ?> 
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="../css/foundation.css" />
-
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <title>Talking Dictionary</title>    
-</head>
-<body>
-
-</body>
-</html>

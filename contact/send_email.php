@@ -1,5 +1,10 @@
 <?php
- 
+
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
 if(isset($_POST['email'])) {
  
      

@@ -1,5 +1,10 @@
-
 <?php
+
+    /*
+    * Author: PHP NLP Tools http://php-nlp-tools.com/
+    * Edited by: Edwin Ko eddersko.com
+    * This script is free software.
+    */
 
 interface TokenizerInterface
 {
@@ -835,9 +840,9 @@ class Maxent extends LinearModel
 
 <?php
 
+// can re-write to improve efficiency
+
 $txt = $_GET['txt'];
-// include('porterstemmer.php');
-// $word = PorterStemmer::Stem($_POST['word']); 
 $words = explode(" ", $txt);
 $txt = "<s1> <s2> " . $txt . " </s1> </s2>";
 
@@ -879,7 +884,6 @@ $glossTypes = array();
 foreach($resultM as $entry) { // check if only one gloss
 
 $id = $entry->getAttribute('id');
-//echo $id;
 $g = $xpath->query("(//g[@id = '$id'])");
 $gloss = $g->item(0)->nodeValue;
 $gloss = str_replace(" ", "_", $gloss);
@@ -958,35 +962,8 @@ for($x=0; $x<$length; $x++){
 }
 }
 );
-
-// look at one before...
-// Remember that in maxent a feature should also target the class
-// thus we prepend each feature name with the class name
-// $occ[type][$x] - 1 = position of previous words...
-
-    
-    
-/*
-
-function ($class, $d) use ($occ, $glossTypes, $length, $tokens) {
-// $data[0] is the current word
-// $data[1] is an array of previous words
-// $data[2] is an array of following words
-    
-$data = $d->getDocumentData();
-$positions = $occ[array_search($class, $glossTypes)];
-for ($x=0; $x<sizeof($posittions); $x++) {
-    $prev  = $tokens[$positions[$x]-1];
-    return ($data[1][0] == $prev) ? "$class ^ prev_ends_with($prev)" : null;
-}
-    
-// check previous word by looking at co-occurence in current data...
-return ($data[1][0]=='<s>') ? "$class ^ prev_ends_with(<s>)" : null;
-}
-*/    
-    
+ 
 // feature engineering    
-
 $feats = array();
 
 for ($x=0; $x<$length; $x++) {
@@ -1038,9 +1015,11 @@ $optimizer = new MaxentGradientDescent(
 
 // an empty maxent model
 $maxent = new Maxent(array());
-// train
 
+// train
 $maxent->train($ff,$tset,$optimizer);    
+
+// debugging purposes
 //$weights = $maxent->dumpWeights();    
 //print_r($weights);
 

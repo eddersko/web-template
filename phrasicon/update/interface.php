@@ -68,46 +68,53 @@
             xmlhttp.open("GET", "autosuggest.php?txt=" + text, true);
             xmlhttp.send();
         }
-        
-                var counter = 12;
 
-        function addLayer(morphDiv, glossDiv /*, extra1Div, extra2Div, extra3Div, extra4Div, extra5Div*/) {
+        var counter = 12;
+
+        function addLayer(morphDiv, glossDiv /*, extra1Div, extra2Div, extra3Div, extra4Div, extra5Div*/ ) {
 
             for (i = 1; i <= 6; i++) {
-            var newMorphDiv = document.createElement('div');
-            newMorphDiv.className = "large-2 columns";
-            var newGlossDiv = document.createElement('div');
-            newGlossDiv.className = "large-2 columns";
+                var newMorphDiv = document.createElement('div');
+                newMorphDiv.className = "large-2 columns";
+                var newGlossDiv = document.createElement('div');
+                newGlossDiv.className = "large-2 columns";
                 
-            //var newExtra1hDiv = document.createElement('div');
-            //newExtra1Div.className = "large-2 columns";
-            //var newExtra2Div = document.createElement('div');
-            //newExtra2Div.className = "large-2 columns";
-            //var newExtra3Div = document.createElement('div');
-            //newExtra3Div.className = "large-2 columns";
-            //var newExtra4Div = document.createElement('div');
-            //newExtra4Div.className = "large-2 columns";
-            //var newExtra5Div = document.createElement('div');
-            //newExtra5Div.className = "large-2 columns";
+                // This is where you add annotation layers. 
+
+                //var newExtra1Div = document.createElement('div');
+                //newExtra1Div.className = "large-2 columns";
+                //var newExtra2Div = document.createElement('div');
+                //newExtra2Div.className = "large-2 columns";
+                //var newExtra3Div = document.createElement('div');
+                //newExtra3Div.className = "large-2 columns";
+                //var newExtra4Div = document.createElement('div');
+                //newExtra4Div.className = "large-2 columns";
+                //var newExtra5Div = document.createElement('div');
+                //newExtra5Div.className = "large-2 columns";
+
+                newMorphDiv.innerHTML = "<input id=\"morpheme" + (counter + 1) + "\" type=\"text\" name=\"morpheme" + (counter + 1) + "\" onkeydown=\"main(event, this)\" onkeyup=\"suggest(this.value, 'gloss" + (counter + 1) + "')\" autocomplete=\"off\">";
+                newGlossDiv.innerHTML = "<input id=\"gloss" + (counter + 1) + "\" type=\"text\" name=\"gloss" + (counter + 1) + "\">";
+
+                // This is where you add annotation layers. 
                 
-            newMorphDiv.innerHTML = "<input id=\"morpheme" + (counter + 1) + "\" type=\"text\" name=\"morpheme"+ (counter + 1) +"\" onkeydown=\"main(event, this)\" onkeyup=\"suggest(this.value, 'gloss"+ (counter + 1) +"')\" autocomplete=\"off\">";
-            newGlossDiv.innerHTML = "<input id=\"gloss"+ (counter + 1) +"\" type=\"text\" name=\"gloss"+ (counter + 1) +"\">";
+                //newExtra1Div.innerHTML = "<input id=\"extra1_"+ (counter + 1) +"\" type=\"text\" name=\"extra1_"+ (counter + 1) +"\">";
+                //newExtra2Div.innerHTML = "<input id=\"extra2_"+ (counter + 1) +"\" type=\"text\" name=\"extra2_"+ (counter + 1) +"\">";
+                //newExtra3Div.innerHTML = "<input id=\"extra3_"+ (counter + 1) +"\" type=\"text\" name=\"extra3_"+ (counter + 1) +"\">";
+                //newExtra4Div.innerHTML = "<input id=\"extra4_"+ (counter + 1) +"\" type=\"text\" name=\"extra4_"+ (counter + 1) +"\">";
+                //newExtra5Div.innerHTML = "<input id=\"extra5_"+ (counter + 1) +"\" type=\"text\" name=\"extra5_"+ (counter + 1) +"\">";
+
+                document.getElementById(morphDiv).appendChild(newMorphDiv);
+                document.getElementById(glossDiv).appendChild(newGlossDiv);
+
+                // This is where you add annotation layers. 
                 
-            //newExtra1Div.innerHTML = "<input id=\"extra1_"+ (counter + 1) +"\" type=\"text\" name=\"extra1_"+ (counter + 1) +"\">";
-            //newExtra2Div.innerHTML = "<input id=\"extra2_"+ (counter + 1) +"\" type=\"text\" name=\"extra2_"+ (counter + 1) +"\">";
-            //newExtra3Div.innerHTML = "<input id=\"extra3_"+ (counter + 1) +"\" type=\"text\" name=\"extra3_"+ (counter + 1) +"\">";
-            //newExtra4Div.innerHTML = "<input id=\"extra4_"+ (counter + 1) +"\" type=\"text\" name=\"extra4_"+ (counter + 1) +"\">";
-            //newExtra5Div.innerHTML = "<input id=\"extra5_"+ (counter + 1) +"\" type=\"text\" name=\"extra5_"+ (counter + 1) +"\">";
-                
-            document.getElementById(morphDiv).appendChild(newMorphDiv);
-            document.getElementById(glossDiv).appendChild(newGlossDiv);
-            //document.getElementById(extra1Div).appendChild(newExtra1Div);
-            //document.getElementById(extra2Div).appendChild(newExtra2Div);
-            //document.getElementById(extra3Div).appendChild(newExtra3Div);
-            //document.getElementById(extra4Div).appendChild(newExtra4Div);
-            //document.getElementById(extra5Div).appendChild(newExtra5Div);
-            
-            counter++;
+                //document.getElementById(extra1Div).appendChild(newExtra1Div);
+                //document.getElementById(extra2Div).appendChild(newExtra2Div);
+                //document.getElementById(extra3Div).appendChild(newExtra3Div);
+                //document.getElementById(extra4Div).appendChild(newExtra4Div);
+                //document.getElementById(extra5Div).appendChild(newExtra5Div);
+
+                counter++;
             }
             document.getElementById("cells").value = counter;
         }
@@ -116,13 +123,99 @@
         function addEditLayer(morphossDiv) {
 
             for (i = 1; i <= 6; i++) {
-            var newMorphossDiv = document.createElement('div');
-            newMorphossDiv.className = "large-2 columns";
-            newMorphossDiv.innerHTML = "<input id=\"morphoss"+(counterEdit+1)+"\" type=\"text\" name=\"morphoss"+(counterEdit+1)+"\" onkeydown=\"main(event, this)\">";
-            document.getElementById(morphossDiv).appendChild(newMorphossDiv);
-            counterEdit++;
+                var newMorphossDiv = document.createElement('div');
+                newMorphossDiv.className = "large-2 columns";
+                newMorphossDiv.innerHTML = "<input id=\"morphoss" + (counterEdit + 1) + "\" type=\"text\" name=\"morphoss" + (counterEdit + 1) + "\" onkeydown=\"main(event, this)\">";
+                document.getElementById(morphossDiv).appendChild(newMorphossDiv);
+                counterEdit++;
             }
             document.getElementById("cellsEdit").value = counterEdit;
+        }
+    </script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#create').on('submit', function(e) {
+
+                $.ajax({
+                    url: './insert.php',
+                    data: $('#create').serialize(),
+                    type: 'POST',
+                    success: function(data) {
+                        alert("Query submitted."); //=== Show Success Message==
+                        clear('create');
+                    },
+                    error: function(data) {
+                        alert("Error."); //===Show Error Message====
+                    }
+                });
+                e.preventDefault(); //=== To Avoid Page Refresh and Fire the Event "Click"===
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#modify').on('submit', function(e) {
+
+                $.ajax({
+                    url: './insert.php',
+                    data: $('#modify').serialize(),
+                    type: 'POST',
+                    success: function(data) {
+                        alert("Query submitted."); //=== Show Success Message==
+                        clear('modify');
+                    },
+                    error: function(data) {
+                        alert("Error."); //===Show Error Message====
+                    }
+                });
+                e.preventDefault(); //=== To Avoid Page Refresh and Fire the Event "Click"===
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#mass_edit').on('submit', function(e) {
+
+                $.ajax({
+                    url: './insert.php',
+                    data: $('#mass_edit').serialize(),
+                    type: 'POST',
+                    success: function(data) {
+                        alert("Query submitted."); //=== Show Success Message==
+                        clear('mass_edit');
+                    },
+                    error: function(data) {
+                        alert("Error."); //===Show Error Message====
+                    }
+                });
+                e.preventDefault(); //=== To Avoid Page Refresh and Fire the Event "Click"===
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#delete').on('submit', function(e) {
+
+                $.ajax({
+                    url: './insert.php',
+                    data: $('#delete').serialize(),
+                    type: 'POST',
+                    success: function(data) {
+                        alert("Query submitted."); //=== Show Success Message==
+                        clear('delete');
+                    },
+                    error: function(data) {
+                        alert("Error."); //===Show Error Message====
+                    }
+                });
+                e.preventDefault(); //=== To Avoid Page Refresh and Fire the Event "Click"===
+            });
+        });
+    </script>
+    <script>
+        function clear(id) {
+            document.getElementById(id).reset();
         }
     </script>
 </head>
@@ -136,94 +229,94 @@
         <hr>
 
         <!-- The section for creating records... -->
-        <form name="create" action="../update/insert.php" method="post">
+        <form id="create" name="create">
             <h4 class="subheader">Create Record</h4>
             <input type="hidden" name="type" value="create">
             <div class="large-12 columns">
                 <!-- Source -->
                 <h4 class="subsubheader">Source</h4>
-                <input id="source" type="text" name="source" >
+                <input id="source" type="text" name="source">
             </div>
             <input type="hidden" id="cells" name="cells" value="12">
             <h4 class="subsubheader">Morpheme</h4>
             <div id="morphinput">
 
-            <div class="large-2 columns">
-                <input id="morpheme1" type="text" name="morpheme1"  onkeyup="suggest(this.value, 'gloss1')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme2" type="text" name="morpheme2"  onkeyup="suggest(this.value, 'gloss2')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme3" type="text" name="morpheme3"  onkeyup="suggest(this.value, 'gloss3')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme4" type="text" name="morpheme4"  onkeyup="suggest(this.value, 'gloss4')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme5" type="text" name="morpheme5"  onkeyup="suggest(this.value, 'gloss5')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme6" type="text" name="morpheme6"  onkeyup="suggest(this.value, 'gloss6')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme7" type="text" name="morpheme7"  onkeyup="suggest(this.value, 'gloss7')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme8" type="text" name="morpheme8"  onkeyup="suggest(this.value, 'gloss8')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme9" type="text" name="morpheme9"  onkeyup="suggest(this.value, 'gloss9')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme10" type="text" name="morpheme10"  onkeyup="suggest(this.value, 'gloss10')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme11" type="text" name="morpheme11"  onkeyup="suggest(this.value, 'gloss11')" autocomplete="off">
-            </div>
-            <div class="large-2 columns">
-                <input id="morpheme12" type="text" name="morpheme12"  onkeyup="suggest(this.value, 'gloss12')" autocomplete="off">
-            </div>
+                <div class="large-2 columns">
+                    <input id="morpheme1" type="text" name="morpheme1" onkeyup="suggest(this.value, 'gloss1')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme2" type="text" name="morpheme2" onkeyup="suggest(this.value, 'gloss2')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme3" type="text" name="morpheme3" onkeyup="suggest(this.value, 'gloss3')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme4" type="text" name="morpheme4" onkeyup="suggest(this.value, 'gloss4')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme5" type="text" name="morpheme5" onkeyup="suggest(this.value, 'gloss5')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme6" type="text" name="morpheme6" onkeyup="suggest(this.value, 'gloss6')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme7" type="text" name="morpheme7" onkeyup="suggest(this.value, 'gloss7')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme8" type="text" name="morpheme8" onkeyup="suggest(this.value, 'gloss8')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme9" type="text" name="morpheme9" onkeyup="suggest(this.value, 'gloss9')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme10" type="text" name="morpheme10" onkeyup="suggest(this.value, 'gloss10')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme11" type="text" name="morpheme11" onkeyup="suggest(this.value, 'gloss11')" autocomplete="off">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morpheme12" type="text" name="morpheme12" onkeyup="suggest(this.value, 'gloss12')" autocomplete="off">
+                </div>
             </div>
             <h4 class="subsubheader">Gloss</h4>
             <div id="glossinput">
 
-            <div class="large-2 columns">
-                <input id="gloss1" type="text" name="gloss1">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss2" type="text" name="gloss2">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss3" type="text" name="gloss3">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss4" type="text" name="gloss4">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss5" type="text" name="gloss5">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss6" type="text" name="gloss6">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss7" type="text" name="gloss7">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss8" type="text" name="gloss8">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss9" type="text" name="gloss9">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss10" type="text" name="gloss10">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss11" type="text" name="gloss11">
-            </div>
-            <div class="large-2 columns">
-                <input id="gloss12" type="text" name="gloss12">
-            </div>
+                <div class="large-2 columns">
+                    <input id="gloss1" type="text" name="gloss1">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss2" type="text" name="gloss2">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss3" type="text" name="gloss3">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss4" type="text" name="gloss4">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss5" type="text" name="gloss5">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss6" type="text" name="gloss6">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss7" type="text" name="gloss7">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss8" type="text" name="gloss8">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss9" type="text" name="gloss9">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss10" type="text" name="gloss10">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss11" type="text" name="gloss11">
+                </div>
+                <div class="large-2 columns">
+                    <input id="gloss12" type="text" name="gloss12">
+                </div>
             </div>
 
             <!-- This is where you add annotation layers. -->
@@ -460,20 +553,16 @@
 -->
             <center><a onclick="addLayer('morphinput', 'glossinput')" class="button round">+ Add Row</a>
             </center>
+
+            <!-- This is where you add annotation layers. -->
             
             <!-- <center><a onclick="addLayer('morphinput', 'glossinput', 'extraInput1','extraInput2','extraInput3','extraInput4','extraInput5')" class="button round">+ Add Row</a>
             </center> -->
-            
+
             <div class="large-12 columns">
                 <h4 class="subsubheader">Translation</h4>
                 <input type="text" name="translation_abc">
             </div>
-            <!-- 
-            <div class="large-12 columns">
-                <h4 class="subsubheader">Translation (123)</h4>
-                <input type="text" name="translation_123">
-            </div>
--->
             <div class="large-4 columns">
                 <h4 class="subsubheader">Reference</h4>
                 <input type="text" name="ref">
@@ -516,7 +605,7 @@
         <hr>
 
         <!-- The section for modifying records... -->
-        <form name="modify" action="../update/insert.php" method="post">
+        <form id="modify" name="modify">
             <h4 class="subheader">Modify Record</h4>
             <input type="hidden" name="type" value="modify">
             <div class="large-3 columns">
@@ -534,6 +623,7 @@
                     <!--<option value="translation|123">Translation (123)</option>-->
                     <option value="media">Media</option>
                     <option value="ref">Reference</option>
+                    
                     <!-- This is where you add annotation layers. -->
 
                     <!-- ExtraAnno1 -->
@@ -555,7 +645,7 @@
             <div class="large-3 columns">
 
                 <h4 class="subsubheader">Edit</h4>
-                <input id="edit" type="text" name="edit" >
+                <input id="edit" type="text" name="edit">
             </div>
             <br>
             <br>
@@ -569,51 +659,51 @@
 
             <h4 class="subsubheader">Morpheme/Gloss</h4>
             <div id="morphossInput">
-            <input type="hidden" id="cellsEdit" name="cellsEdit" value="12">
-            <div class="large-2 columns">
-                <input id="morphoss1" type="text" name="morphoss1" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss2" type="text" name="morphoss2" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss3" type="text" name="morphoss3" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss4" type="text" name="morphoss4" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss5" type="text" name="morphoss5" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss6" type="text" name="morphoss6" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss7" type="text" name="morphoss7" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss8" type="text" name="morphoss8" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss9" type="text" name="morphoss9" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss10" type="text" name="morphoss10" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss11" type="text" name="morphoss11" >
-            </div>
-            <div class="large-2 columns">
-                <input id="morphoss12" type="text" name="morphoss12" >
-            </div>
+                <input type="hidden" id="cellsEdit" name="cellsEdit" value="12">
+                <div class="large-2 columns">
+                    <input id="morphoss1" type="text" name="morphoss1">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss2" type="text" name="morphoss2">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss3" type="text" name="morphoss3">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss4" type="text" name="morphoss4">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss5" type="text" name="morphoss5">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss6" type="text" name="morphoss6">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss7" type="text" name="morphoss7">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss8" type="text" name="morphoss8">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss9" type="text" name="morphoss9">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss10" type="text" name="morphoss10">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss11" type="text" name="morphoss11">
+                </div>
+                <div class="large-2 columns">
+                    <input id="morphoss12" type="text" name="morphoss12">
+                </div>
             </div>
             <center><a onclick="addEditLayer('morphossInput')" class="button round">+ Add Row</a>
             </center>
         </form>
         <!-- ...ends here. -->
-        
+
         <hr>
-        <form action="../update/insert.php" method="post">
+        <form id="mass_edit" name="mass_edit">
             <h4 class="subheader">Mass Edit</h4>
             <input type="hidden" name="type" value="mass_edit">
             <div class="large-3 columns">
@@ -641,7 +731,7 @@
         <hr>
 
         <!-- The section for deleting records... -->
-        <form action="../update/insert.php" method="post">
+        <form id="delete" name="delete">
             <h4 class="subheader">Delete Record</h4>
             <input type="hidden" name="type" value="delete">
             <div class="large-3 columns">

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<html>
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -11,7 +11,15 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/expressions.css" />
     <script src="js/vendor/modernizr.js"></script>
-
+    <style>
+        .hero {
+            <!-- Image goes here. -->
+            background: url("background_expressions.jpg");
+            background-size: cover;
+            box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.15);
+            height: 40%;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,6 +27,7 @@
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 
+    <!-- Menu bar. -->
     <div class="fixed">
         <nav class="top-bar" data-topbar>
             <ul class="title-area">
@@ -44,43 +53,73 @@
 
     <div class="row">
         <div class="large-12 small-12 columns">
-            <p align="center" style="font-size:1.2em">On this page you will find links to short videos explaining some common expressions.</p>
+            <!-- Paragraph #1 -->
+            <p align="center" style="font-size:1.2em">Consectetuer consectetuer neque, sem ultrices. Tortor et interdum tristique, maecenas malesuada justo in velit fermentum, lorem sed amet.</p>
         </div>
     </div>
+    <!-- Expessions #1 and #2 Videos start here... -->
     <div class="row">
+        <!-- Expression #1 Video starts here... -->
         <div class="large-6 small-12 columns">
             <div class="expressions">
                 <hr>
                 <center>
                     <p>Expression #1</p>
+                    <!-- Expression #1 video -->
                     <a class="button secondary" href="#" data-reveal-id="expression1">Watch</a>
                 </center>
                 <hr>
             </div>
         </div>
+        <!-- ...Expression #1 Video ends here -->
+        <!-- Expression #2 Video starts here... -->
         <div class="large-6 small-12 columns">
             <div class="expressions">
                 <hr>
                 <center>
-                    <p>Coming soon!</p>
-                    <a class="button secondary" href="#" data-reveal-id="coming_soon">Watch</a>
+                    <p>Expression #2</p>
+                    <!-- Expression #2 video -->
+                    <a class="button secondary" href="#" data-reveal-id="expression2">Watch</a>
                 </center>
                 <hr>
             </div>
         </div>
+        <!-- ...Expression #2 Video ends here -->
     </div>
+    <!-- ...Expression #1 and #2 Videos end here -->
+
     </center>
+
+    <!-- Expression #1 Video starts here... -->
     <div id="expression1" class="reveal-modal small expressions" data-reveal>
         <p style="font-size:200%">Expression #1</p>
         <div class="flex-video">
-            <video poster='video_placeholder.png' controls='controls'>
-                <source src="placeholder.mp4" type="video/mp4" />
-                <source src="placeholder.webm" type="video/webm" />
-                <source src="placeholder.ogv" type="video/ogg" />Your browser doesn't seem to support the video tag.
+            <!-- Video -->
+            <video poster='img/placeholder1.png' controls='controls'>
+                <source src="video/placeholder.mp4" type="video/mp4" />
+                <source src="video/placeholder.webm" type="video/webm" />
+                <source src="video/placeholder.ogv" type="video/ogg" />Your browser doesn't seem to support the video tag.
             </video>
         </div>
         <a class="close-reveal-modal">&#215;</a>
     </div>
+    <!-- ...Expression #1 Video ends here -->
+    
+    <!-- Expression #2 Video starts here... -->
+    <div id="expression1" class="reveal-modal small expressions" data-reveal>
+        <p style="font-size:200%">Expression #2</p>
+        <div class="flex-video">
+            <!-- Video -->
+            <video poster='img/placeholder.png' controls='controls'>
+                <source src="video/placeholder.mp4" type="video/mp4" />
+                <source src="video/placeholder.webm" type="video/webm" />
+                <source src="video/placeholder.ogv" type="video/ogg" />Your browser doesn't seem to support the video tag.
+            </video>
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <!-- ...Expression #2 Video ends here -->
+  
     <script src="js/all.js"></script>
     <script>
         $(document).foundation({

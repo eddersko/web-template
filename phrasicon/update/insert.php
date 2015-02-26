@@ -1,5 +1,10 @@
 <?php
 
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
 $file = '../phrasicon.xml';
 $xml = simplexml_load_file($file);
 $sxe = new SimpleXMLElement($xml->asXML());
@@ -40,9 +45,7 @@ for ($x=1; $x<=$num_cells; $x++) {
     }
 }
 $translation1 = $entry->addChild('translation', $_POST['translation_abc']);
-$translation1->addAttribute("lang", "en");
-//$translation2 = $entry->addChild('translation', $_POST['translation_123']);
-//$translation2->addAttribute("lang", "123");    
+$translation1->addAttribute("lang", "en");   
 $media = $entry->addChild('media');
 $media->addAttribute("mimeType", substr($_POST['media'], -3));
 $media->addAttribute("url", $_POST['media']);
@@ -347,25 +350,4 @@ $dom->formatOutput = true;
 $dom->loadXML($phrasicon->asXML());
 $dom->save($file);
 
-echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center><b>Query submitted.</b></center></h4><hr></div>";
-
-mysqli_close($con);
-  include("../update/interface.php");
-
 ?> 
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Phrasicon Template</title>
-    <meta name="description" content="Multi-layered Language Learning Resources" />
-    <meta name="author" content="User" />
-    <meta name="copyright" content="User" />
-    <link rel="stylesheet" href="../css/foundation.css" />
-</head>
-<body>
-
-</body>
-</html>

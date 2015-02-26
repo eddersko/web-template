@@ -1,18 +1,33 @@
 <?php 
 
-$_SESSION[ 'word']= $_GET[ 'word']; 
-$word= $_SESSION[ 'word']; 
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
+$_SESSION['word']= $_GET[ 'word']; 
+$word= $_SESSION['word']; 
+
 $xmlDoc= new DOMDocument(); 
 $xmlDoc->load("dictionary.xml"); 
 $xpath = new DOMXPath($xmlDoc); 
-$result = $xpath->query("/dictionary/entry/sense/cit[usg='$word']/../.."); 
 
+if ($_GET['lang'] == "source") {
+$result = $xpath->query("/dictionary/entry/form[orth=\"$word\"]/..");  
+
+} else {
+$result = $xpath->query("/dictionary/entry/sense/cit[usg=\"".$word."\"]/../..");   
+
+}
 $table = ""; 
+
+// for each entry, get relevant fields to display
+// you may adjust to add/remove fields to display
 foreach($result as $entry) {     
 
 $id = $entry->getAttribute('id'); 
 $hyper = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue; 
-$pomo = $entry->childNodes->item(1)->childNodes->item(1)->nodeValue; 
+$source = $entry->childNodes->item(1)->childNodes->item(1)->nodeValue; 
 $eng = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue; 
 $pos = $entry->childNodes->item(5)->childNodes->item(1)->nodeValue; 
 $note = $entry->childNodes->item(7)->nodeValue; 
@@ -29,62 +44,71 @@ $media = $entry->childNodes->item(9)->getAttribute('url');
 
 $count = 0; 
 $examples = ""; 
-$polysemy = $xpath->query("/dictionary/entry/form[orth='$pomo']/..")->length; 
 
-$lenA = strlen($pomo);
-$lenB = strlen($pomo) - 1;
-$lenC = strlen($pomo) - 2;
-$len1 = strlen($hyper); 
-$len2 = strlen($hyper)+1; 
+// check polysemy/homophony
+$polysemy = $xpath->query("/dictionary/entry/form[orth='$source']/..")->length; 
+
+// varying length due to diacritics/special characters
+// PHP cannot count some diacritics/special characters
+$lenA = strlen($source);
+$lenB = strlen($source) - 1;
+$lenC = strlen($source) - 2;
+
 $xmlDoc = new DOMDocument(); 
 $xmlDoc->load("../phrasicon/phrasicon.xml");
 $xpath = new DOMXPath($xmlDoc); 
-    
+
+// if polysemous/homophonous
 if ($polysemy > 1) { 
+    
 $p = false; 
 $e = false; 
-$count += $xpath->query("//phrase[starts-with(source, '".$pomo." ')]")->length; 
-$count += $xpath->query("//phrase[contains(source, ' ".$pomo." ')]")->length; 
-$count += $xpath->query("//phrase[(substring(source, string-length(translation) - $lenA) = '".$pomo."')]")->length; 
-$count += $xpath->query("//morpheme[m='".$pomo."']")->length; 
+$count += $xpath->query("//phrase[starts-with(source, '".$source." ')]")->length; 
+$count += $xpath->query("//phrase[contains(source, ' ".$source." ')]")->length; 
+$count += $xpath->query("//phrase[(substring(source, string-length(translation) - $lenA) = '".$source."')]")->length; 
+$count += $xpath->query("//morpheme[m='".$source."']")->length; 
+
+// if phrasicon contains source word
 if ($count > 0) { 
     $p = true; 
 } 
+
 $count = 0; 
-$count += $xpath->query("//phrase[starts-with(translation, '$hyper')]")->length; 
-$count += $xpath->query("//phrase[contains(translation, ' $hyper ')]")->length; 
-$count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len1.") = ' ".$hyper."')]")->length; 
-$count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = ' ".$hyper."?')]")->length;
-$count += $xpath->query("//phrase[(substring(translation, string-length(translation) - ".$len2.") = ' ".$hyper.".')]")->length; 
 $count += $xpath->query("(//gloss[g='$hyper'])")->length; 
 
+// if phrasicon contains hyper
 if ($count > 0) { 
     $e = true; 
 } 
 
+// if both phrasicon contains both source word and hypernym, set up to provide linkage
 if ($p and $e) { 
     $count = 1; 
-} 
+} else {
+    $count = 0;   
+}
 
+// if not polysemous/homophonous
 } else { 
 
-$count += $xpath->query('//phrase[starts-with(source, "'.$pomo.' ")]')->length; 
-$count += $xpath->query('//phrase[contains(source,  " '.$pomo.' ")]')->length;   
-$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenA.') = " '.$pomo.'")]')->length; 
-$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenB.') = " '.$pomo.'")]')->length; 
-$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenC.') = " '.$pomo.'")]')->length; 
-
-$count += $xpath->query('//morpheme[m="'.$pomo.'"]')->length;
+$count += $xpath->query('//phrase[starts-with(source, "'.$source.' ")]')->length; 
+$count += $xpath->query('//phrase[contains(source,  " '.$source.' ")]')->length;   
+$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenA.') = " '.$source.'")]')->length; 
+$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenB.') = " '.$source.'")]')->length; 
+$count += $xpath->query('//phrase[(substring(source, string-length(source) - '.$lenC.') = " '.$source.'")]')->length; 
+$count += $xpath->query('//morpheme[m="'.$source.'"]')->length;
 
 } 
-    
+
+// if the entry headword appears in phrasicon, provide a link
 if ($count > 0) {
     if ($polysemy > 1) {
-$examples .= "<tr><td colspan=\"2\"><center><a href=\"../phrasicon/word.php?word=" . $pomo . "&eng=" . $eng . "&lang=poly\">Example phrases (phrasicon)</a></center></td></tr>"; 
-} else { 
-$examples .= "<tr><td colspan=\"2\"><center><a href=\"../phrasicon/word.php?word=" . $pomo . "&lang=pomo\">Example phrases (phrasicon)</a></center></td></tr>"; 
-    }
+        $examples .= "<tr><td colspan=\"2\"><center><a href=\"../phrasicon/word.php?word=" . $source . "&eng=" . $eng . "&lang=poly\">Example phrases (phrasicon)</a></center></td></tr>"; 
+    } else { 
+        $examples .= "<tr><td colspan=\"2\"><center><a href=\"../phrasicon/word.php?word=" . $source . "&lang=source\">Example phrases (phrasicon)</a></center></td></tr>"; 
+        }
 } 
+    
 $table = $table . "<a name=\"" . $id . "\"><table align=\"center\" width=\"300px\"><tr><td class=\"english\" colspan=\"2\"><center>" . $eng . "</center></td></tr>";
 
 // This is where you add annotation layers. 
@@ -95,7 +119,7 @@ $table = $table . "<a name=\"" . $id . "\"><table align=\"center\" width=\"300px
 // $table = $table .  "<tr><td class=\"english\" colspan=\"2\"><center>" . $extraAnno4 . "</center></td></tr>"; 
 // $table = $table .  "<tr><td class=\"english\" colspan=\"2\"><center>" . $extraAnno5 . "</center></td></tr>"; 
 
-$table = $table . "<tr><td class=\"pomo\" colspan=\"2\"><center>" . $pomo . "</center></td></tr>" . "<tr class=\"body\">" . "<td valign=\"top\" class=\"description\"><center><em>" . $pos . "</center></em></td><td class=\"description\">" . $note . "</td></tr>" . $examples . "<tr class=\"space\"><td colspan=\"2\"><center><audio width=\"300px\" src=\"../dictionary/sounds/" . $media . "\" controls preload=\"auto\" autobuffer></audio></center></td></tr></table></a>"; 
+$table = $table . "<tr><td class=\"source\" colspan=\"2\"><center>" . $source . "</center></td></tr>" . "<tr class=\"body\">" . "<td valign=\"top\" class=\"description\"><center><em>" . $pos . "</center></em></td><td class=\"description\">" . $note . "</td></tr>" . $examples . "<tr class=\"space\"><td colspan=\"2\"><center><audio width=\"300px\" src=\"../dictionary/sounds/" . $media . "\" controls preload=\"auto\" autobuffer></audio></center></td></tr></table></a>"; 
 
 } 
 ?>
@@ -218,19 +242,37 @@ $table = $table . "<tr><td class=\"pomo\" colspan=\"2\"><center>" . $pomo . "</c
                 </center>
             </ul>
 
-            <div class="row collapse">
-                <div class="large-8 small-9 columns">
-                    <form action="../dictionary/category.php" method="post">
-                        <!-- Search bar. -->
-                        <input type="text" placeholder="Type English word..." name="word">
+           <div class="row collapse">
+                <div class="large-2 small-3 columns">
+                    <form name="form1" action="../dictionary/category.php" method="post">
+                        <!-- Language options. -->
+                        <select name="lang">
+                            <option value="english">English</option>
+                            <option value="source">Source</option>
+                        </select>
+
                 </div>
-                <div class="large-4 small-3 columns">
+
+                <div class="large-6 small-4 columns">
+                    <!-- Search bar. -->
+                    <input type="text" placeholder="Type word..." name="word">
+
+                </div>
+                <div class="large-3 small-3 columns">
                     <!-- Submit button. -->
                     <input class="button postfix" type="submit" value="Submit">
-                    </form>
+                </div>
+                <div class="large-1 small-2 columns">
+
+                    <!-- Dropdown for special characters. -->
+                    <a class="button dropdown postfix" data-dropdown="drop"></a>
+                    <ul id="drop" class="f-dropdown" data-dropdown-content>
+                        <li><a onmouseover="showtip(this,event,'U02B0')" onmouseout=hidetip() href="javascript:;" onclick="form1.word.value=form1.word.value + 'ʔ';">ʔ</a> 
+                        </li>
+                    </ul>
                 </div>
             </div>
-
+               
             <p>
                 <!-- Background image. -->
                 <img src="background_dictionary.jpg" />

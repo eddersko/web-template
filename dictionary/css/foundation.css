@@ -47,10 +47,10 @@ body {
     font-size: 100%;
 }
 .english,
-.pomo {
+.source {
     font-size: 160%;
 }
-.pomo {
+.source {
     font-weight: bold;
 }
 .description {

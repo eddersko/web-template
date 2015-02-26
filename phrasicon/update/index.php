@@ -1,4 +1,10 @@
 <?php
+
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 

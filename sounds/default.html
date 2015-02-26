@@ -18,6 +18,7 @@
         support = !! (document.createElement('audio').canPlayType);
         if (support) clips = [];
 
+        // plays sound file
         function ipa(sound) {
             if (!clips[sound]) clips[sound] = new Audio('sounds/' + sound + '.wav');
             clips[sound].play();
@@ -27,7 +28,7 @@
 </head>
 
 <body>
-
+    <!-- Menu -->
     <div class="fixed">
         <nav class="top-bar" data-topbar>
             <ul class="title-area">
@@ -47,9 +48,11 @@
 
                 <ul class="right">
                     <li class="divider"></li>
+                    <!-- Sounds and Letters -->
                     <li><a href="#sounds" class="smoothScroll" style="color: white">Sounds and Letters</a>
                     </li>
                     <li class="divider"></li>
+                    <!-- Vowels and Consonants -->
                     <li><a href="#v_c" class="smoothScroll" style="color: white">Vowels and Consonants</a>
                     </li>
                     <li class="divider"></li>
@@ -57,16 +60,20 @@
             </section>
         </nav>
     </div>
+    
+    <!-- Sounds Section starts here... -->
     <a id="sounds"></a>
         <div id="intro">
             <div class="content">
                 <div id="profile">
+                    <!-- Image goes here. -->
                     <img src="../placeholder.png" alt="Profile Photo">
                 </div>
                 <div class="single-col">
 
                     <div class="text">
                         <h4>Sounds and Letters</h4>
+                        <!-- Paragraph #1 -->
                         <p align="justify">Consectetuer consectetuer neque, sem ultrices. Tortor et interdum tristique, maecenas malesuada justo in velit fermentum, lorem sed amet. Eget bibendum posuere mollis id in malesuada, risus amet, tristique velit vitae. Rhoncus massa, lobortis eget nulla non a tincidunt facilisis, elit pellentesque urna vestibulum enim tincidunt fusce.
                             <p/>
                     </div>
@@ -79,59 +86,71 @@
                 </div>
             </div>
         </div>
+        <!-- ...Sounds Section ends here. -->
 
+        <!-- Sound Matrix Section starts here... -->
         <a id="matrix"></a>
         <div id="sounds">
             <div class="content">
                 <div class="single-col">
                     <br>
+                    <!-- Paragraph #2 -->
                     <p align="justify">Consectetuer consectetuer neque, sem ultrices. Tortor et interdum tristique, maecenas malesuada justo in velit fermentum, lorem sed amet. Eget bibendum posuere mollis id in malesuada, risus amet, tristique velit vitae. Rhoncus massa, lobortis eget nulla non a tincidunt facilisis, elit pellentesque urna vestibulum enim tincidunt fusce.</p>
 
                     <!-- Sound matrix starts here... -->
                     <table width="100%" height="400px">
+                        <!-- Table Row #1 starts here... -->
                         <tr>
-                            <td class="pomo_sound" onclick="ipa('a')">a</td>
-                            <td class="pomo_sound" onclick="ipa('b')">b</td>
-                            <td class="pomo_sound" onclick="ipa('c')">c</td>
-                            <td class="pomo_sound" onclick="ipa('d')">d</td>
-                            <td class="pomo_sound" onclick="ipa('ch_ej')">e</td>
+                            <td class="click_sound" onclick="ipa('a')">a</td>
+                            <td class="click_sound" onclick="ipa('b')">b</td>
+                            <td class="click_sound" onclick="ipa('c')">c</td>
+                            <td class="click_sound" onclick="ipa('d')">d</td>
+                            <td class="click_sound" onclick="ipa('e')">e</td>
                         </tr>
+                        <!-- ...Table Row #1 ends here. -->
+                        <!-- Table Row #2 starts here... -->
                         <tr>
-                            <td class="pomo_sound" onclick="ipa('ch_ej')">f</td>
-                            <td class="pomo_sound" onclick="ipa('e')">g</td>
-                            <td class="pomo_sound" onclick="ipa('ee')">h</td>
-                            <td class="pomo_sound" onclick="ipa('h')">i</td>
-                            <td class="pomo_sound" onclick="ipa('i')">j</td>
+                            <td class="click_sound" onclick="ipa('f')">f</td>
+                            <td class="click_sound" onclick="ipa('g')">g</td>
+                            <td class="click_sound" onclick="ipa('h')">h</td>
+                            <td class="click_sound" onclick="ipa('i')">i</td>
+                            <td class="click_sound" onclick="ipa('j')">j</td>
                         </tr>
+                        <!-- ...Table Row #2 ends here. -->
+                        <!-- Table Row #3 starts here... -->
                         <tr>
-                            <td class="pomo_sound" onclick="ipa('ii')">k</td>
-                            <td class="pomo_sound" onclick="ipa('j')">l</td>
-                            <td class="pomo_sound" onclick="ipa('k')">m</td>
-                            <td class="pomo_sound" onclick="ipa('k_ej')">n</td>
-                            <td class="pomo_sound" onclick="ipa('kh')">o</td>
+                            <td class="click_sound" onclick="ipa('k')">k</td>
+                            <td class="click_sound" onclick="ipa('l')">l</td>
+                            <td class="click_sound" onclick="ipa('m')">m</td>
+                            <td class="click_sound" onclick="ipa('n')">n</td>
+                            <td class="click_sound" onclick="ipa('o')">o</td>
                         </tr>
+                        <!-- ...Table Row #3 ends here. -->
+                        <!-- Table Row #4 starts here... -->
                         <tr>
-                            <td class="pomo_sound" onclick="ipa('l')">p</td>
-                            <td class="pomo_sound" onclick="ipa('m')">q</td>
-                            <td class="pomo_sound" onclick="ipa('n')">r</td>
-                            <td class="pomo_sound" onclick="ipa('o')">s</td>
-                            <td class="pomo_sound" onclick="ipa('oo')">t</td>
+                            <td class="click_sound" onclick="ipa('p')">p</td>
+                            <td class="click_sound" onclick="ipa('q')">q</td>
+                            <td class="click_sound" onclick="ipa('r')">r</td>
+                            <td class="click_sound" onclick="ipa('s')">s</td>
+                            <td class="click_sound" onclick="ipa('t')">t</td>
                         </tr>
+                        <!-- ...Table Row #4 ends here. -->
+                        <!-- Table Row #5 starts here... -->
                         <tr>
-                            <td class="pomo_sound" onclick="ipa('p')">u</td>
-                            <td class="pomo_sound" onclick="ipa('p_ej')">v</td>
-                            <td class="pomo_sound" onclick="ipa('ph')">w</td>
-                            <td class="pomo_sound" onclick="ipa('s')">x</td>
-                            <td class="pomo_sound" onclick="ipa('sh')">y</td>
+                            <td class="click_sound" onclick="ipa('u')">u</td>
+                            <td class="click_sound" onclick="ipa('v')">v</td>
+                            <td class="click_sound" onclick="ipa('w')">w</td>
+                            <td class="click_sound" onclick="ipa('x')">x</td>
+                            <td class="click_sound" onclick="ipa('y')">y</td>
                         </tr>
+                        <!-- ...Table Row #5 ends here. -->
+                        <!-- Table Row #6 starts here... -->
                         <tr>
-                            <td class="pomo_sound" onclick="ipa('t')">z</td>
-
+                            <td class="click_sound" onclick="ipa('z')">z</td>
                         </tr>
-
+                        <!-- ...Table Row #6 ends here. -->
                     </table>
-
-                    <!-- ...ends here. -->
+                    <!-- ...sound matrix ends here. -->
 
                 </div>
                 <div id="arrow">
@@ -142,18 +161,21 @@
                 </div>
             </div>
         </div>
+    <!-- ...Sound Matrix Section ends here. -->
 
+    <!-- Vowels and Consonants Section starts here... -->
     <a id="v_c"></a>
     <div id="v_c">
         <div class="content">
             <div class="single-col">
                 <div id="profile">
+                    <!-- Image goes here. -->
                     <img src="../placeholder.png" alt="Profile Photo">
                 </div>
                 <h4>Vowels and Consonants</h4>
                 <div class="text">
+                <!-- Paragraph #3 -->
                 <p align="justify">Consectetuer consectetuer neque, sem ultrices. Tortor et interdum tristique, maecenas malesuada justo in velit fermentum, lorem sed amet. Eget bibendum posuere mollis id in malesuada, risus amet, tristique velit vitae. Rhoncus massa, lobortis eget nulla non a tincidunt facilisis, elit pellentesque urna vestibulum enim tincidunt fusce.</p></div>
-                
                                 <div id="arrow">
                     <a href="#videos" class="smoothScroll">
                         <div class="icon-down-open-big">
@@ -163,50 +185,81 @@
             </div>
         </div>
     </div>
+    <!-- ...Vowels and Consonants Section ends here. -->    
+    <!-- Videos Section starts here... -->
     <a id="videos"></a>
     <div id="sounds">
         <div class="content">
             <div class="single-col">
+                <!-- Sound #1 and #2 Videos start here... -->
                 <div class="row">
+                    <!-- Sound #1 Video starts here... -->
                     <div class="large-6 small-12 columns">
                         <div class="videos">
                             <hr>
                             <center>
                                 <p>Sound #1</p>
-                                <a class="button secondary" href="#" data-reveal-id="temp">Watch</a>
+                                <!-- Sound #1 Video -->
+                                <a class="button secondary" href="#" data-reveal-id="temp1">Watch</a>
                             </center>
                             <hr>
                         </div>
                     </div>
+                    <!-- ...Sound #1 Video ends here -->
+                    <!-- Sound #2 Video starts here... -->
                     <div class="large-6 small-12 columns">
                         <div class="videos">
                             <hr>
                             <center>
-                                <p>Coming soon!</p>
-                                <a class="button secondary" href="#" data-reveal-id="temp">Watch</a>
+                                <p>Sound #2</p>
+                                <!-- Sound #2 Video -->
+                                <a class="button secondary" href="#" data-reveal-id="temp2">Watch</a>
                             </center>
                             <hr>
                         </div>
                     </div>
+                    <!-- ...Sound #2 Video ends here -->
                 </div>
+                <!-- ...Sound #1 and #2 Videos end here -->
             </div>
         </div>
     </div>
-
-    <div id="temp" class="reveal-modal small" data-reveal>
+    <!-- ...Videos Section ends here. -->
+    
+    <!-- Sound #1 Video starts here... -->
+    <div id="temp1" class="reveal-modal small" data-reveal>
         <h2>Sound #1</h2>
         <div class="flex-video">
-
-            <video poster='' controls='controls'>
-                <source src="" type="video/mp4" />
-                <source src="" type="video/webm" />
-                <source src="" type="video/ogg" />Your browser doesn't seem to support the video tag.
+            
+            <!-- Video -->
+            <video poster='img/placeholder1.png' controls='controls'>
+                <source src="video/placeholder1.mp4" type="video/mp4" />
+                <source src="video/placeholder1.webm" type="video/webm" />
+                <source src="video/placeholder1.ogg" type="video/ogg" />Your browser doesn't seem to support the video tag.
             </video>
 
         </div>
         <a class="close-reveal-modal">&#215;</a>
     </div>
+    <!-- ...and ends here -->
+    
+    <!-- Sound #2 Video starts here... -->
+    <div id="temp2" class="reveal-modal small" data-reveal>
+        <h2>Sound #2</h2>
+        <div class="flex-video">
+            
+            <!-- Video -->
+            <video poster='img/placeholder2.png' controls='controls'>
+                <source src="video/placeholder2.mp4" type="video/mp4" />
+                <source src="video/placeholder2.webm" type="video/webm" />
+                <source src="video/placeholder2.ogg" type="video/ogg" />Your browser doesn't seem to support the video tag.
+            </video>
 
+        </div>
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <!-- ...and ends here -->
+    
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/gallery.js"></script>

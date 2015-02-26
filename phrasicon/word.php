@@ -1,54 +1,65 @@
 <?php
+
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
 $count = 0;
 $counting = TRUE;
+
 $word = $_POST['word'];
 $lang = $_POST['lang'];
 $hyper = $_POST['hyper'];
 
 if ($word == null && $lang == null) {
     $word = $_GET['word'];
-$lang = $_GET['lang'];
-$eng = $_GET['eng'];
+    $lang = $_GET['lang'];
+    $eng = $_GET['eng'];
     $counting = FALSE;
 }
 
+// remove trailing spaces
 $word = rtrim($word, " ");
 $len1 = strlen($word);
 $len2 = strlen($word) + 1;
-
 
 $xmlDoc = new DOMDocument();
 $xmlDoc->load("phrasicon.xml");
 $xpath = new DOMXPath($xmlDoc); 
 
-
 $xmlDocD = new DOMDocument();
 $xmlDocD->load("../dictionary/dictionary.xml");
 $xpathD = new DOMXPath($xmlDocD); 
 
-
-if ($word == "" ) {
+// user enters nothting, retrieve all entries
+if ($word == "") {
     
     $result = $xpath->query('//phrase');
 
 } else {
 
+// hyper search - has to be in English
 if ($hyper == 'hyper' & ($lang == 'eng' | $lang == 'english')) {
     
 $xmlDocD = new DOMDocument();
 $xmlDocD->load("../dictionary/dictionary.xml");
 $xpathD = new DOMXPath($xmlDocD); 
-    
+
+// retrieves dictionary entries with word, should return one entry
 $resultD = $xpathD->query("/dictionary/entry/sense/cit[quote='$word']/../..");
-    
+
+// collects the hypernym of that entry
 foreach ($resultD as $entry) {
-$hypernym = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue;
+    $hypernym = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(1)->nodeValue;
 }
 
+// searches all dictionary entries that share the hypernym
 $resultD = $xpathD->query("/dictionary/entry/sense/cit[usg='$hypernym']/../..");
     
 $headword_arr = array();
 
+// retrieves all English headwords tht share the hypernym
 foreach ($resultD as $entry) {
 $headword = $entry->childNodes->item(3)->childNodes->item(1)->childNodes->item(3)->nodeValue;
 array_push($headword_arr, $headword);
@@ -56,10 +67,12 @@ array_push($headword_arr, $headword);
     
 $cWord = ucfirst($word);
 
+// set up query by including searched word...
 $query =  '(//phrase[starts-with(translation, "'.$word.' ")]) | (//phrase[starts-with(translation, "'.$cWord.' ")]) | 
 (//phrase[contains(translation, " '.$word.' ")]) | (//phrase[(substring(translation, string-length(translation) - '.$len1.') = " '.$word.'")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'?")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'.")]) | (//phrase/gloss[g="'.$word.'"]/..) ';
     
 
+// append to query all English headwords that share the hypernym
 for ($x=0; $x<count($headword_arr); $x++) {
     
     $head = $headword_arr[$x];
@@ -74,9 +87,9 @@ for ($x=0; $x<count($headword_arr); $x++) {
 
 $result = $xpath->query($query);
 
-    
 } else {
 
+// English non-hyper search
 if ($lang == 'eng' | $lang == 'english') {    
 
 $cWord = ucfirst($word);
@@ -84,36 +97,40 @@ $cWord = ucfirst($word);
 $result = $xpath->query('(//phrase[starts-with(translation, "'.$word.' ")]) | (//phrase[starts-with(translation, "'.$cWord.' ")]) | 
 (//phrase[contains(translation, " '.$word.' ")]) | (//phrase[(substring(translation, string-length(translation) - '.$len1.') = " '.$word.'")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'?")]) | (//phrase[(substring(translation, string-length(translation) - '.$len2.') = " '.$word.'.")]) | (//phrase/gloss[g="'.$word.'"]/..)');
 
-    
+// polynym/homophony search - linkage
 } elseif ($lang == "poly") {
     
 $len1 = strlen($eng) - 1;
-$len2 = strlen($eng);
-    
+$len2 = strlen($eng);    
 $cWord = ucfirst($eng);
-  
+
+// find all entries where morpheme matches the word
 $resultG = $xpath->query('(//m[text()=\''.$word.'\'])');
 
-
 $id_arr = array();
-    
+
 foreach($resultG as $entry) {
+
+// retrieve the ids of the morpheme fields
 $id = $entry->getAttribute('id');
 $resultM = $xpath->query('(//g[@id="'.$id.'"])');
 
-foreach($resultM as $entryIn) {
-    $val = $entryIn->nodeValue;   
-    if ($eng == $val) {
-        $id = explode(".", $id)[0];
-        array_push($id_arr, $id);
+    // for each id, look at the matching gloss
+    foreach($resultM as $entryIn) {
+        $val = $entryIn->nodeValue;   
+        
+        // if the gloss matches the English, add to results page
+        if ($eng == $val) {
+            $id = explode(".", $id)[0];
+            array_push($id_arr, $id);
+        }
     }
-}
-
 }
 
 $counting = 0;  
 $query = "";
-    
+
+// retrieve all relevant entries
 for ($x=0; $x<count($id_arr); $x++) {
     if ($counting == 0) {
     $id_arr[$x];
@@ -126,7 +143,8 @@ for ($x=0; $x<count($id_arr); $x++) {
 }
 
 $result = $xpath->query($query);  
-    
+
+// source search
 } else {
     
 $len1 = strlen($word);
@@ -141,6 +159,7 @@ $result = $xpath->query('(//phrase[starts-with(source, "'.$word.' ")]) | (//phra
 }
 $table = "";
 
+// loop over each entry, and adjust layout on web page
 foreach($result as $entry) {
 
 $source = $entry->childNodes->item(3)->nodeValue;
@@ -528,7 +547,6 @@ $results .= "<h4 class=\"subsubheader\">No results found.</h4>";
     			&nbsp;<input id="checkbox1" type="checkbox" name="hyper" value="hyper"><label for="checkbox1">Hyper Search</label>
     </div>
                                     </form>
-
             <!-- Picture here. -->
             <p><img src="background_phrasicon.jpg" />
             </p>

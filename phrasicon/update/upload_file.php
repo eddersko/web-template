@@ -1,5 +1,10 @@
 <?php
 
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
 $success = FALSE;
 
 if(isset($_POST['submit']))
@@ -23,10 +28,10 @@ if(isset($_POST['submit']))
 
 if ($success) {
     echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center>Upload Success!</center></h4></div>";
- include("./interface.php");   
+ include("./index.php");   
 } else {
  echo "<div class=\"row\"><hr><br><h4 style=\"font-size: 200%\"><center>Upload Failed...</center></h4></div>";
- include("./interface.php");
+ include("./index.php");
 }
 ?>
 

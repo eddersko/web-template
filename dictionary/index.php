@@ -1,8 +1,16 @@
 <?php 
+
+    /*
+    * Author: Edwin Ko eddersko.com
+    * This script is free software.
+    */
+
 $xmlDoc=new DOMDocument(); 
 $xmlDoc->load("dictionary.xml"); 
 $xpath = new DOMXPath($xmlDoc); 
-$entries = $xpath->query("//entry"); 
+$entries = $xpath->query("//entry");
+
+// count all entries in the dictionary
 $count = $entries->length; 
 ?>
 
@@ -129,18 +137,37 @@ $count = $entries->length;
                 </center>
             </ul>
 
-            <div class="row collapse">
-                <div class="large-8 small-9 columns">
-                    <form action="../dictionary/category.php" method="post">
-                        <!-- Search bar. -->
-                        <input type="text" placeholder="Type English word..." name="word">
-                </div>
-                <div class="large-4 small-3 columns">
+           <div class="row collapse">
+                <div class="large-2 small-3 columns">
+                    <form name="form1" action="../dictionary/category.php" method="post">
+                        <!-- Language options. -->
+                        <select name="lang">
+                            <option value="english">English</option>
+                            <option value="source">Source</option>
+                        </select>
 
+                </div>
+
+                <div class="large-6 small-4 columns">
+                    <!-- Search bar. -->
+                    <input type="text" placeholder="Type word..." name="word">
+
+                </div>
+                <div class="large-3 small-3 columns">
                     <!-- Submit button. -->
                     <input class="button postfix" type="submit" value="Submit">
-                    </form>
                 </div>
+                <div class="large-1 small-2 columns">
+
+                    <!-- Dropdown for special characters. -->
+                    <a class="button dropdown postfix" data-dropdown="drop"></a>
+                    <ul id="drop" class="f-dropdown" data-dropdown-content>
+                        <li><a onmouseover="showtip(this,event,'U02B0')" onmouseout=hidetip() href="javascript:;" onclick="form1.word.value=form1.word.value + 'ʔ';">ʔ</a> 
+                        </li>
+                    </ul>
+
+                </div>
+
             </div>
 
 
