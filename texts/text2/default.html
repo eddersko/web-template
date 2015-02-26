@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Stories and Texts</title>
+    <meta name="description" content="Multi-layered Language Learning Resources" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="User" />
+    <meta name="copyright" content="User" />
+    <link rel="stylesheet" href="../css/foundation.css" />
+    <link rel="stylesheet" href="../css/texts.css" />
+    <link rel="stylesheet" href="../../owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="../../owl-carousel/owl.theme.css">
+    <script src="../js/vendor/modernizr.js"></script>
+    <style>
+        .hero {
+            padding-bottom: 50px;
+            <!-- Image goes here. --> 
+            background-image: url("../img/background_texts.jpg");
+            background-size: cover;
+            box-shadow: inset 0px 0px 0 2000px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menu Bar. -->
+    <div class="fixed">
+        <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+
+                <li class="name">
+                    <h1>
+<a href="../">
+Back to Texts
+</a>
+</h1>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <section class="hero">
+
+        <div class="row">
+            <div class="large-6 columns about-box">
+                <br>
+                <div class="black-box">
+                    <!-- Title of Text -->
+                    <h4 style="color:white"><span id="pom">Template #1</h4>
+                    <!-- Paragraph #1 -->
+                    <p align="justify">Consectetuer consectetuer neque, sem ultrices. Tortor et interdum tristique, maecenas malesuada justo in velit fermentum, lorem sed amet. Eget bibendum posuere mollis id in malesuada, risus amet, tristique velit vitae. Rhoncus massa, lobortis eget nulla non a tincidunt facilisis, elit pellentesque urna vestibulum enim tincidunt fusce. Placerat magna quam tincidunt neque ullamcorper non. Leo neque, pede et ipsum sed elit, ut ut, feugiat amet eu.</p>
+                </div>
+            </div>
+            <div class="large-6 columns">
+
+                <center>
+                    <br>
+
+                    <!-- Video of text. -->
+                    <!-- 
+
+                    <video width="100%" poster='../img/placeholder.png' controls='controls'>
+                    <source src="../videos/placeholder.mp4" type="video/mp4" />
+                    <source src="../videos/placeholder.webm" type="video/webm" />
+                    <source src="../videos/placeholder.ogv" type="video/ogg" />
+                    -->
+                    
+                    <!-- Placeholder -->
+                    <img width="100%" src="../img/video_placeholder.png">
+                    
+                </center>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="row">
+        <br>
+        <!-- Slide show of texts.-->
+        <div id="owl-demo" class="owl-carousel owl-theme">
+            <!-- Text PDF #1 starts here... -->
+            <div class="item">
+                <!-- PDF #1 -->
+                <img src="../img/placeholder_pdf.png" alt="text1">
+            </div>
+            <!-- ...Text PDF #1 ends here -->
+            <!-- Text PDF #2 starts here... -->
+            <div class="item">
+                <!-- PDF #2 -->
+                <img src="../img/placeholder_pdf.png" alt="text2">
+            </div>
+            <!-- ...Text PDF #2 ends here -->
+            <!-- Text PDF #3 starts here... -->
+            <div class="item">
+                <!-- PDF #3 -->
+                <img src="../img/placeholder_pdf.png" alt="text3">
+            </div>
+            <!-- ...Text PDF #3 ends here -->
+            <!-- Text PDF #4 starts here... -->
+            <div class="item">
+                <!-- PDF #4 -->
+                <img src="../img/placeholder_pdf.png" alt="text4">
+            </div>
+            <!-- ...Text PDF #4 ends here -->
+        </div>
+        <br>
+    </div>
+
+    <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../owl-carousel/owl.carousel.js"></script>
+    <style>
+        #owl-demo .item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#owl-demo").owlCarousel({
+
+                navigation: true,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                items: 2,
+                scrollPerPage: true,
+                paginationNumbers: true
+
+                // "singleItem:true" is a shortcut for:
+                // items : 1, 
+                // itemsDesktop : false,
+                // itemsDesktopSmall : false,
+                // itemsTablet: false,
+                // itemsMobile : false
+
+            });
+        });
+    </script>
+    <script src="../js/foundation/foundation.js"></script>
+    <script>
+        $(document).foundation();
+
+        var doc = document.documentElement;
+        doc.setAttribute('data-useragent', navigator.userAgent);
+    </script>
+</body>
+
+</html>
